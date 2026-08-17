@@ -1,0 +1,7 @@
+   +---------------------------+
+   |  (o) standby              |
+   |                           |
+   |  [bench]        [kettle]  |
+   |                           |
+   +---------------------------+
+     circuit predates the contract

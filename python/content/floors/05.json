@@ -1,0 +1,732 @@
+{
+  "id": 5,
+  "name_key": "floors.05.name",
+  "clause_key": "floors.05.clause",
+  "theme": "server catacomb",
+  "palette": "full",
+  "start": "05-r01",
+  "boss_room": "05-r30",
+  "encounter_chance": 0.2,
+  "last": false,
+  "quirk": {
+    "key": "quirk.f5",
+    "no_ability_restore": true,
+    "encounter_bonus": 0.02
+  },
+  "event_chance": 0.18,
+  "random_events": [
+    {
+      "id": "f5_fan",
+      "weight": 24,
+      "key": "events.f5.fan"
+    },
+    {
+      "id": "f5_clips",
+      "weight": 22,
+      "key": "events.f5.clips",
+      "op": "currency",
+      "range": [
+        14,
+        30
+      ]
+    },
+    {
+      "id": "f5_static",
+      "weight": 18,
+      "key": "events.f5.static",
+      "op": "damage",
+      "dice": "1d8"
+    },
+    {
+      "id": "f5_log",
+      "weight": 16,
+      "key": "events.f5.log"
+    },
+    {
+      "id": "f5_cache",
+      "weight": 12,
+      "key": "events.f5.cache",
+      "op": "item",
+      "item": "adrenaline"
+    },
+    {
+      "id": "f5_flicker",
+      "weight": 8,
+      "key": "events.f5.flicker"
+    }
+  ],
+  "encounter_table": [
+    {
+      "monster": "tape_ghoul",
+      "weight": 26
+    },
+    {
+      "monster": "orphan_process",
+      "weight": 24
+    },
+    {
+      "monster": "retention_policy",
+      "weight": 22
+    },
+    {
+      "monster": "cold_storage",
+      "weight": 16
+    },
+    {
+      "monster": "undead_sysadmin",
+      "weight": 12
+    }
+  ],
+  "rooms": {
+    "05-r01": {
+      "pos": [
+        2,
+        0
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r01.name",
+      "desc_key": "rooms5.r01.desc",
+      "long_desc_key": "rooms5.r01.long",
+      "exits": {
+        "south": "05-r02"
+      },
+      "no_encounter": true,
+      "art": "room_catacomb",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "floor5_arrival",
+          "once": true,
+          "flag": "tut.f5"
+        }
+      ]
+    },
+    "05-r04": {
+      "pos": [
+        0,
+        1
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r04.name",
+      "desc_key": "rooms5.r04.desc",
+      "long_desc_key": "rooms5.r04.long",
+      "exits": {
+        "east": "05-r03"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_common",
+          "flag": "05.c.r04"
+        }
+      ]
+    },
+    "05-r03": {
+      "pos": [
+        1,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r03.name",
+      "desc_key": "rooms5.r03.desc",
+      "long_desc_key": "rooms5.r03.long",
+      "exits": {
+        "south": "05-r07",
+        "east": "05-r02",
+        "west": "05-r04"
+      },
+      "contents": [
+        {
+          "type": "npc",
+          "id": "the_ossuary_clerk",
+          "minigame": "dice",
+          "hint_key": "room.npc_hint",
+          "config": {
+            "opponent": "ossuary_clerk",
+            "reward": "cold_backup",
+            "penalty": 6,
+            "name_key": "minigame.dice.ossuary_name"
+          }
+        }
+      ]
+    },
+    "05-r02": {
+      "pos": [
+        2,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r02.name",
+      "desc_key": "rooms5.r02.desc",
+      "long_desc_key": "rooms5.r02.long",
+      "exits": {
+        "north": "05-r01",
+        "south": "05-r08",
+        "east": "05-r05",
+        "west": "05-r03"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_medical",
+          "flag": "05.med.r02"
+        }
+      ]
+    },
+    "05-r05": {
+      "pos": [
+        3,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r05.name",
+      "desc_key": "rooms5.r05.desc",
+      "long_desc_key": "rooms5.r05.long",
+      "exits": {
+        "south": "05-r09",
+        "west": "05-r02"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_medical",
+          "flag": "05.med.r05"
+        }
+      ]
+    },
+    "05-r06": {
+      "pos": [
+        0,
+        2
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r06.name",
+      "desc_key": "rooms5.r06.desc",
+      "long_desc_key": "rooms5.r06.long",
+      "exits": {
+        "east": "05-r07"
+      }
+    },
+    "05-r07": {
+      "pos": [
+        1,
+        2
+      ],
+      "kind": "safe",
+      "name_key": "rooms5.r07.name",
+      "desc_key": "rooms5.r07.desc",
+      "long_desc_key": "rooms5.r07.long",
+      "exits": {
+        "north": "05-r03",
+        "south": "05-r12",
+        "east": "05-r08",
+        "west": "05-r06"
+      },
+      "art": "room_ups"
+    },
+    "05-r08": {
+      "pos": [
+        2,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r08.name",
+      "desc_key": "rooms5.r08.desc",
+      "long_desc_key": "rooms5.r08.long",
+      "exits": {
+        "north": "05-r02",
+        "south": "05-r13",
+        "east": "05-r09",
+        "west": "05-r07"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_medical",
+          "flag": "05.med.r08"
+        }
+      ]
+    },
+    "05-r09": {
+      "pos": [
+        3,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r09.name",
+      "desc_key": "rooms5.r09.desc",
+      "long_desc_key": "rooms5.r09.long",
+      "exits": {
+        "north": "05-r05",
+        "east": "05-r10",
+        "west": "05-r08"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f5_n1",
+          "hint_key": "room.note_hint",
+          "flag": "05.note.1"
+        }
+      ]
+    },
+    "05-r10": {
+      "pos": [
+        4,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r10.name",
+      "desc_key": "rooms5.r10.desc",
+      "long_desc_key": "rooms5.r10.long",
+      "exits": {
+        "south": "05-r15",
+        "west": "05-r09"
+      },
+      "no_encounter": true,
+      "art": "room_merchant",
+      "contents": [
+        {
+          "type": "npc",
+          "id": "merchant",
+          "shop": true,
+          "hint_key": "rooms_common.merchant_hint",
+          "config": {
+            "npc": "merchant",
+            "stock_table": "stock_f5",
+            "slots": 6
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "merchant_again",
+          "once": true,
+          "flag": "tut.m5"
+        }
+      ]
+    },
+    "05-r11": {
+      "pos": [
+        0,
+        3
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r11.name",
+      "desc_key": "rooms5.r11.desc",
+      "long_desc_key": "rooms5.r11.long",
+      "exits": {
+        "east": "05-r12"
+      }
+    },
+    "05-r12": {
+      "pos": [
+        1,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r12.name",
+      "desc_key": "rooms5.r12.desc",
+      "long_desc_key": "rooms5.r12.long",
+      "exits": {
+        "north": "05-r07",
+        "east": "05-r13",
+        "west": "05-r11"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f5_w",
+          "hint_key": "room.note_hint",
+          "flag": "05.note.w"
+        }
+      ]
+    },
+    "05-r13": {
+      "pos": [
+        2,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r13.name",
+      "desc_key": "rooms5.r13.desc",
+      "long_desc_key": "rooms5.r13.long",
+      "exits": {
+        "north": "05-r08",
+        "south": "05-r18",
+        "east": "05-r14",
+        "west": "05-r12"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f5_n2",
+          "hint_key": "room.note_hint",
+          "flag": "05.note.2"
+        }
+      ]
+    },
+    "05-r14": {
+      "pos": [
+        3,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r14.name",
+      "desc_key": "rooms5.r14.desc",
+      "long_desc_key": "rooms5.r14.long",
+      "exits": {
+        "south": "05-r19",
+        "east": "05-r15",
+        "west": "05-r13"
+      },
+      "no_encounter": true,
+      "miniboss": "the_backup",
+      "art": "room_tapelibrary",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f5_miniboss",
+          "once": true,
+          "flag": "tut.f5mini"
+        }
+      ]
+    },
+    "05-r15": {
+      "pos": [
+        4,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r15.name",
+      "desc_key": "rooms5.r15.desc",
+      "long_desc_key": "rooms5.r15.long",
+      "exits": {
+        "north": "05-r10",
+        "south": "05-r20",
+        "west": "05-r14"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "05.stash.1",
+          "low": 27,
+          "high": 56
+        }
+      ]
+    },
+    "05-r16": {
+      "pos": [
+        0,
+        4
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r16.name",
+      "desc_key": "rooms5.r16.desc",
+      "long_desc_key": "rooms5.r16.long",
+      "exits": {
+        "east": "05-r17"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_good",
+          "flag": "05.c.r16",
+          "hint_key": "rooms5.r16.chest_hint"
+        }
+      ]
+    },
+    "05-r17": {
+      "pos": [
+        1,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r17.name",
+      "desc_key": "rooms5.r17.desc",
+      "long_desc_key": "rooms5.r17.long",
+      "exits": {
+        "east": "05-r18",
+        "west": "05-r16"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f5_n3",
+          "hint_key": "room.note_hint",
+          "flag": "05.note.3"
+        }
+      ]
+    },
+    "05-r18": {
+      "pos": [
+        2,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r18.name",
+      "desc_key": "rooms5.r18.desc",
+      "long_desc_key": "rooms5.r18.long",
+      "exits": {
+        "north": "05-r13",
+        "south": "05-r22",
+        "east": "05-r19",
+        "west": "05-r17"
+      }
+    },
+    "05-r19": {
+      "pos": [
+        3,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r19.name",
+      "desc_key": "rooms5.r19.desc",
+      "long_desc_key": "rooms5.r19.long",
+      "exits": {
+        "north": "05-r14",
+        "east": "05-r20",
+        "west": "05-r18"
+      }
+    },
+    "05-r20": {
+      "pos": [
+        4,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r20.name",
+      "desc_key": "rooms5.r20.desc",
+      "long_desc_key": "rooms5.r20.long",
+      "exits": {
+        "north": "05-r15",
+        "south": "05-r24",
+        "west": "05-r19"
+      },
+      "no_encounter": true,
+      "elite": "sysadmin",
+      "art": "room_noc",
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_hoard",
+          "flag": "05.c.r20",
+          "hint_key": "rooms5.r20.chest_hint"
+        }
+      ]
+    },
+    "05-r21": {
+      "pos": [
+        1,
+        5
+      ],
+      "kind": "safe",
+      "name_key": "rooms5.r21.name",
+      "desc_key": "rooms5.r21.desc",
+      "long_desc_key": "rooms5.r21.long",
+      "exits": {
+        "east": "05-r22"
+      },
+      "art": "room_ups"
+    },
+    "05-r22": {
+      "pos": [
+        2,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r22.name",
+      "desc_key": "rooms5.r22.desc",
+      "long_desc_key": "rooms5.r22.long",
+      "exits": {
+        "north": "05-r18",
+        "south": "05-r26",
+        "east": "05-r23",
+        "west": "05-r21"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f5_tos",
+          "hint_key": "room.note_hint",
+          "flag": "05.note.tos"
+        }
+      ]
+    },
+    "05-r23": {
+      "pos": [
+        3,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r23.name",
+      "desc_key": "rooms5.r23.desc",
+      "long_desc_key": "rooms5.r23.long",
+      "exits": {
+        "south": "05-r27",
+        "east": "05-r24",
+        "west": "05-r22"
+      }
+    },
+    "05-r24": {
+      "pos": [
+        4,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r24.name",
+      "desc_key": "rooms5.r24.desc",
+      "long_desc_key": "rooms5.r24.long",
+      "exits": {
+        "north": "05-r20",
+        "west": "05-r23"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "05.stash.2",
+          "low": 27,
+          "high": 56
+        }
+      ]
+    },
+    "05-r26": {
+      "pos": [
+        2,
+        6
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r26.name",
+      "desc_key": "rooms5.r26.desc",
+      "long_desc_key": "rooms5.r26.long",
+      "exits": {
+        "north": "05-r22",
+        "south": "05-r28",
+        "east": "05-r27"
+      },
+      "contents": [
+        {
+          "type": "npc",
+          "id": "vending_machine",
+          "shop": true,
+          "hint_key": "rooms_common.vending_hint",
+          "again_key": "rooms_common.vending_again",
+          "config": {
+            "npc": "vending_machine",
+            "stock_table": "vending_f5",
+            "slots": 3,
+            "machine": true
+          }
+        }
+      ]
+    },
+    "05-r27": {
+      "pos": [
+        3,
+        6
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r27.name",
+      "desc_key": "rooms5.r27.desc",
+      "long_desc_key": "rooms5.r27.long",
+      "exits": {
+        "north": "05-r23",
+        "east": "05-r25",
+        "west": "05-r26"
+      }
+    },
+    "05-r25": {
+      "pos": [
+        4,
+        6
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r25.name",
+      "desc_key": "rooms5.r25.desc",
+      "long_desc_key": "rooms5.r25.long",
+      "exits": {
+        "west": "05-r27"
+      },
+      "no_encounter": true,
+      "contents": [
+        {
+          "type": "item",
+          "item": "own_merch",
+          "flag": "05.i.r25",
+          "hint_key": "rooms5.r25.item_hint"
+        }
+      ]
+    },
+    "05-r29": {
+      "pos": [
+        1,
+        7
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms5.r29.name",
+      "desc_key": "rooms5.r29.desc",
+      "long_desc_key": "rooms5.r29.long",
+      "exits": {
+        "east": "05-r28"
+      },
+      "no_encounter": true,
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f5_hoard",
+          "flag": "05.c.r29",
+          "hint_key": "rooms5.r29.chest_hint"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f5_secret",
+          "once": true,
+          "flag": "tut.f5sec"
+        }
+      ]
+    },
+    "05-r28": {
+      "pos": [
+        2,
+        7
+      ],
+      "kind": "normal",
+      "name_key": "rooms5.r28.name",
+      "desc_key": "rooms5.r28.desc",
+      "long_desc_key": "rooms5.r28.long",
+      "exits": {
+        "north": "05-r26",
+        "south": "05-r30",
+        "west": "05-r29"
+      },
+      "no_encounter": true,
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f5_pre_boss",
+          "once": true,
+          "flag": "tut.f5pb"
+        }
+      ]
+    },
+    "05-r30": {
+      "pos": [
+        2,
+        8
+      ],
+      "kind": "boss",
+      "name_key": "rooms5.r30.name",
+      "desc_key": "rooms5.r30.desc",
+      "long_desc_key": "rooms5.r30.long",
+      "exits": {
+        "north": "05-r28"
+      },
+      "no_encounter": true,
+      "boss": "raid_six"
+    }
+  },
+  "effect": "cold"
+}

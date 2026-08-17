@@ -1,0 +1,3158 @@
+{
+  "floor1_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 27
+      },
+      {
+        "item": "ration",
+        "weight": 40
+      },
+      {
+        "item": "laminate",
+        "weight": 15
+      },
+      {
+        "item": "own_merch",
+        "weight": 10
+      },
+      {
+        "item": "vending_coffee",
+        "weight": 8
+      }
+    ]
+  },
+  "floor1_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "ration",
+        "weight": 40
+      },
+      {
+        "item": "vending_coffee",
+        "weight": 32
+      },
+      {
+        "item": "smoke_canister",
+        "weight": 15
+      },
+      {
+        "item": "own_merch",
+        "weight": 15
+      },
+      {
+        "item": "stapler",
+        "weight": 15
+      },
+      {
+        "item": "adrenaline",
+        "weight": 16
+      }
+    ]
+  },
+  "floor1_elite": {
+    "draws": 1,
+    "always": [
+      "ppe_vest"
+    ],
+    "entries": [
+      {
+        "item": "adrenaline",
+        "weight": 80
+      },
+      {
+        "item": "stapler",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_starter": {
+    "draws": 1,
+    "always": [
+      "ration"
+    ],
+    "entries": [
+      {
+        "item": "mop",
+        "weight": 40
+      },
+      {
+        "item": "laminate",
+        "weight": 35
+      },
+      {
+        "item": "own_merch",
+        "weight": 25
+      }
+    ],
+    "clips": [
+      2,
+      5
+    ]
+  },
+  "chest_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "ration",
+        "weight": 56
+      },
+      {
+        "item": "vending_coffee",
+        "weight": 40
+      },
+      {
+        "item": "laminate",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      2,
+      6
+    ]
+  },
+  "chest_map": {
+    "draws": 0,
+    "always": [
+      "audit_trail"
+    ]
+  },
+  "chest_hoard": {
+    "draws": 2,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "stapler",
+        "weight": 30
+      },
+      {
+        "item": "vending_coffee",
+        "weight": 48
+      },
+      {
+        "item": "smoke_canister",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      10,
+      20
+    ]
+  },
+  "boss_greeter": {
+    "draws": 0,
+    "always": [
+      "greeter_badge",
+      "adrenaline"
+    ]
+  },
+  "rps_prize": {
+    "draws": 0,
+    "always": [
+      "vending_coffee"
+    ]
+  },
+  "f2_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 24
+      },
+      {
+        "item": "ration",
+        "weight": 32
+      },
+      {
+        "item": "sump_water",
+        "weight": 28
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "grease",
+        "weight": 10
+      }
+    ]
+  },
+  "f2_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "ration",
+        "weight": 40
+      },
+      {
+        "item": "sump_water",
+        "weight": 40
+      },
+      {
+        "item": "grease",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 15
+      },
+      {
+        "item": "adrenaline",
+        "weight": 24
+      },
+      {
+        "item": "hazard_wrap",
+        "weight": 14
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 14
+      }
+    ]
+  },
+  "f2_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "sump_water",
+        "weight": 40
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "crowbar",
+        "weight": 20
+      },
+      {
+        "item": "receipt_coat",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 10
+      },
+      {
+        "item": "hazard_wrap",
+        "weight": 18
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 18
+      }
+    ]
+  },
+  "f2_elite": {
+    "draws": 1,
+    "always": [
+      "waders"
+    ],
+    "entries": [
+      {
+        "item": "coin_gauntlet",
+        "weight": 50
+      },
+      {
+        "item": "adrenaline",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f2_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "ration",
+        "weight": 48
+      },
+      {
+        "item": "sump_water",
+        "weight": 48
+      },
+      {
+        "item": "grease",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      5,
+      12
+    ]
+  },
+  "chest_f2_good": {
+    "draws": 1,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "crowbar",
+        "weight": 40
+      },
+      {
+        "item": "receipt_coat",
+        "weight": 35
+      },
+      {
+        "item": "sump_water",
+        "weight": 40
+      },
+      {
+        "item": "hazard_wrap",
+        "weight": 20
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      10,
+      18
+    ]
+  },
+  "chest_f2_hoard": {
+    "draws": 2,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "coin_gauntlet",
+        "weight": 25
+      },
+      {
+        "item": "waders",
+        "weight": 25
+      },
+      {
+        "item": "sump_water",
+        "weight": 40
+      },
+      {
+        "item": "grease",
+        "weight": 25
+      },
+      {
+        "item": "hazard_wrap",
+        "weight": 22
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 22
+      }
+    ],
+    "clips": [
+      16,
+      30
+    ]
+  },
+  "miniboss_deductible": {
+    "draws": 0,
+    "always": [
+      "coin_gauntlet",
+      "adrenaline"
+    ]
+  },
+  "boss_ledgermaw": {
+    "draws": 0,
+    "always": [
+      "ledger_page",
+      "adrenaline",
+      "waders"
+    ]
+  },
+  "dice_prize": {
+    "draws": 0,
+    "always": [
+      "toll_token"
+    ]
+  },
+  "f3_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 21
+      },
+      {
+        "item": "ration",
+        "weight": 32
+      },
+      {
+        "item": "cold_tea",
+        "weight": 32
+      },
+      {
+        "item": "policy_wording",
+        "weight": 15
+      },
+      {
+        "item": "own_merch",
+        "weight": 10
+      }
+    ]
+  },
+  "f3_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "cold_tea",
+        "weight": 48
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "policy_wording",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 15
+      },
+      {
+        "item": "actuary_pen",
+        "weight": 10
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 14
+      }
+    ]
+  },
+  "f3_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "adrenaline",
+        "weight": 48
+      },
+      {
+        "item": "actuary_pen",
+        "weight": 25
+      },
+      {
+        "item": "loss_ledger",
+        "weight": 25
+      },
+      {
+        "item": "cold_tea",
+        "weight": 32
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 18
+      }
+    ]
+  },
+  "f3_elite": {
+    "draws": 1,
+    "always": [
+      "loss_ledger"
+    ],
+    "entries": [
+      {
+        "item": "actuary_pen",
+        "weight": 50
+      },
+      {
+        "item": "adrenaline",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f3_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "ration",
+        "weight": 48
+      },
+      {
+        "item": "cold_tea",
+        "weight": 48
+      },
+      {
+        "item": "policy_wording",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      8,
+      16
+    ]
+  },
+  "chest_f3_good": {
+    "draws": 1,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "actuary_pen",
+        "weight": 40
+      },
+      {
+        "item": "loss_ledger",
+        "weight": 35
+      },
+      {
+        "item": "cold_tea",
+        "weight": 40
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      13,
+      24
+    ]
+  },
+  "chest_f3_hoard": {
+    "draws": 2,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "actuary_pen",
+        "weight": 25
+      },
+      {
+        "item": "loss_ledger",
+        "weight": 25
+      },
+      {
+        "item": "cold_tea",
+        "weight": 40
+      },
+      {
+        "item": "policy_wording",
+        "weight": 25
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 22
+      }
+    ],
+    "clips": [
+      21,
+      36
+    ]
+  },
+  "boss_cap": {
+    "draws": 0,
+    "always": [
+      "loss_ledger",
+      "adrenaline",
+      "adrenaline"
+    ]
+  },
+  "f4_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 19
+      },
+      {
+        "item": "cold_tea",
+        "weight": 38
+      },
+      {
+        "item": "casserole",
+        "weight": 28
+      },
+      {
+        "item": "own_merch",
+        "weight": 16
+      },
+      {
+        "item": "policy_wording",
+        "weight": 10
+      }
+    ]
+  },
+  "f4_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "casserole",
+        "weight": 48
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "cold_tea",
+        "weight": 32
+      },
+      {
+        "item": "secateurs",
+        "weight": 15
+      },
+      {
+        "item": "own_merch",
+        "weight": 10
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 14
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 14
+      }
+    ]
+  },
+  "f4_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "casserole",
+        "weight": 48
+      },
+      {
+        "item": "secateurs",
+        "weight": 25
+      },
+      {
+        "item": "gardening_gloves",
+        "weight": 25
+      },
+      {
+        "item": "adrenaline",
+        "weight": 32
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 18
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 18
+      }
+    ]
+  },
+  "f4_elite": {
+    "draws": 1,
+    "always": [
+      "gardening_gloves"
+    ],
+    "entries": [
+      {
+        "item": "secateurs",
+        "weight": 50
+      },
+      {
+        "item": "casserole",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f4_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "casserole",
+        "weight": 48
+      },
+      {
+        "item": "policy_wording",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      10,
+      20
+    ]
+  },
+  "chest_f4_good": {
+    "draws": 1,
+    "always": [
+      "casserole"
+    ],
+    "entries": [
+      {
+        "item": "secateurs",
+        "weight": 40
+      },
+      {
+        "item": "gardening_gloves",
+        "weight": 35
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 20
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 20
+      }
+    ],
+    "clips": [
+      17,
+      30
+    ]
+  },
+  "chest_f4_hoard": {
+    "draws": 2,
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "secateurs",
+        "weight": 25
+      },
+      {
+        "item": "gardening_gloves",
+        "weight": 25
+      },
+      {
+        "item": "casserole",
+        "weight": 40
+      },
+      {
+        "item": "ledger_binding",
+        "weight": 22
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 22
+      }
+    ],
+    "clips": [
+      26,
+      46
+    ]
+  },
+  "miniboss_committee": {
+    "draws": 0,
+    "always": [
+      "gardening_gloves",
+      "casserole"
+    ]
+  },
+  "boss_hensley": {
+    "draws": 0,
+    "always": [
+      "hensley_keys",
+      "casserole",
+      "adrenaline"
+    ]
+  },
+  "rps_f4_prize": {
+    "draws": 0,
+    "always": [
+      "extended_log"
+    ]
+  },
+  "stock_f2": {
+    "always": [
+      "ration"
+    ],
+    "entries": [
+      {
+        "item": "sump_water",
+        "weight": 25
+      },
+      {
+        "item": "crowbar",
+        "weight": 20
+      },
+      {
+        "item": "smoke_canister",
+        "weight": 18
+      },
+      {
+        "item": "adrenaline",
+        "weight": 15
+      },
+      {
+        "item": "grease",
+        "weight": 12
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      }
+    ]
+  },
+  "stock_f3": {
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "cold_tea",
+        "weight": 22
+      },
+      {
+        "item": "actuary_pen",
+        "weight": 18
+      },
+      {
+        "item": "policy_wording",
+        "weight": 18
+      },
+      {
+        "item": "coin_gauntlet",
+        "weight": 14
+      },
+      {
+        "item": "sump_water",
+        "weight": 14
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      }
+    ]
+  },
+  "stock_f4": {
+    "always": [
+      "casserole"
+    ],
+    "entries": [
+      {
+        "item": "secateurs",
+        "weight": 20
+      },
+      {
+        "item": "adrenaline",
+        "weight": 18
+      },
+      {
+        "item": "cold_tea",
+        "weight": 16
+      },
+      {
+        "item": "policy_wording",
+        "weight": 14
+      },
+      {
+        "item": "actuary_pen",
+        "weight": 14
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      }
+    ]
+  },
+  "stock_f5": {
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "tape_flail",
+        "weight": 20
+      },
+      {
+        "item": "cold_backup",
+        "weight": 22
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "casserole",
+        "weight": 18
+      },
+      {
+        "item": "cold_tea",
+        "weight": 20
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f6": {
+    "always": [
+      "adrenaline"
+    ],
+    "entries": [
+      {
+        "item": "signature_pen",
+        "weight": 20
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 22
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "cold_backup",
+        "weight": 20
+      },
+      {
+        "item": "casserole",
+        "weight": 18
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      }
+    ]
+  },
+  "f5_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 18
+      },
+      {
+        "item": "cold_tea",
+        "weight": 35
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "own_merch",
+        "weight": 16
+      },
+      {
+        "item": "cold_backup",
+        "weight": 19
+      }
+    ]
+  },
+  "f5_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "cold_backup",
+        "weight": 38
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "rack_plate",
+        "weight": 18
+      },
+      {
+        "item": "adrenaline",
+        "weight": 28
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 14
+      }
+    ]
+  },
+  "f5_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "cold_backup",
+        "weight": 44
+      },
+      {
+        "item": "tape_flail",
+        "weight": 24
+      },
+      {
+        "item": "rack_plate",
+        "weight": 24
+      },
+      {
+        "item": "root_token",
+        "weight": 24
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 18
+      }
+    ]
+  },
+  "f5_elite": {
+    "draws": 1,
+    "always": [
+      "rack_plate"
+    ],
+    "entries": [
+      {
+        "item": "tape_flail",
+        "weight": 50
+      },
+      {
+        "item": "cold_backup",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f5_common": {
+    "draws": 1,
+    "clips": [
+      14,
+      26
+    ],
+    "entries": [
+      {
+        "item": "root_token",
+        "weight": 30
+      },
+      {
+        "item": "cold_backup",
+        "weight": 32
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f5_good": {
+    "draws": 1,
+    "clips": [
+      23,
+      40
+    ],
+    "always": [
+      "cold_backup"
+    ],
+    "entries": [
+      {
+        "item": "tape_flail",
+        "weight": 40
+      },
+      {
+        "item": "rack_plate",
+        "weight": 35
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f5_hoard": {
+    "draws": 2,
+    "clips": [
+      36,
+      63
+    ],
+    "always": [
+      "cold_backup"
+    ],
+    "entries": [
+      {
+        "item": "tape_flail",
+        "weight": 25
+      },
+      {
+        "item": "rack_plate",
+        "weight": 25
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 22
+      }
+    ]
+  },
+  "miniboss_backup": {
+    "draws": 0,
+    "always": [
+      "parity_disk",
+      "cold_backup"
+    ]
+  },
+  "boss_raid": {
+    "draws": 0,
+    "always": [
+      "raid_head",
+      "rack_plate",
+      "cold_backup"
+    ]
+  },
+  "f6_scraps": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "nothing",
+        "weight": 16
+      },
+      {
+        "item": "own_merch",
+        "weight": 26
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 32
+      },
+      {
+        "item": "root_token",
+        "weight": 16
+      },
+      {
+        "item": "cold_backup",
+        "weight": 16
+      }
+    ]
+  },
+  "f6_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "royalty_cheque",
+        "weight": 38
+      },
+      {
+        "item": "cold_backup",
+        "weight": 32
+      },
+      {
+        "item": "brand_shield",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 14
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 14
+      }
+    ]
+  },
+  "f6_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "royalty_cheque",
+        "weight": 44
+      },
+      {
+        "item": "signature_pen",
+        "weight": 24
+      },
+      {
+        "item": "brand_shield",
+        "weight": 24
+      },
+      {
+        "item": "cold_backup",
+        "weight": 38
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 18
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 18
+      }
+    ]
+  },
+  "f6_elite": {
+    "draws": 1,
+    "always": [
+      "brand_shield"
+    ],
+    "entries": [
+      {
+        "item": "signature_pen",
+        "weight": 50
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f6_common": {
+    "draws": 1,
+    "clips": [
+      18,
+      33
+    ],
+    "entries": [
+      {
+        "item": "royalty_cheque",
+        "weight": 48
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 24
+      }
+    ]
+  },
+  "chest_f6_good": {
+    "draws": 1,
+    "clips": [
+      30,
+      50
+    ],
+    "always": [
+      "royalty_cheque"
+    ],
+    "entries": [
+      {
+        "item": "signature_pen",
+        "weight": 40
+      },
+      {
+        "item": "brand_shield",
+        "weight": 35
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 20
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f6_hoard": {
+    "draws": 2,
+    "clips": [
+      46,
+      80
+    ],
+    "always": [
+      "royalty_cheque"
+    ],
+    "entries": [
+      {
+        "item": "signature_pen",
+        "weight": 25
+      },
+      {
+        "item": "brand_shield",
+        "weight": 25
+      },
+      {
+        "item": "adrenaline",
+        "weight": 40
+      },
+      {
+        "item": "dust_sheet",
+        "weight": 22
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 22
+      }
+    ]
+  },
+  "miniboss_focus": {
+    "draws": 0,
+    "always": [
+      "signature_pen",
+      "royalty_cheque"
+    ]
+  },
+  "boss_likeness": {
+    "draws": 0,
+    "always": [
+      "likeness_rights",
+      "brand_shield",
+      "royalty_cheque"
+    ]
+  },
+  "f7_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 38
+      },
+      {
+        "item": "cold_backup",
+        "weight": 32
+      },
+      {
+        "item": "storm_coat",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 14
+      }
+    ]
+  },
+  "f7_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 44
+      },
+      {
+        "item": "barometer",
+        "weight": 24
+      },
+      {
+        "item": "storm_coat",
+        "weight": 24
+      },
+      {
+        "item": "cold_backup",
+        "weight": 38
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 18
+      }
+    ]
+  },
+  "f7_elite": {
+    "draws": 1,
+    "always": [
+      "storm_coat"
+    ],
+    "entries": [
+      {
+        "item": "barometer",
+        "weight": 50
+      },
+      {
+        "item": "eye_of_the_storm",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f7_common": {
+    "draws": 1,
+    "clips": [
+      24,
+      44
+    ],
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 48
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f7_good": {
+    "draws": 1,
+    "clips": [
+      38,
+      66
+    ],
+    "always": [
+      "eye_of_the_storm"
+    ],
+    "entries": [
+      {
+        "item": "barometer",
+        "weight": 40
+      },
+      {
+        "item": "storm_coat",
+        "weight": 35
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f7_hoard": {
+    "draws": 2,
+    "clips": [
+      60,
+      100
+    ],
+    "always": [
+      "eye_of_the_storm"
+    ],
+    "entries": [
+      {
+        "item": "barometer",
+        "weight": 25
+      },
+      {
+        "item": "storm_coat",
+        "weight": 25
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 22
+      }
+    ]
+  },
+  "miniboss_exception": {
+    "draws": 0,
+    "always": [
+      "prism",
+      "eye_of_the_storm"
+    ]
+  },
+  "boss_kaleidon": {
+    "draws": 0,
+    "always": [
+      "storm_coat",
+      "eye_of_the_storm",
+      "barometer"
+    ]
+  },
+  "f8_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "quench",
+        "weight": 38
+      },
+      {
+        "item": "eye_of_the_storm",
+        "weight": 32
+      },
+      {
+        "item": "slag_plate",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 14
+      },
+      {
+        "item": "counterweight",
+        "weight": 14
+      }
+    ]
+  },
+  "f8_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "quench",
+        "weight": 44
+      },
+      {
+        "item": "crucible_hammer",
+        "weight": 24
+      },
+      {
+        "item": "slag_plate",
+        "weight": 24
+      },
+      {
+        "item": "eye_of_the_storm",
+        "weight": 38
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 18
+      },
+      {
+        "item": "counterweight",
+        "weight": 18
+      }
+    ]
+  },
+  "f8_elite": {
+    "draws": 1,
+    "always": [
+      "slag_plate"
+    ],
+    "entries": [
+      {
+        "item": "crucible_hammer",
+        "weight": 50
+      },
+      {
+        "item": "quench",
+        "weight": 80
+      }
+    ]
+  },
+  "chest_f8_common": {
+    "draws": 1,
+    "clips": [
+      30,
+      54
+    ],
+    "entries": [
+      {
+        "item": "quench",
+        "weight": 48
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f8_good": {
+    "draws": 1,
+    "clips": [
+      46,
+      80
+    ],
+    "always": [
+      "quench"
+    ],
+    "entries": [
+      {
+        "item": "crucible_hammer",
+        "weight": 40
+      },
+      {
+        "item": "slag_plate",
+        "weight": 35
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 20
+      },
+      {
+        "item": "counterweight",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f8_hoard": {
+    "draws": 2,
+    "clips": [
+      75,
+      125
+    ],
+    "always": [
+      "quench"
+    ],
+    "entries": [
+      {
+        "item": "crucible_hammer",
+        "weight": 25
+      },
+      {
+        "item": "slag_plate",
+        "weight": 25
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "mesh_liner",
+        "weight": 22
+      },
+      {
+        "item": "counterweight",
+        "weight": 22
+      }
+    ]
+  },
+  "chest_f8_map": {
+    "draws": 0,
+    "clips": [
+      20,
+      40
+    ],
+    "always": [
+      "full_disclosure"
+    ]
+  },
+  "miniboss_surety": {
+    "draws": 0,
+    "always": [
+      "crucible_hammer",
+      "quench"
+    ]
+  },
+  "boss_guarantor": {
+    "draws": 0,
+    "always": [
+      "indemnity_waiver",
+      "slag_plate",
+      "quench"
+    ]
+  },
+  "stock_f7": {
+    "always": [
+      "eye_of_the_storm"
+    ],
+    "entries": [
+      {
+        "item": "cold_backup",
+        "weight": 22
+      },
+      {
+        "item": "barometer",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 22
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 20
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f8": {
+    "always": [
+      "quench"
+    ],
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 22
+      },
+      {
+        "item": "crucible_hammer",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 22
+      },
+      {
+        "item": "cold_backup",
+        "weight": 20
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "second_opinion",
+        "weight": 30
+      }
+    ]
+  },
+  "f9_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "whole_thing",
+        "weight": 40
+      },
+      {
+        "item": "quench",
+        "weight": 30
+      },
+      {
+        "item": "severance_plate",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "counterweight",
+        "weight": 14
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 14
+      }
+    ]
+  },
+  "f9_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "whole_thing",
+        "weight": 42
+      },
+      {
+        "item": "blue_pencil_item",
+        "weight": 24
+      },
+      {
+        "item": "severance_plate",
+        "weight": 24
+      },
+      {
+        "item": "quench",
+        "weight": 24
+      },
+      {
+        "item": "counterweight",
+        "weight": 18
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 18
+      }
+    ]
+  },
+  "f9_elite": {
+    "draws": 1,
+    "always": [
+      "severance_plate"
+    ],
+    "entries": [
+      {
+        "item": "blue_pencil_item",
+        "weight": 50
+      },
+      {
+        "item": "whole_thing",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_f9_common": {
+    "draws": 1,
+    "clips": [
+      24,
+      44
+    ],
+    "entries": [
+      {
+        "item": "whole_thing",
+        "weight": 40
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f9_good": {
+    "draws": 1,
+    "clips": [
+      40,
+      70
+    ],
+    "always": [
+      "whole_thing"
+    ],
+    "entries": [
+      {
+        "item": "blue_pencil_item",
+        "weight": 40
+      },
+      {
+        "item": "severance_plate",
+        "weight": 35
+      },
+      {
+        "item": "counterweight",
+        "weight": 20
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f9_hoard": {
+    "draws": 2,
+    "clips": [
+      65,
+      110
+    ],
+    "always": [
+      "whole_thing"
+    ],
+    "entries": [
+      {
+        "item": "blue_pencil_item",
+        "weight": 25
+      },
+      {
+        "item": "severance_plate",
+        "weight": 25
+      },
+      {
+        "item": "whole_thing",
+        "weight": 30
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "counterweight",
+        "weight": 22
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f9": {
+    "always": [
+      "whole_thing"
+    ],
+    "entries": [
+      {
+        "item": "blue_pencil_item",
+        "weight": 20
+      },
+      {
+        "item": "quench",
+        "weight": 26
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "quench",
+        "weight": 22
+      },
+      {
+        "item": "whole_thing",
+        "weight": 24
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "the_franchise",
+        "weight": 30
+      },
+      {
+        "item": "injunction",
+        "weight": 22
+      },
+      {
+        "item": "without_prejudice",
+        "weight": 20
+      }
+    ]
+  },
+  "f10_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "stay_of_execution",
+        "weight": 40
+      },
+      {
+        "item": "whole_thing",
+        "weight": 30
+      },
+      {
+        "item": "court_dress",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 14
+      }
+    ]
+  },
+  "f10_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "stay_of_execution",
+        "weight": 42
+      },
+      {
+        "item": "gavel",
+        "weight": 24
+      },
+      {
+        "item": "court_dress",
+        "weight": 24
+      },
+      {
+        "item": "whole_thing",
+        "weight": 24
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 18
+      }
+    ]
+  },
+  "f10_elite": {
+    "draws": 1,
+    "always": [
+      "court_dress"
+    ],
+    "entries": [
+      {
+        "item": "gavel",
+        "weight": 50
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_f10_common": {
+    "draws": 1,
+    "clips": [
+      24,
+      44
+    ],
+    "entries": [
+      {
+        "item": "stay_of_execution",
+        "weight": 40
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f10_good": {
+    "draws": 1,
+    "clips": [
+      40,
+      70
+    ],
+    "always": [
+      "stay_of_execution"
+    ],
+    "entries": [
+      {
+        "item": "gavel",
+        "weight": 40
+      },
+      {
+        "item": "court_dress",
+        "weight": 35
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f10_hoard": {
+    "draws": 2,
+    "clips": [
+      65,
+      110
+    ],
+    "always": [
+      "stay_of_execution"
+    ],
+    "entries": [
+      {
+        "item": "gavel",
+        "weight": 25
+      },
+      {
+        "item": "court_dress",
+        "weight": 25
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 30
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f10": {
+    "always": [
+      "stay_of_execution"
+    ],
+    "entries": [
+      {
+        "item": "gavel",
+        "weight": 20
+      },
+      {
+        "item": "whole_thing",
+        "weight": 26
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "quench",
+        "weight": 22
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 24
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "second_opinion",
+        "weight": 30
+      },
+      {
+        "item": "injunction",
+        "weight": 20
+      },
+      {
+        "item": "without_prejudice",
+        "weight": 22
+      },
+      {
+        "item": "standing_order",
+        "weight": 16
+      }
+    ]
+  },
+  "f11_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "clean_draft",
+        "weight": 40
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 30
+      },
+      {
+        "item": "original_copy",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 14
+      },
+      {
+        "item": "interleaf",
+        "weight": 14
+      }
+    ]
+  },
+  "f11_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "clean_draft",
+        "weight": 42
+      },
+      {
+        "item": "red_pen",
+        "weight": 24
+      },
+      {
+        "item": "original_copy",
+        "weight": 24
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 24
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 18
+      },
+      {
+        "item": "interleaf",
+        "weight": 18
+      }
+    ]
+  },
+  "f11_elite": {
+    "draws": 1,
+    "always": [
+      "original_copy"
+    ],
+    "entries": [
+      {
+        "item": "red_pen",
+        "weight": 50
+      },
+      {
+        "item": "clean_draft",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_f11_common": {
+    "draws": 1,
+    "clips": [
+      24,
+      44
+    ],
+    "entries": [
+      {
+        "item": "clean_draft",
+        "weight": 40
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f11_good": {
+    "draws": 1,
+    "clips": [
+      40,
+      70
+    ],
+    "always": [
+      "clean_draft"
+    ],
+    "entries": [
+      {
+        "item": "red_pen",
+        "weight": 40
+      },
+      {
+        "item": "original_copy",
+        "weight": 35
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 20
+      },
+      {
+        "item": "interleaf",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f11_hoard": {
+    "draws": 2,
+    "clips": [
+      65,
+      110
+    ],
+    "always": [
+      "clean_draft"
+    ],
+    "entries": [
+      {
+        "item": "red_pen",
+        "weight": 25
+      },
+      {
+        "item": "original_copy",
+        "weight": 25
+      },
+      {
+        "item": "clean_draft",
+        "weight": 30
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "padded_ledger",
+        "weight": 22
+      },
+      {
+        "item": "interleaf",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f11": {
+    "always": [
+      "clean_draft"
+    ],
+    "entries": [
+      {
+        "item": "red_pen",
+        "weight": 20
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 26
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "quench",
+        "weight": 22
+      },
+      {
+        "item": "clean_draft",
+        "weight": 24
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "silent_partner",
+        "weight": 30
+      },
+      {
+        "item": "without_prejudice",
+        "weight": 20
+      },
+      {
+        "item": "standing_order",
+        "weight": 20
+      },
+      {
+        "item": "material_change",
+        "weight": 16
+      }
+    ]
+  },
+  "miniboss_hemikin": {
+    "draws": 0,
+    "always": [
+      "severed_half",
+      "whole_thing"
+    ]
+  },
+  "boss_hemikin": {
+    "draws": 0,
+    "always": [
+      "severance_plate",
+      "whole_thing",
+      "blue_pencil_item"
+    ]
+  },
+  "miniboss_clerk": {
+    "draws": 0,
+    "always": [
+      "gavel",
+      "stay_of_execution"
+    ]
+  },
+  "boss_vorn": {
+    "draws": 0,
+    "always": [
+      "vorn_seal",
+      "court_dress",
+      "stay_of_execution"
+    ]
+  },
+  "miniboss_redline": {
+    "draws": 0,
+    "always": [
+      "red_pen",
+      "clean_draft"
+    ]
+  },
+  "boss_amendment": {
+    "draws": 0,
+    "always": [
+      "unamended_term",
+      "original_copy",
+      "clean_draft"
+    ]
+  },
+  "f12_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "last_kettle",
+        "weight": 42
+      },
+      {
+        "item": "clean_draft",
+        "weight": 32
+      },
+      {
+        "item": "shutter_plate",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "interleaf",
+        "weight": 14
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 14
+      }
+    ]
+  },
+  "f12_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "last_kettle",
+        "weight": 44
+      },
+      {
+        "item": "ash_blade",
+        "weight": 24
+      },
+      {
+        "item": "shutter_plate",
+        "weight": 24
+      },
+      {
+        "item": "clean_draft",
+        "weight": 24
+      },
+      {
+        "item": "interleaf",
+        "weight": 18
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 18
+      }
+    ]
+  },
+  "f12_elite": {
+    "draws": 1,
+    "always": [
+      "shutter_plate"
+    ],
+    "entries": [
+      {
+        "item": "ash_blade",
+        "weight": 50
+      },
+      {
+        "item": "last_kettle",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_f12_common": {
+    "draws": 1,
+    "clips": [
+      26,
+      48
+    ],
+    "entries": [
+      {
+        "item": "last_kettle",
+        "weight": 42
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f12_good": {
+    "draws": 1,
+    "clips": [
+      44,
+      76
+    ],
+    "always": [
+      "last_kettle"
+    ],
+    "entries": [
+      {
+        "item": "ash_blade",
+        "weight": 40
+      },
+      {
+        "item": "shutter_plate",
+        "weight": 35
+      },
+      {
+        "item": "interleaf",
+        "weight": 20
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f12_hoard": {
+    "draws": 2,
+    "clips": [
+      70,
+      120
+    ],
+    "always": [
+      "last_kettle"
+    ],
+    "entries": [
+      {
+        "item": "ash_blade",
+        "weight": 25
+      },
+      {
+        "item": "shutter_plate",
+        "weight": 25
+      },
+      {
+        "item": "last_kettle",
+        "weight": 32
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "interleaf",
+        "weight": 22
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f12": {
+    "always": [
+      "last_kettle"
+    ],
+    "entries": [
+      {
+        "item": "ash_blade",
+        "weight": 20
+      },
+      {
+        "item": "clean_draft",
+        "weight": 26
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "last_kettle",
+        "weight": 26
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "the_franchise",
+        "weight": 30
+      },
+      {
+        "item": "the_deed",
+        "weight": 30
+      },
+      {
+        "item": "standing_order",
+        "weight": 20
+      },
+      {
+        "item": "material_change",
+        "weight": 20
+      },
+      {
+        "item": "costs_order",
+        "weight": 14
+      }
+    ]
+  },
+  "f13_common": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "good_tea",
+        "weight": 42
+      },
+      {
+        "item": "last_kettle",
+        "weight": 32
+      },
+      {
+        "item": "entire_plate",
+        "weight": 18
+      },
+      {
+        "item": "root_token",
+        "weight": 18
+      },
+      {
+        "item": "own_merch",
+        "weight": 12
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 14
+      }
+    ]
+  },
+  "f13_good": {
+    "draws": 1,
+    "entries": [
+      {
+        "item": "good_tea",
+        "weight": 44
+      },
+      {
+        "item": "blank_page",
+        "weight": 24
+      },
+      {
+        "item": "entire_plate",
+        "weight": 24
+      },
+      {
+        "item": "last_kettle",
+        "weight": 24
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 18
+      }
+    ]
+  },
+  "f13_elite": {
+    "draws": 1,
+    "always": [
+      "entire_plate"
+    ],
+    "entries": [
+      {
+        "item": "blank_page",
+        "weight": 50
+      },
+      {
+        "item": "good_tea",
+        "weight": 50
+      }
+    ]
+  },
+  "chest_f13_common": {
+    "draws": 1,
+    "clips": [
+      26,
+      48
+    ],
+    "entries": [
+      {
+        "item": "good_tea",
+        "weight": 42
+      },
+      {
+        "item": "root_token",
+        "weight": 26
+      },
+      {
+        "item": "own_merch",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f13_good": {
+    "draws": 1,
+    "clips": [
+      44,
+      76
+    ],
+    "always": [
+      "good_tea"
+    ],
+    "entries": [
+      {
+        "item": "blank_page",
+        "weight": 40
+      },
+      {
+        "item": "entire_plate",
+        "weight": 35
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 20
+      }
+    ]
+  },
+  "chest_f13_hoard": {
+    "draws": 2,
+    "clips": [
+      70,
+      120
+    ],
+    "always": [
+      "good_tea"
+    ],
+    "entries": [
+      {
+        "item": "blank_page",
+        "weight": 25
+      },
+      {
+        "item": "entire_plate",
+        "weight": 25
+      },
+      {
+        "item": "good_tea",
+        "weight": 32
+      },
+      {
+        "item": "root_token",
+        "weight": 25
+      },
+      {
+        "item": "mirror_backing",
+        "weight": 22
+      }
+    ]
+  },
+  "stock_f13": {
+    "always": [
+      "good_tea"
+    ],
+    "entries": [
+      {
+        "item": "blank_page",
+        "weight": 20
+      },
+      {
+        "item": "last_kettle",
+        "weight": 26
+      },
+      {
+        "item": "root_token",
+        "weight": 20
+      },
+      {
+        "item": "good_tea",
+        "weight": 26
+      },
+      {
+        "item": "audit_trail",
+        "weight": 30
+      },
+      {
+        "item": "extended_log",
+        "weight": 22
+      },
+      {
+        "item": "silent_partner",
+        "weight": 30
+      },
+      {
+        "item": "the_deed",
+        "weight": 30
+      },
+      {
+        "item": "material_change",
+        "weight": 22
+      },
+      {
+        "item": "standing_order",
+        "weight": 18
+      },
+      {
+        "item": "costs_order",
+        "weight": 14
+      }
+    ]
+  },
+  "miniboss_finalnotice": {
+    "draws": 0,
+    "always": [
+      "ash_blade",
+      "last_kettle"
+    ]
+  },
+  "boss_reaper": {
+    "draws": 0,
+    "always": [
+      "reaper_scale",
+      "shutter_plate",
+      "last_kettle"
+    ]
+  },
+  "miniboss_recital": {
+    "draws": 0,
+    "always": [
+      "blank_page",
+      "good_tea"
+    ]
+  },
+  "boss_signatory": {
+    "draws": 0,
+    "always": [
+      "entire_plate",
+      "good_tea"
+    ]
+  },
+  "boss_narrator": {
+    "draws": 0,
+    "always": [
+      "the_last_word"
+    ]
+  },
+  "chest_f5_medical": {
+    "draws": 1,
+    "clips": [
+      10,
+      20
+    ],
+    "entries": [
+      {
+        "item": "cold_backup",
+        "weight": 55
+      },
+      {
+        "item": "casserole",
+        "weight": 28
+      },
+      {
+        "item": "cold_tea",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f5": {
+    "always": [
+      "cold_backup",
+      "cold_tea"
+    ],
+    "entries": [
+      {
+        "item": "casserole",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f6_medical": {
+    "draws": 1,
+    "clips": [
+      12,
+      22
+    ],
+    "entries": [
+      {
+        "item": "royalty_cheque",
+        "weight": 55
+      },
+      {
+        "item": "cold_backup",
+        "weight": 28
+      },
+      {
+        "item": "casserole",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f6": {
+    "always": [
+      "royalty_cheque",
+      "casserole"
+    ],
+    "entries": [
+      {
+        "item": "cold_backup",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f7_medical": {
+    "draws": 1,
+    "clips": [
+      14,
+      26
+    ],
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 55
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 28
+      },
+      {
+        "item": "cold_backup",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f7": {
+    "always": [
+      "eye_of_the_storm",
+      "cold_backup"
+    ],
+    "entries": [
+      {
+        "item": "royalty_cheque",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f8_medical": {
+    "draws": 1,
+    "clips": [
+      16,
+      30
+    ],
+    "entries": [
+      {
+        "item": "quench",
+        "weight": 55
+      },
+      {
+        "item": "eye_of_the_storm",
+        "weight": 28
+      },
+      {
+        "item": "royalty_cheque",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f8": {
+    "always": [
+      "quench",
+      "royalty_cheque"
+    ],
+    "entries": [
+      {
+        "item": "eye_of_the_storm",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f9_medical": {
+    "draws": 1,
+    "clips": [
+      18,
+      34
+    ],
+    "entries": [
+      {
+        "item": "whole_thing",
+        "weight": 55
+      },
+      {
+        "item": "quench",
+        "weight": 28
+      },
+      {
+        "item": "eye_of_the_storm",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f9": {
+    "always": [
+      "whole_thing",
+      "eye_of_the_storm"
+    ],
+    "entries": [
+      {
+        "item": "quench",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f10_medical": {
+    "draws": 1,
+    "clips": [
+      20,
+      38
+    ],
+    "entries": [
+      {
+        "item": "stay_of_execution",
+        "weight": 55
+      },
+      {
+        "item": "whole_thing",
+        "weight": 28
+      },
+      {
+        "item": "quench",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f10": {
+    "always": [
+      "stay_of_execution",
+      "quench"
+    ],
+    "entries": [
+      {
+        "item": "whole_thing",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f11_medical": {
+    "draws": 1,
+    "clips": [
+      22,
+      42
+    ],
+    "entries": [
+      {
+        "item": "clean_draft",
+        "weight": 55
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 28
+      },
+      {
+        "item": "whole_thing",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f11": {
+    "always": [
+      "clean_draft",
+      "whole_thing"
+    ],
+    "entries": [
+      {
+        "item": "stay_of_execution",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f12_medical": {
+    "draws": 1,
+    "clips": [
+      24,
+      46
+    ],
+    "entries": [
+      {
+        "item": "last_kettle",
+        "weight": 55
+      },
+      {
+        "item": "clean_draft",
+        "weight": 28
+      },
+      {
+        "item": "stay_of_execution",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f12": {
+    "always": [
+      "last_kettle",
+      "stay_of_execution"
+    ],
+    "entries": [
+      {
+        "item": "clean_draft",
+        "weight": 30
+      }
+    ]
+  },
+  "chest_f13_medical": {
+    "draws": 1,
+    "clips": [
+      26,
+      50
+    ],
+    "entries": [
+      {
+        "item": "good_tea",
+        "weight": 55
+      },
+      {
+        "item": "last_kettle",
+        "weight": 28
+      },
+      {
+        "item": "clean_draft",
+        "weight": 17
+      }
+    ]
+  },
+  "vending_f13": {
+    "always": [
+      "good_tea",
+      "clean_draft"
+    ],
+    "entries": [
+      {
+        "item": "last_kettle",
+        "weight": 30
+      }
+    ]
+  }
+}

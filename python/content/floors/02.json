@@ -1,0 +1,613 @@
+{
+  "id": 2,
+  "name_key": "floors.02.name",
+  "clause_key": "floors.02.clause",
+  "theme": "coin-clogged sewer under the fee structure",
+  "palette": "full",
+  "start": "02-r01",
+  "boss_room": "02-r24",
+  "encounter_chance": 0.24,
+  "last": false,
+  "encounter_table": [
+    {
+      "monster": "coin_slick",
+      "weight": 26
+    },
+    {
+      "monster": "surcharge",
+      "weight": 26
+    },
+    {
+      "monster": "collections",
+      "weight": 22
+    },
+    {
+      "monster": "meter",
+      "weight": 16
+    },
+    {
+      "monster": "drowned_customer",
+      "weight": 10
+    }
+  ],
+  "rooms": {
+    "02-r01": {
+      "pos": [
+        2,
+        0
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "name_key": "rooms2.r01.name",
+      "desc_key": "rooms2.r01.desc",
+      "long_desc_key": "rooms2.r01.long",
+      "art": "room_stairwell",
+      "exits": {
+        "south": "02-r02"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "floor2_arrival",
+          "once": true,
+          "flag": "tut.f2arrive"
+        }
+      ]
+    },
+    "02-r02": {
+      "pos": [
+        2,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r02.name",
+      "desc_key": "rooms2.r02.desc",
+      "long_desc_key": "rooms2.r02.long",
+      "exits": {
+        "north": "02-r01",
+        "west": "02-r03",
+        "east": "02-r05",
+        "south": "02-r08"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f2_n1",
+          "hint_key": "room.note_hint",
+          "flag": "02.note.n1"
+        }
+      ]
+    },
+    "02-r03": {
+      "pos": [
+        1,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r03.name",
+      "desc_key": "rooms2.r03.desc",
+      "long_desc_key": "rooms2.r03.long",
+      "exits": {
+        "east": "02-r02",
+        "west": "02-r04",
+        "south": "02-r07"
+      }
+    },
+    "02-r04": {
+      "pos": [
+        0,
+        1
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms2.r04.name",
+      "desc_key": "rooms2.r04.desc",
+      "long_desc_key": "rooms2.r04.long",
+      "exits": {
+        "east": "02-r03"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f2_common",
+          "flag": "02.chest.r04",
+          "hint_key": "rooms2.r04.chest_hint"
+        }
+      ]
+    },
+    "02-r05": {
+      "pos": [
+        3,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r05.name",
+      "desc_key": "rooms2.r05.desc",
+      "long_desc_key": "rooms2.r05.long",
+      "exits": {
+        "west": "02-r02",
+        "east": "02-r06",
+        "south": "02-r09"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "02.stash.1",
+          "low": 18,
+          "high": 38
+        }
+      ]
+    },
+    "02-r06": {
+      "pos": [
+        4,
+        1
+      ],
+      "kind": "dead_end",
+      "no_encounter": true,
+      "name_key": "rooms2.r06.name",
+      "desc_key": "rooms2.r06.desc",
+      "long_desc_key": "rooms2.r06.long",
+      "art": "room_vault",
+      "exits": {
+        "west": "02-r05"
+      },
+      "contents": [
+        {
+          "type": "npc",
+          "id": "coin_diver",
+          "minigame": "dice",
+          "hint_key": "rooms2.r06.npc_hint",
+          "config": {
+            "opponent": "coin_diver",
+            "reward": "toll_token",
+            "penalty": 5
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_dice",
+          "once": true,
+          "flag": "tut.dice"
+        }
+      ]
+    },
+    "02-r07": {
+      "pos": [
+        1,
+        2
+      ],
+      "kind": "safe",
+      "name_key": "rooms2.r07.name",
+      "desc_key": "rooms2.r07.desc",
+      "long_desc_key": "rooms2.r07.long",
+      "art": "room_pumphouse",
+      "exits": {
+        "north": "02-r03",
+        "east": "02-r08",
+        "south": "02-r11"
+      }
+    },
+    "02-r08": {
+      "pos": [
+        2,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r08.name",
+      "desc_key": "rooms2.r08.desc",
+      "long_desc_key": "rooms2.r08.long",
+      "exits": {
+        "north": "02-r02",
+        "west": "02-r07",
+        "east": "02-r09",
+        "south": "02-r12"
+      }
+    },
+    "02-r09": {
+      "pos": [
+        3,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r09.name",
+      "desc_key": "rooms2.r09.desc",
+      "long_desc_key": "rooms2.r09.long",
+      "exits": {
+        "west": "02-r08",
+        "north": "02-r05",
+        "east": "02-r10",
+        "south": "02-r13"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f2_w",
+          "hint_key": "room.note_hint",
+          "flag": "02.note.w"
+        }
+      ]
+    },
+    "02-r10": {
+      "pos": [
+        4,
+        2
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms2.r10m.name",
+      "desc_key": "rooms2.r10m.desc",
+      "long_desc_key": "rooms2.r10m.long",
+      "exits": {
+        "west": "02-r09",
+        "south": "02-r14"
+      },
+      "contents": [
+        {
+          "type": "npc",
+          "id": "merchant",
+          "shop": true,
+          "hint_key": "rooms_common.merchant_hint",
+          "config": {
+            "npc": "merchant",
+            "stock_table": "stock_f2",
+            "slots": 5
+          }
+        }
+      ],
+      "no_encounter": true,
+      "art": "room_merchant",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "merchant_first",
+          "once": true,
+          "flag": "tut.merchant"
+        }
+      ]
+    },
+    "02-r11": {
+      "pos": [
+        1,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r11.name",
+      "desc_key": "rooms2.r11.desc",
+      "long_desc_key": "rooms2.r11.long",
+      "exits": {
+        "north": "02-r07",
+        "east": "02-r12",
+        "south": "02-r15"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f2_n2",
+          "hint_key": "room.note_hint",
+          "flag": "02.note.n2"
+        }
+      ]
+    },
+    "02-r12": {
+      "pos": [
+        2,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r12.name",
+      "desc_key": "rooms2.r12.desc",
+      "long_desc_key": "rooms2.r12.long",
+      "exits": {
+        "north": "02-r08",
+        "west": "02-r11",
+        "east": "02-r13",
+        "south": "02-r16"
+      }
+    },
+    "02-r13": {
+      "pos": [
+        3,
+        3
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "miniboss": "the_deductible",
+      "name_key": "rooms2.r13.name",
+      "desc_key": "rooms2.r13.desc",
+      "long_desc_key": "rooms2.r13.long",
+      "art": "room_tollgate",
+      "exits": {
+        "north": "02-r09",
+        "west": "02-r12",
+        "east": "02-r14",
+        "south": "02-r17"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "miniboss_intro",
+          "once": true,
+          "flag": "tut.f2mini"
+        }
+      ]
+    },
+    "02-r14": {
+      "pos": [
+        4,
+        3
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms2.r14.name",
+      "desc_key": "rooms2.r14.desc",
+      "long_desc_key": "rooms2.r14.long",
+      "exits": {
+        "north": "02-r10",
+        "west": "02-r13"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f2_good",
+          "flag": "02.chest.r14",
+          "hint_key": "rooms2.r14.chest_hint"
+        }
+      ]
+    },
+    "02-r15": {
+      "pos": [
+        1,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r15.name",
+      "desc_key": "rooms2.r15.desc",
+      "long_desc_key": "rooms2.r15.long",
+      "exits": {
+        "north": "02-r11",
+        "east": "02-r16",
+        "south": "02-r19"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f2_t",
+          "hint_key": "room.note_hint",
+          "flag": "02.note.t"
+        }
+      ]
+    },
+    "02-r16": {
+      "pos": [
+        2,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r16.name",
+      "desc_key": "rooms2.r16.desc",
+      "long_desc_key": "rooms2.r16.long",
+      "exits": {
+        "north": "02-r12",
+        "west": "02-r15",
+        "east": "02-r17",
+        "south": "02-r20"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "02.stash.2",
+          "low": 18,
+          "high": 38
+        }
+      ]
+    },
+    "02-r17": {
+      "pos": [
+        3,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r17.name",
+      "desc_key": "rooms2.r17.desc",
+      "long_desc_key": "rooms2.r17.long",
+      "exits": {
+        "north": "02-r13",
+        "west": "02-r16",
+        "south": "02-r21"
+      }
+    },
+    "02-r18": {
+      "pos": [
+        0,
+        5
+      ],
+      "kind": "dead_end",
+      "no_encounter": true,
+      "name_key": "rooms2.r18.name",
+      "desc_key": "rooms2.r18.desc",
+      "long_desc_key": "rooms2.r18.long",
+      "exits": {
+        "east": "02-r19"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f2_hoard",
+          "flag": "02.chest.r18",
+          "hint_key": "rooms2.r18.chest_hint"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f2_secret",
+          "once": true,
+          "flag": "tut.f2secret"
+        }
+      ]
+    },
+    "02-r19": {
+      "pos": [
+        1,
+        5
+      ],
+      "kind": "safe",
+      "name_key": "rooms2.r19.name",
+      "desc_key": "rooms2.r19.desc",
+      "long_desc_key": "rooms2.r19.long",
+      "art": "room_pumphouse",
+      "exits": {
+        "north": "02-r15",
+        "west": "02-r18",
+        "east": "02-r20"
+      }
+    },
+    "02-r20": {
+      "pos": [
+        2,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms2.r20.name",
+      "desc_key": "rooms2.r20.desc",
+      "long_desc_key": "rooms2.r20.long",
+      "exits": {
+        "north": "02-r16",
+        "west": "02-r19",
+        "east": "02-r21",
+        "south": "02-r23"
+      }
+    },
+    "02-r21": {
+      "pos": [
+        3,
+        5
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "elite": "auditor",
+      "name_key": "rooms2.r21.name",
+      "desc_key": "rooms2.r21.desc",
+      "long_desc_key": "rooms2.r21.long",
+      "art": "room_countroom",
+      "exits": {
+        "north": "02-r17",
+        "west": "02-r20",
+        "east": "02-r22"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f2_hoard",
+          "flag": "02.chest.r21",
+          "hint_key": "rooms2.r21.chest_hint"
+        }
+      ]
+    },
+    "02-r22": {
+      "pos": [
+        4,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms2.r22.name",
+      "desc_key": "rooms2.r22.desc",
+      "long_desc_key": "rooms2.r22.long",
+      "exits": {
+        "west": "02-r21"
+      },
+      "contents": [
+        {
+          "type": "item",
+          "item": "own_merch",
+          "flag": "02.item.r22",
+          "hint_key": "rooms2.r22.item_hint"
+        }
+      ]
+    },
+    "02-r23": {
+      "pos": [
+        2,
+        6
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "name_key": "rooms2.r23.name",
+      "desc_key": "rooms2.r23.desc",
+      "long_desc_key": "rooms2.r23.long",
+      "exits": {
+        "north": "02-r20",
+        "south": "02-r24"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f2_pre_boss",
+          "once": true,
+          "flag": "tut.f2preboss"
+        }
+      ]
+    },
+    "02-r24": {
+      "pos": [
+        2,
+        7
+      ],
+      "kind": "boss",
+      "no_encounter": true,
+      "boss": "ledgermaw",
+      "name_key": "rooms2.r24.name",
+      "desc_key": "rooms2.r24.desc",
+      "long_desc_key": "rooms2.r24.long",
+      "exits": {
+        "north": "02-r23"
+      }
+    }
+  },
+  "quirk": {
+    "key": "quirk.f2",
+    "entry_toll": 2,
+    "encounter_bonus": 0.02
+  },
+  "event_chance": 0.16,
+  "random_events": [
+    {
+      "id": "f2_haul",
+      "weight": 30,
+      "key": "events.f2.haul",
+      "op": "currency",
+      "range": [
+        6,
+        16
+      ]
+    },
+    {
+      "id": "f2_cold",
+      "weight": 22,
+      "key": "events.f2.cold",
+      "op": "damage",
+      "dice": "1d4"
+    },
+    {
+      "id": "f2_bottle",
+      "weight": 18,
+      "key": "events.f2.bottle",
+      "op": "item",
+      "item": "sump_water"
+    },
+    {
+      "id": "f2_pump",
+      "weight": 15,
+      "key": "events.f2.pump",
+      "op": "heal",
+      "dice": "2d4"
+    },
+    {
+      "id": "f2_wake",
+      "weight": 15,
+      "key": "events.f2.wake",
+      "op": "stalker",
+      "monster": "collections"
+    }
+  ]
+}

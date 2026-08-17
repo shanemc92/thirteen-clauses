@@ -1,0 +1,567 @@
+{
+  "id": 1,
+  "name_key": "floors.01.name",
+  "clause_key": "floors.01.clause",
+  "theme": "onboarding corridor, laminated signage",
+  "palette": "full",
+  "start": "01-r01",
+  "boss_room": "01-r22",
+  "encounter_chance": 0.26,
+  "grants_continue_on_death": true,
+  "last": false,
+  "encounter_table": [
+    {
+      "monster": "signage",
+      "weight": 30
+    },
+    {
+      "monster": "intern",
+      "weight": 28
+    },
+    {
+      "monster": "clipboards",
+      "weight": 22
+    },
+    {
+      "monster": "queue",
+      "weight": 12
+    },
+    {
+      "monster": "mascot",
+      "weight": 8
+    }
+  ],
+  "rooms": {
+    "01-r01": {
+      "pos": [
+        0,
+        0
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "name_key": "rooms.r01.name",
+      "desc_key": "rooms.r01.desc",
+      "long_desc_key": "rooms.r01.long",
+      "art": "room_intake",
+      "exits": {
+        "east": "01-r02"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_move",
+          "once": true,
+          "flag": "tut.move"
+        }
+      ]
+    },
+    "01-r02": {
+      "pos": [
+        1,
+        0
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r02.name",
+      "desc_key": "rooms.r02.desc",
+      "long_desc_key": "rooms.r02.long",
+      "exits": {
+        "west": "01-r01",
+        "east": "01-r03",
+        "south": "01-r06"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f1_n1",
+          "hint_key": "room.note_hint",
+          "flag": "01.note.n1"
+        }
+      ]
+    },
+    "01-r03": {
+      "pos": [
+        2,
+        0
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r03.name",
+      "desc_key": "rooms.r03.desc",
+      "long_desc_key": "rooms.r03.long",
+      "exits": {
+        "west": "01-r02",
+        "east": "01-r04"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_starter",
+          "flag": "01.chest.r03",
+          "hint_key": "rooms.r03.chest_hint",
+          "open_key": "rooms.r03.chest_open"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_take",
+          "once": true,
+          "flag": "tut.take"
+        }
+      ]
+    },
+    "01-r04": {
+      "pos": [
+        3,
+        0
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms.r04.name",
+      "desc_key": "rooms.r04.desc",
+      "long_desc_key": "rooms.r04.long",
+      "exits": {
+        "west": "01-r03",
+        "south": "01-r08"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_common",
+          "flag": "01.chest.r04"
+        }
+      ]
+    },
+    "01-r05": {
+      "pos": [
+        0,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r05.name",
+      "desc_key": "rooms.r05.desc",
+      "long_desc_key": "rooms.r05.long",
+      "art": "room_queue",
+      "exits": {
+        "east": "01-r06",
+        "south": "01-r10"
+      }
+    },
+    "01-r06": {
+      "pos": [
+        1,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r06.name",
+      "desc_key": "rooms.r06.desc",
+      "long_desc_key": "rooms.r06.long",
+      "exits": {
+        "north": "01-r02",
+        "west": "01-r05",
+        "east": "01-r07",
+        "south": "01-r11"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "01.stash.1",
+          "low": 15,
+          "high": 32
+        }
+      ]
+    },
+    "01-r07": {
+      "pos": [
+        2,
+        1
+      ],
+      "kind": "safe",
+      "name_key": "rooms.r07.name",
+      "desc_key": "rooms.r07.desc",
+      "long_desc_key": "rooms.r07.long",
+      "art": "room_break",
+      "exits": {
+        "west": "01-r06",
+        "east": "01-r08"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_rest",
+          "once": true,
+          "flag": "tut.rest"
+        }
+      ]
+    },
+    "01-r08": {
+      "pos": [
+        3,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r08.name",
+      "desc_key": "rooms.r08.desc",
+      "long_desc_key": "rooms.r08.long",
+      "exits": {
+        "north": "01-r04",
+        "west": "01-r07",
+        "east": "01-r09",
+        "south": "01-r13"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f1_w",
+          "hint_key": "room.note_hint",
+          "flag": "01.note.w"
+        }
+      ]
+    },
+    "01-r09": {
+      "pos": [
+        4,
+        1
+      ],
+      "kind": "dead_end",
+      "no_encounter": true,
+      "name_key": "rooms.r09.name",
+      "desc_key": "rooms.r09.desc",
+      "long_desc_key": "rooms.r09.long",
+      "exits": {
+        "west": "01-r08"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_map",
+          "flag": "01.chest.r09",
+          "hint_key": "rooms.r09.chest_hint",
+          "open_key": "rooms.r09.chest_open"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_map",
+          "once": true,
+          "flag": "tut.map"
+        }
+      ]
+    },
+    "01-r10": {
+      "pos": [
+        0,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r10.name",
+      "desc_key": "rooms.r10.desc",
+      "long_desc_key": "rooms.r10.long",
+      "exits": {
+        "north": "01-r05",
+        "south": "01-r14"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_common",
+          "flag": "01.chest.r10"
+        }
+      ]
+    },
+    "01-r11": {
+      "pos": [
+        1,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r11.name",
+      "desc_key": "rooms.r11.desc",
+      "long_desc_key": "rooms.r11.long",
+      "exits": {
+        "north": "01-r06",
+        "east": "01-r12",
+        "south": "01-r15"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f1_n2",
+          "hint_key": "room.note_hint",
+          "flag": "01.note.n2"
+        }
+      ]
+    },
+    "01-r12": {
+      "pos": [
+        2,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r12.name",
+      "desc_key": "rooms.r12.desc",
+      "long_desc_key": "rooms.r12.long",
+      "exits": {
+        "west": "01-r11",
+        "south": "01-r16"
+      }
+    },
+    "01-r13": {
+      "pos": [
+        3,
+        2
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "name_key": "rooms.r13.name",
+      "desc_key": "rooms.r13.desc",
+      "long_desc_key": "rooms.r13.long",
+      "art": "room_theatre",
+      "exits": {
+        "north": "01-r08",
+        "south": "01-r17"
+      },
+      "contents": [
+        {
+          "type": "npc",
+          "id": "vending_ghost",
+          "minigame": "rps",
+          "hint_key": "rooms.r13.npc_hint",
+          "config": {
+            "opponent": "vending_ghost",
+            "reward": "adrenaline",
+            "penalty": 4,
+            "name_key": "minigame.rps.ghost_name"
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "tutorial_talk",
+          "once": true,
+          "flag": "tut.talk"
+        }
+      ]
+    },
+    "01-r14": {
+      "pos": [
+        0,
+        3
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms.r14.name",
+      "desc_key": "rooms.r14.desc",
+      "long_desc_key": "rooms.r14.long",
+      "exits": {
+        "north": "01-r10",
+        "east": "01-r15"
+      },
+      "contents": [
+        {
+          "type": "item",
+          "item": "own_merch",
+          "flag": "01.item.r14",
+          "hint_key": "rooms.r14.item_hint"
+        }
+      ]
+    },
+    "01-r15": {
+      "pos": [
+        1,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r15.name",
+      "desc_key": "rooms.r15.desc",
+      "long_desc_key": "rooms.r15.long",
+      "exits": {
+        "north": "01-r11",
+        "west": "01-r14",
+        "east": "01-r16",
+        "south": "01-r19"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "01.stash.2",
+          "low": 15,
+          "high": 32
+        }
+      ]
+    },
+    "01-r16": {
+      "pos": [
+        2,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r16.name",
+      "desc_key": "rooms.r16.desc",
+      "long_desc_key": "rooms.r16.long",
+      "exits": {
+        "north": "01-r12",
+        "west": "01-r15",
+        "east": "01-r17",
+        "south": "01-r20"
+      }
+    },
+    "01-r17": {
+      "pos": [
+        3,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms.r17.name",
+      "desc_key": "rooms.r17.desc",
+      "long_desc_key": "rooms.r17.long",
+      "exits": {
+        "north": "01-r13",
+        "west": "01-r16",
+        "east": "01-r18"
+      }
+    },
+    "01-r18": {
+      "pos": [
+        4,
+        3
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "elite": "middle_management",
+      "name_key": "rooms.r18.name",
+      "desc_key": "rooms.r18.desc",
+      "long_desc_key": "rooms.r18.long",
+      "art": "room_office",
+      "exits": {
+        "west": "01-r17",
+        "south": "01-r21"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_hoard",
+          "flag": "01.chest.r18",
+          "hint_key": "rooms.r18.chest_hint"
+        }
+      ]
+    },
+    "01-r19": {
+      "pos": [
+        1,
+        4
+      ],
+      "kind": "safe",
+      "name_key": "rooms.r19.name",
+      "desc_key": "rooms.r19.desc",
+      "long_desc_key": "rooms.r19.long",
+      "art": "room_break",
+      "exits": {
+        "north": "01-r15",
+        "east": "01-r20"
+      }
+    },
+    "01-r20": {
+      "pos": [
+        2,
+        4
+      ],
+      "kind": "normal",
+      "no_encounter": true,
+      "name_key": "rooms.r20.name",
+      "desc_key": "rooms.r20.desc",
+      "long_desc_key": "rooms.r20.long",
+      "exits": {
+        "north": "01-r16",
+        "west": "01-r19",
+        "south": "01-r22"
+      },
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "pre_boss",
+          "once": true,
+          "flag": "tut.preboss"
+        }
+      ]
+    },
+    "01-r21": {
+      "pos": [
+        4,
+        4
+      ],
+      "kind": "dead_end",
+      "no_encounter": true,
+      "name_key": "rooms.r21.name",
+      "desc_key": "rooms.r21.desc",
+      "long_desc_key": "rooms.r21.long",
+      "exits": {
+        "north": "01-r18"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_common",
+          "flag": "01.chest.r21"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "secret_room",
+          "once": true,
+          "flag": "tut.secret"
+        }
+      ]
+    },
+    "01-r22": {
+      "pos": [
+        2,
+        5
+      ],
+      "kind": "boss",
+      "no_encounter": true,
+      "boss": "the_greeter",
+      "name_key": "rooms.r22.name",
+      "desc_key": "rooms.r22.desc",
+      "long_desc_key": "rooms.r22.long",
+      "exits": {
+        "north": "01-r20"
+      }
+    }
+  },
+  "event_chance": 0.1,
+  "random_events": [
+    {
+      "id": "f1_clips",
+      "weight": 30,
+      "key": "events.f1.clips",
+      "op": "currency",
+      "range": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "f1_tannoy",
+      "weight": 25,
+      "key": "events.f1.tannoy"
+    },
+    {
+      "id": "f1_lights",
+      "weight": 20,
+      "key": "events.f1.lights"
+    },
+    {
+      "id": "f1_biscuit",
+      "weight": 15,
+      "key": "events.f1.biscuit",
+      "op": "heal",
+      "dice": "1d6"
+    },
+    {
+      "id": "f1_flicker",
+      "weight": 10,
+      "key": "events.f1.flicker"
+    }
+  ]
+}

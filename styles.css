@@ -1,0 +1,824 @@
+:root {
+  --ink:       #0c0a07;
+  --screen:    #171310;
+  --rule:      #3b3227;
+  --paper:     #ecdfc4;
+  --paper-dim: #a3947a;
+  --seal:      #a8382a;
+  --amber:     #e8a33d;
+  --amber-soft:#f2c079;
+  --bronze-hi: #7a6449;
+  --bronze-lo: #241d16;
+
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ============ the desk behind everything ============ */
+
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(90% 60% at 50% 120%, #1d1710, transparent 70%),
+    linear-gradient(#0e0b08, #050403);
+  pointer-events: none;
+}
+
+.scene__papers { position: absolute; inset: -6%; }
+
+/* one sheet of somebody else's litigation */
+.paper, .folder {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: var(--h);
+  transform: rotate(var(--r));
+  opacity: var(--o);
+  filter: blur(var(--b, 0px));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
+  border-radius: 2px;
+}
+
+.paper {
+  background:
+    repeating-linear-gradient(180deg, transparent 0 8px, rgba(58, 42, 22, .5) 8px 9px)
+      14% 30% / 72% 46% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 8px, rgba(58, 42, 22, .5) 8px 9px)
+      14% 84% / 60% 22% no-repeat,
+    linear-gradient(155deg, #f6eeda 0%, #e2d5b8 55%, #cdbe9c 100%);
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  left: 14%; top: 12%;
+  width: 52%; height: 4px;
+  background: rgba(58, 42, 22, .62);
+}
+.paper::after {
+  content: "";
+  position: absolute;
+  left: 14%; top: 19%;
+  width: 30%; height: 3px;
+  background: rgba(58, 42, 22, .42);
+}
+
+.folder {
+  background: linear-gradient(160deg, #d0ab68, #9d7c45 70%, #7d6136);
+  border-radius: 2px 10px 3px 3px;
+}
+.folder::before {
+  content: "";
+  position: absolute;
+  top: -11px; left: 4%;
+  width: 40%; height: 13px;
+  background: linear-gradient(#d0ab68, #bb9758);
+  border-radius: 5px 5px 0 0;
+}
+.folder::after {
+  content: "";
+  position: absolute;
+  left: 10%; top: 26%;
+  width: 55%; height: 4px;
+  background: rgba(40, 28, 12, .45);
+  box-shadow: 0 14px 0 rgba(40, 28, 12, .3), 0 28px 0 rgba(40, 28, 12, .2);
+}
+
+/* two warm bulbs, one either side of the desk */
+.scene__glow {
+  position: absolute;
+  width: 62vmax; height: 62vmax;
+  border-radius: 50%;
+  filter: blur(30px);
+}
+.scene__glow--left {
+  left: -22vmax; bottom: -20vmax;
+  background: radial-gradient(circle, rgba(255, 176, 74, .30), rgba(255, 150, 50, .07) 45%, transparent 70%);
+}
+.scene__glow--right {
+  right: -24vmax; top: -18vmax;
+  background: radial-gradient(circle, rgba(255, 190, 110, .24), rgba(255, 160, 70, .06) 45%, transparent 70%);
+}
+
+.scene__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 45%, transparent 30%, rgba(4, 3, 2, .82) 100%);
+}
+
+/* ============ layout ============ */
+
+.filing {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+}
+
+.margin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-top: 60px;
+}
+.margin__rule { flex: 1; width: 1px; background: linear-gradient(var(--rule), transparent); }
+.margin__rule:last-child { background: linear-gradient(transparent, var(--rule)); }
+.margin__caption {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--serif);
+  font-variant: small-caps;
+  letter-spacing: .22em;
+  font-size: 12px;
+  color: var(--paper-dim);
+  white-space: nowrap;
+}
+
+.record { min-width: 0; }
+
+/* ============ title ============ */
+
+.caption { text-align: center; margin-bottom: 26px; }
+.caption p { margin: 0; }
+
+.caption__court {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--paper-dim);
+}
+
+.caption__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 26px);
+  margin: 6px 0 8px;
+}
+
+.glyph {
+  flex: none;
+  width: clamp(30px, 6vw, 46px);
+  height: clamp(30px, 6vw, 46px);
+  color: var(--amber);
+  filter: drop-shadow(0 0 12px rgba(232, 163, 61, .45));
+}
+
+.caption__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: clamp(30px, 7.4vw, 56px);
+  letter-spacing: .1em;
+  line-height: 1.05;
+  color: var(--amber-soft);
+  text-shadow: 0 0 30px rgba(232, 163, 61, .45), 0 2px 0 rgba(0, 0, 0, .6);
+}
+
+.caption__parties {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: var(--paper-dim);
+}
+.caption__parties span { font-style: italic; color: var(--amber); }
+
+.caption__docket {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #7b6f5c;
+}
+
+/* ============ the console, sat in a bronze bezel ============ */
+
+.console {
+  position: relative;
+  padding: 5px;
+  border-radius: 8px;
+  background: linear-gradient(150deg, var(--bronze-hi), #3a2f24 30%, var(--bronze-lo) 75%, #45382a);
+  box-shadow:
+    0 32px 70px -28px #000,
+    0 0 0 1px rgba(0, 0, 0, .6),
+    inset 0 1px 0 rgba(255, 214, 150, .22),
+    inset 0 -1px 0 rgba(0, 0, 0, .5);
+}
+
+.console__rivets i {
+  position: absolute;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #b79a6e, #4a3c2b 70%);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, .8);
+}
+.console__rivets i:nth-child(1) { left: 6px;  top: 6px; }
+.console__rivets i:nth-child(2) { right: 6px; top: 6px; }
+.console__rivets i:nth-child(3) { left: 6px;  bottom: 6px; }
+.console__rivets i:nth-child(4) { right: 6px; bottom: 6px; }
+
+.console__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 8px 14px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(#241d15, #191410);
+  border: 1px solid #100c08;
+  border-bottom: 0;
+}
+.console__lamps { display: flex; gap: 6px; }
+.console__lamps i {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: #3a3025;                     /* unlit */
+  transition: background .35s, box-shadow .35s;
+}
+
+/* red: the proceedings ended   amber: working   green: ready */
+.console__bar[data-state="done"] .console__lamps i:nth-child(1) {
+  background: var(--seal);
+  box-shadow: 0 0 9px rgba(168, 56, 42, .75);
+}
+.console__bar[data-state="boot"] .console__lamps i:nth-child(2) {
+  background: var(--amber);
+  box-shadow: 0 0 9px rgba(232, 163, 61, .7);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+.console__bar[data-state="running"] .console__lamps i:nth-child(3),
+.console__bar[data-state="await"]   .console__lamps i:nth-child(3) {
+  background: #8fae6f;
+  box-shadow: 0 0 9px rgba(143, 174, 111, .65);
+}
+
+.console__name {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+
+.console__actions { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+.console__actions button {
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: .06em;
+  padding: 4px 11px;
+  color: #c4b291;
+  background: linear-gradient(#2c241a, #1d1710);
+  border: 1px solid #443826;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, box-shadow .15s;
+}
+.console__actions button:hover {
+  color: var(--amber-soft);
+  border-color: var(--amber);
+  box-shadow: 0 0 12px -2px rgba(232, 163, 61, .6);
+}
+/* The label is fixed at "OSKB", so the off state has to be visible in the
+   styling. Scoped to :not(:hover) — this selector out-specifies the generic
+   hover rule above, and without that guard it would swallow the hover
+   feedback the other toolbar buttons get. */
+.console__actions button[data-act="keyboard"][aria-pressed="false"]:not(:hover) {
+  color: #8a7a5f;
+  border-style: dashed;
+  opacity: .75;
+}
+.console__actions button.is-danger:hover {
+  color: #ef9c8d;
+  border-color: var(--seal);
+  box-shadow: 0 0 12px -2px rgba(168, 56, 42, .7);
+}
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.console__screen {
+  padding: 12px 8px 8px 14px;
+  background: var(--screen);
+  border: 1px solid #0d0a07;
+  border-top: 0;
+  box-shadow:
+    inset 0 0 90px rgba(0, 0, 0, .85),
+    inset 0 0 22px rgba(232, 163, 61, .05);
+}
+#term { height: 60vh; min-height: 320px; }
+
+.console__foot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 14px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(#191410, #221b14);
+  border: 1px solid #100c08;
+  border-top: 0;
+  font-size: 11px;
+  color: #7b6f5c;
+}
+.console__hint { margin-left: auto; text-align: right; }
+
+.seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 13px 3px 10px;
+  border: 1px solid #443826;
+  border-radius: 999px;
+  font-variant: small-caps;
+  font-family: var(--serif);
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--paper-dim);
+  white-space: nowrap;
+}
+.seal__dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.seal[data-state="boot"]    { color: var(--amber); border-color: rgba(232, 163, 61, .5); }
+.seal[data-state="running"],
+.seal[data-state="await"]   { color: #8fae6f; }
+.seal[data-state="done"]    { color: #cf6151; border-color: rgba(168, 56, 42, .6); }
+.seal[data-state="boot"] .seal__dot { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .2; } }
+
+/* ============ mobile composer ============ */
+
+.composer {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 9px 10px;
+  border-radius: 5px;
+  background: #131009;
+  border: 1px solid #100c08;
+}
+.composer input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 16px;              /* stops iOS zooming on focus */
+  padding: 9px 12px;
+  color: var(--paper);
+  background: var(--screen);
+  border: 1px solid #443826;
+  border-radius: 4px;
+}
+.composer input::placeholder { color: #6a5f4d; }
+.composer button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 18px;
+  color: #1b1409;
+  background: linear-gradient(var(--amber-soft), var(--amber));
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ============ small print ============ */
+
+.smallprint {
+  margin-top: 22px;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: #7b6f5c;
+  max-width: 66ch;
+}
+.smallprint p { margin: 0 0 6px; }
+.smallprint b { color: var(--paper-dim); font-weight: 600; }
+
+/* ============ responsive ============ */
+
+/* ============ mobile: terminal fills the screen, keyboard pinned ============ */
+
+@media (max-width: 760px) {
+  html, body {
+    height: var(--app-height, 100%);
+    overflow: hidden;             /* the terminal scrolls, the page doesn't */
+    overscroll-behavior: none;    /* no pull-to-refresh while tapping keys */
+  }
+
+  .filing {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+    /* --app-height is the measured visual viewport; 100dvh is the fallback.
+       Android PWAs overreport dvh, which pushes the last keyboard row off screen. */
+    height: var(--app-height, 100dvh);
+    max-width: none;
+  }
+
+  /* everything that isn't the terminal */
+  .margin,
+  .caption,
+  .smallprint,
+  .console__foot,
+  .console__rivets,
+  .console__name { display: none; }
+
+  .record {
+    display: flex;
+    flex-direction: column;
+    height: var(--app-height, 100dvh);
+    min-height: 0;
+  }
+
+  .console {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;             /* no bezel; the screen goes edge to edge */
+  }
+
+  .console__bar {
+    flex: none;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 8px 12px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    gap: 10px;
+  }
+  .console__brand {
+    font-family: var(--serif);
+    font-variant: small-caps;
+    letter-spacing: .12em;
+    font-size: 15px;
+    color: var(--amber-soft);
+    white-space: nowrap;
+  }
+  .console__actions { margin-left: auto; gap: 5px; flex-wrap: nowrap; }
+  .console__actions button { padding: 5px 9px; }
+
+  .console__screen {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    padding: 8px 4px 4px 10px;
+    border-left: 0;
+    border-right: 0;
+  }
+  #term { height: 100%; min-height: 0; }
+
+  .kb {
+    flex: none;
+    margin-top: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  }
+
+  /* the screen covers the desk anyway, so stop compositing it */
+  .scene { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ============ on-screen keyboard (touch devices) ============ */
+
+.kb {
+  margin-top: 8px;
+  padding: 8px 6px 10px;
+  border-radius: 5px;
+  background: linear-gradient(#151109, #0f0c07);
+  border: 1px solid #100c08;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.kb__row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.kb__row:last-child { margin-bottom: 0; }
+.kb__row--indent { padding: 0 5%; }
+.kb__row--util { margin-bottom: 8px; }
+
+.kb__key {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 42px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--paper);
+  background: linear-gradient(#332921, #221b13);
+  border: 1px solid #4a3c2b;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: none;
+}
+.kb__key.is-down {
+  background: linear-gradient(#4a3c2b, #332921);
+  border-bottom-width: 1px;
+  transform: translateY(1px);
+}
+
+.kb__key--wide  { flex: 1.5 1 0; font-size: 13px; }
+.kb__key--space { flex: 5 1 0; }
+.kb__key--util  { flex: 1 1 0; font-size: 14px; color: var(--paper-dim); height: 34px; }
+.kb__key--ghost { visibility: hidden; pointer-events: none; }
+
+.kb__key--enter {
+  color: #1b1409;
+  font-weight: 600;
+  background: linear-gradient(var(--amber-soft), var(--amber));
+  border-color: #a8752a;
+}
+.kb__key--enter.is-down { background: linear-gradient(var(--amber), #c9871f); }
+
+#kbShift.is-active {
+  color: var(--amber-soft);
+  border-color: var(--amber);
+  box-shadow: inset 0 0 10px -2px rgba(232, 163, 61, .6);
+}
+
+/* short screens: shrink keys rather than push the terminal off-screen */
+@media (max-height: 720px) {
+  .kb__key { height: 36px; font-size: 15px; }
+  .kb__key--util { height: 30px; }
+}
+
+/* ============ effects overlay ============ */
+
+/* Covers the page, never the keyboard: .kb is raised above this layer below. */
+.fx {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fx > * {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.fx > .is-in { opacity: 1; }
+
+/* --- storm --- */
+
+.fx__flash {
+  background: radial-gradient(120% 90% at 50% 0%, rgba(198, 216, 240, .5), transparent 65%);
+  transition: opacity .55s ease-out;
+}
+.fx__flash.is-in { opacity: 0; }
+.fx__flash.is-in.is-lit { opacity: .55; transition: opacity .06s ease-in; }
+
+/* --- party --- */
+
+.fx__party i {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(60px);
+  mix-blend-mode: screen;
+  opacity: .55;
+}
+.fx__party i:nth-child(1) { background: radial-gradient(circle, #e0417a, transparent 66%); animation: fx-drift-a 5.5s ease-in-out infinite; }
+.fx__party i:nth-child(2) { background: radial-gradient(circle, #3f8fe0, transparent 66%); animation: fx-drift-b 6.7s ease-in-out infinite; }
+.fx__party i:nth-child(3) { background: radial-gradient(circle, #47c46b, transparent 66%); animation: fx-drift-c 7.9s ease-in-out infinite; }
+.fx__party i:nth-child(4) { background: radial-gradient(circle, #e8a33d, transparent 66%); animation: fx-drift-d 6.1s ease-in-out infinite; }
+
+/* Slow, wide movement rather than flashing. Nothing here changes faster than
+   about 1 Hz, which keeps it clear of photosensitivity territory. */
+@keyframes fx-drift-a { 0%,100% { transform: translate(-25%, -20%) scale(1);   } 50% { transform: translate(10%, 15%) scale(1.25); } }
+@keyframes fx-drift-b { 0%,100% { transform: translate(60%, -15%) scale(1.15); } 50% { transform: translate(25%, 30%) scale(.9);  } }
+@keyframes fx-drift-c { 0%,100% { transform: translate(15%, 60%) scale(1);     } 50% { transform: translate(55%, 20%) scale(1.2); } }
+@keyframes fx-drift-d { 0%,100% { transform: translate(50%, 45%) scale(.95);   } 50% { transform: translate(-5%, 5%) scale(1.15); } }
+
+.fx__party.is-calm i { animation: none; opacity: .3; }
+.fx__party.is-calm i:nth-child(1) { transform: translate(-20%, -15%); }
+.fx__party.is-calm i:nth-child(2) { transform: translate(55%, -10%); }
+.fx__party.is-calm i:nth-child(3) { transform: translate(10%, 55%); }
+.fx__party.is-calm i:nth-child(4) { transform: translate(45%, 40%); }
+
+/* --- floor cleared --- */
+
+.fx__cleared {
+  background: radial-gradient(90% 70% at 50% 50%, rgba(232, 163, 61, .16), transparent 70%);
+  animation: fx-fade-out 1.8s ease-out forwards;
+}
+.fx__cleared i {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 10vmax; height: 10vmax;
+  margin: -5vmax 0 0 -5vmax;
+  border: 2px solid rgba(242, 192, 121, .8);
+  border-radius: 50%;
+  animation: fx-ring 1.5s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+@keyframes fx-ring { to { transform: scale(9); opacity: 0; } }
+@keyframes fx-fade-out { 60% { opacity: 1; } to { opacity: 0; } }
+
+/* --- cold: floor 5, the catacomb --- */
+
+/* Held, so it fades in over a couple of seconds rather than snapping on. */
+.fx__cold {
+  transition: opacity 2.2s ease;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(126, 168, 208, .16), transparent 60%),
+    linear-gradient(rgba(88, 128, 168, .10), rgba(60, 96, 136, .16));
+}
+.console__screen.fx-cold {
+  filter: saturate(.45) hue-rotate(-18deg) brightness(.94);
+  transition: filter 2.2s ease;
+}
+
+/* --- sever: floor 9, the page cut in half --- */
+
+/* Both halves are ruled with the same fine lines. The right half is three
+   pixels out of step, so the seam reads as a cut that never lined up again. */
+.fx__sever { transition: opacity 1.4s ease; }
+.fx__sever i {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 50%;
+  background-image: repeating-linear-gradient(
+    rgba(236, 223, 196, .055) 0 1px, transparent 1px 7px);
+}
+.fx__sever-l { left: 0;  background-position: 0 0; }
+.fx__sever-r { right: 0; transform: translateY(-3px); }
+.fx__sever b {
+  position: absolute;
+  top: -2%; bottom: -2%;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background: linear-gradient(90deg,
+    rgba(236, 223, 196, .30), rgba(6, 5, 4, .85) 45%, rgba(6, 5, 4, .85) 55%, rgba(0, 0, 0, .25));
+  box-shadow: 0 0 14px rgba(0, 0, 0, .8);
+  animation: fx-sever-breathe 7s ease-in-out infinite;
+}
+@keyframes fx-sever-breathe {
+  0%, 100% { transform: translateX(0);    }
+  50%      { transform: translateX(1.5px); }
+}
+
+/* --- session: floor 10, court is sitting --- */
+
+.fx__session {
+  transition: opacity 3s ease;
+  background: radial-gradient(78% 62% at 50% 46%, transparent 30%, rgba(4, 3, 2, .62) 100%);
+}
+.fx__session.is-in { animation: fx-session-breathe 14s ease-in-out infinite; }
+@keyframes fx-session-breathe { 0%, 100% { opacity: 1; } 50% { opacity: .78; } }
+
+/* --- amend: floor 11 rewrites a room --- */
+
+/* One element, one transform, 1.6s. It fires on about half of all revisits. */
+.fx__amend { transition: opacity .2s ease; }
+.fx__amend i {
+  position: absolute;
+  left: 0; right: 0;
+  height: 14vh;
+  background: linear-gradient(rgba(168, 56, 42, 0), rgba(168, 56, 42, .22) 55%, rgba(216, 92, 74, .5));
+  border-bottom: 1px solid rgba(216, 92, 74, .75);
+  will-change: transform;
+  animation: fx-amend-sweep 1.5s cubic-bezier(.35, 0, .2, 1) forwards;
+}
+@keyframes fx-amend-sweep {
+  from { transform: translateY(-14vh); opacity: .25; }
+  25%  { opacity: 1; }
+  to   { transform: translateY(100vh); opacity: 0; }
+}
+
+/* --- ember: the Reaper of Records --- */
+
+.fx__ember { opacity: 0; }
+.fx__ember.is-in { opacity: .9; }
+
+/* --- blank: floor 13 --- */
+
+/* Drains over eight seconds, and stops well short of unreadable. */
+.fx__blank {
+  background: radial-gradient(120% 120% at 50% 45%, rgba(255, 253, 248, .34), rgba(244, 240, 232, .24));
+  transition: opacity 8s linear;
+}
+.console__screen.fx-blank {
+  filter: brightness(1.25) contrast(.72) saturate(.2);
+  transition: filter 8s linear;
+}
+
+/* --- static: the secret final boss --- */
+
+/* A noise tile drawn once in JS, then only moved: no per-frame repaint, and
+   nothing on screen changes faster than about a fifth of a hertz. */
+.fx__static {
+  background-repeat: repeat;
+  transition: opacity 1.2s ease;
+  animation: fx-static-drift 9s linear infinite;
+}
+.fx__static.is-in { opacity: .5; }
+.fx__static i {
+  position: absolute;
+  left: 0; right: 0;
+  height: 22vh;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .05), rgba(255, 255, 255, 0));
+  animation: fx-static-roll 5s linear infinite;
+}
+@keyframes fx-static-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 60px; }
+}
+@keyframes fx-static-roll {
+  from { transform: translateY(-22vh); }
+  to   { transform: translateY(100vh); }
+}
+.fx__static.is-calm { animation: none; }
+
+/* --- signature: the withdrawal ending --- */
+
+.fx__signature i {
+  position: absolute;
+  border-radius: 46% 54% 52% 48% / 50% 46% 54% 50%;
+  background: radial-gradient(circle, rgba(12, 10, 7, .82), rgba(12, 10, 7, .45) 55%, transparent 72%);
+  transform: scale(0);
+  will-change: transform;
+}
+.fx__signature i:nth-child(1) { left: 8%;  top: 62%; width: 70vmax; height: 70vmax; margin: -35vmax 0 0 -35vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) forwards; }
+.fx__signature i:nth-child(2) { left: 68%; top: 30%; width: 60vmax; height: 60vmax; margin: -30vmax 0 0 -30vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) .5s forwards; }
+.fx__signature i:nth-child(3) { left: 38%; top: 78%; width: 80vmax; height: 80vmax; margin: -40vmax 0 0 -40vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) 1.1s forwards; }
+@keyframes fx-ink {
+  from { transform: scale(0);   opacity: .95; }
+  70%  { transform: scale(1);   opacity: .8;  }
+  to   { transform: scale(1.2); opacity: 0;   }
+}
+
+/* --- lowhp: under a quarter health --- */
+
+/* Above static, so the two compose during the last fight instead of one
+   hiding the other. The pulse is a shade over two seconds: 0.4 Hz. */
+.fx__lowhp {
+  z-index: 2;
+  background: radial-gradient(74% 60% at 50% 50%, transparent 40%, rgba(122, 20, 14, .5) 100%);
+  transition: opacity 1.6s ease;
+}
+.fx__lowhp.is-in { animation: fx-lowhp-pulse 2.4s ease-in-out infinite; }
+@keyframes fx-lowhp-pulse { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+
+/* --- palette shifts, applied to the screen itself --- */
+
+.console__screen.fx-rainbow { animation: fx-hue 9s linear infinite; }
+.console__screen.fx-mono    { filter: grayscale(1) contrast(1.06); transition: filter 1.2s ease; }
+.console__screen.fx-still   { animation: none; filter: hue-rotate(140deg) saturate(1.3); }
+@keyframes fx-hue { to { filter: hue-rotate(360deg); } }
+
+/* The keyboard stays above every effect, unfiltered and tappable. */
+.kb { position: relative; z-index: 60; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx__cleared i { animation-duration: .9s; }
+  .console__screen.fx-rainbow { animation: none; filter: hue-rotate(140deg) saturate(1.3); }
+
+  /* Still versions of the held effects: the same picture, without the movement. */
+  .fx__sever b,
+  .fx__session.is-in,
+  .fx__static,
+  .fx__lowhp.is-in { animation: none; }
+  .fx__static i { display: none; }
+  .fx__lowhp { opacity: .85; }
+  .fx__lowhp.is-in { opacity: .85; }
+  .fx__amend i { animation-duration: 1.2s; }
+}

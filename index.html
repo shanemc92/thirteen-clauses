@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thirteen Clauses — Binding Arbitration Terminal</title>
+<meta name="description" content="A dungeon crawler about terms of service arbitration. Runs entirely in your browser.">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'none';
+  script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net;
+  style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+  connect-src 'self' https://cdn.jsdelivr.net;
+  img-src 'self' data: blob:;
+  font-src 'self' data:;
+  manifest-src 'self';
+  worker-src 'self' blob:;
+  base-uri 'none';
+  form-action 'none';
+">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icons/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#171310">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="13 Clauses">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.css"
+      integrity="sha384-8Xk9wy/gzEDUKrXtrmCFa2bBuK3BpjpDuL/p0SeKQX19Khl/M+lHOgD/CyYf7efP"
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="styles.css?v=20260815a">
+</head>
+<body>
+
+<main class="filing">
+  <aside class="margin" aria-hidden="true">
+    <span class="margin__rule"></span>
+    <span class="margin__caption">Exhibit A &mdash; Transcript of Proceedings</span>
+    <span class="margin__rule"></span>
+  </aside>
+
+  <div class="record">
+    <header class="caption">
+      <p class="caption__court">In the matter of arbitration between</p>
+      <h1 class="caption__title">Thirteen Clauses</h1>
+      <p class="caption__parties">The Claimant <span>v.</span> The Dungeon, its heirs and assigns</p>
+      <p class="caption__docket">Case No. 13&ndash;CV&ndash;0000 &nbsp;&middot;&nbsp; Section §13(a) &nbsp;&middot;&nbsp; Venue: this tab</p>
+    </header>
+
+    <section class="console" aria-label="Game terminal">
+      <div class="console__bar">
+        <span class="console__brand" id="consoleBrand">Thirteen Clauses</span>
+        <span class="console__lamps" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="console__name" id="consoleName">arbitration terminal</span>
+        <span class="console__actions">
+          <button type="button" data-act="restart">Restart</button>
+          <button type="button" data-act="export">Backup</button>
+          <button type="button" data-act="import">Restore</button>
+          <button type="button" data-act="erase" class="is-danger">Erase</button>
+          <button type="button" data-act="keyboard" aria-pressed="true" hidden>OSKB</button>
+        </span>
+      </div>
+
+      <div class="console__screen"><div id="term"></div></div>
+
+      <div class="console__foot">
+        <span class="seal" id="seal" data-state="boot">
+          <span class="seal__dot" aria-hidden="true"></span>
+          <span class="seal__text" id="sealText">Booting</span>
+        </span>
+        <span class="console__hint" id="hint">Save and load inside the game. The backup buttons move files to and from disk.</span>
+      </div>
+
+      <div class="kb" id="kb" hidden>
+        <div class="kb__row kb__row--util">
+          <button type="button" class="kb__key kb__key--util" data-k="tab" aria-label="Complete the command">tab</button>
+          <button type="button" class="kb__key kb__key--util" data-k="up" aria-label="Previous command">&uarr;</button>
+          <button type="button" class="kb__key kb__key--util" data-k="scroll-up" aria-label="Scroll up five lines">&#9650;</button>
+          <button type="button" class="kb__key kb__key--util" data-k="scroll-down" aria-label="Scroll down five lines">&#9660;</button>
+        </div>
+
+        <div class="kb__page kb__page--letters" id="kbLetters">
+          <div class="kb__row">
+            <button type="button" class="kb__key" data-k="q">q</button>
+            <button type="button" class="kb__key" data-k="w">w</button>
+            <button type="button" class="kb__key" data-k="e">e</button>
+            <button type="button" class="kb__key" data-k="r">r</button>
+            <button type="button" class="kb__key" data-k="t">t</button>
+            <button type="button" class="kb__key" data-k="y">y</button>
+            <button type="button" class="kb__key" data-k="u">u</button>
+            <button type="button" class="kb__key" data-k="i">i</button>
+            <button type="button" class="kb__key" data-k="o">o</button>
+            <button type="button" class="kb__key" data-k="p">p</button>
+          </div>
+          <div class="kb__row kb__row--indent">
+            <button type="button" class="kb__key" data-k="a">a</button>
+            <button type="button" class="kb__key" data-k="s">s</button>
+            <button type="button" class="kb__key" data-k="d">d</button>
+            <button type="button" class="kb__key" data-k="f">f</button>
+            <button type="button" class="kb__key" data-k="g">g</button>
+            <button type="button" class="kb__key" data-k="h">h</button>
+            <button type="button" class="kb__key" data-k="j">j</button>
+            <button type="button" class="kb__key" data-k="k">k</button>
+            <button type="button" class="kb__key" data-k="l">l</button>
+          </div>
+          <div class="kb__row">
+            <button type="button" class="kb__key kb__key--wide" data-k="shift" id="kbShift" aria-label="Shift">&#8679;</button>
+            <button type="button" class="kb__key" data-k="z">z</button>
+            <button type="button" class="kb__key" data-k="x">x</button>
+            <button type="button" class="kb__key" data-k="c">c</button>
+            <button type="button" class="kb__key" data-k="v">v</button>
+            <button type="button" class="kb__key" data-k="b">b</button>
+            <button type="button" class="kb__key" data-k="n">n</button>
+            <button type="button" class="kb__key" data-k="m">m</button>
+            <button type="button" class="kb__key kb__key--wide" data-k="backspace" aria-label="Backspace">&#9003;</button>
+          </div>
+          <div class="kb__row">
+            <button type="button" class="kb__key kb__key--wide" data-k="page-sym">123</button>
+            <button type="button" class="kb__key kb__key--space" data-k="space" aria-label="Space"></button>
+            <button type="button" class="kb__key kb__key--wide kb__key--enter" data-k="enter" aria-label="Enter">&crarr;</button>
+          </div>
+        </div>
+
+        <div class="kb__page kb__page--symbols" id="kbSymbols" hidden>
+          <div class="kb__row">
+            <button type="button" class="kb__key" data-k="1">1</button>
+            <button type="button" class="kb__key" data-k="2">2</button>
+            <button type="button" class="kb__key" data-k="3">3</button>
+            <button type="button" class="kb__key" data-k="4">4</button>
+            <button type="button" class="kb__key" data-k="5">5</button>
+            <button type="button" class="kb__key" data-k="6">6</button>
+            <button type="button" class="kb__key" data-k="7">7</button>
+            <button type="button" class="kb__key" data-k="8">8</button>
+            <button type="button" class="kb__key" data-k="9">9</button>
+            <button type="button" class="kb__key" data-k="0">0</button>
+          </div>
+          <div class="kb__row kb__row--indent">
+            <button type="button" class="kb__key" data-k="-">-</button>
+            <button type="button" class="kb__key" data-k="_">_</button>
+            <button type="button" class="kb__key" data-k=":">:</button>
+            <button type="button" class="kb__key" data-k=";">;</button>
+            <button type="button" class="kb__key" data-k="(">(</button>
+            <button type="button" class="kb__key" data-k=")">)</button>
+            <button type="button" class="kb__key" data-k="&amp;">&amp;</button>
+            <button type="button" class="kb__key" data-k="@">@</button>
+            <button type="button" class="kb__key" data-k="'">&apos;</button>
+          </div>
+          <div class="kb__row">
+            <button type="button" class="kb__key kb__key--wide kb__key--ghost" aria-hidden="true" tabindex="-1"></button>
+            <button type="button" class="kb__key" data-k=".">.</button>
+            <button type="button" class="kb__key" data-k=",">,</button>
+            <button type="button" class="kb__key" data-k="?">?</button>
+            <button type="button" class="kb__key" data-k="!">!</button>
+            <button type="button" class="kb__key" data-k="/">/</button>
+            <button type="button" class="kb__key" data-k="&quot;">&quot;</button>
+            <button type="button" class="kb__key kb__key--wide" data-k="backspace" aria-label="Backspace">&#9003;</button>
+          </div>
+          <div class="kb__row">
+            <button type="button" class="kb__key kb__key--wide" data-k="page-abc">ABC</button>
+            <button type="button" class="kb__key kb__key--space" data-k="space" aria-label="Space"></button>
+            <button type="button" class="kb__key kb__key--wide kb__key--enter" data-k="enter" aria-label="Enter">&crarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="smallprint">
+      <p><b>Clause 13(f).</b> Nothing you do here reaches a server. The game runs in this browser
+        as WebAssembly, and your save file lives in this browser's local storage only.
+        Clearing site data ends the proceedings permanently.</p>
+      <p><b>Clause 13(g).</b> Save and load are commands you type in the game. The buttons
+        above only move your save files between this browser and your disk &mdash; download a
+        backup if you want them to survive Clause 13(f).</p>
+    </footer>
+  </div>
+</main>
+
+<input type="file" id="filePicker" accept="application/json,.json" hidden>
+
+<!-- Pinned by hash. These are the only third-party files the page loads, and
+     without integrity= a compromised or hijacked CDN response would execute
+     with full origin privileges — the CSP has to allow 'unsafe-eval' for
+     Pyodide, so nothing downstream would stop it. Hashes are SHA-384 of the
+     published npm tarball contents, which is what jsdelivr mirrors verbatim.
+     Bumping a version means recomputing them; see tools/sri.py. -->
+<script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.js"
+        integrity="sha384-M169f14mRZOXm3hD/v2Ti0ThIT/RnAQagXA9nlE15yHAtrW19gdePJh/HaTzUOe/"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.js"
+        integrity="sha384-iF+jqbuti4XlB64clWgFWYEscb+UnSRv3VgVikGYZu+otNFnSHr7y7NcKfBnGizn"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="config.js?v=20260815a"></script>
+<script src="app.js?v=20260815a"></script>
+<script src="effects.js?v=20260815a"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+build: 2026-08-15a
+Every file in this folder belongs to the same build. Mixing files from different
+downloads is what causes "el.input is null" and similar breakage — index.html,
+app.js, worker.js and styles.css all have to move together.
+
+The same string is shown on the title screen and by the in-game VERSION command,
+so you can confirm which code is actually running.

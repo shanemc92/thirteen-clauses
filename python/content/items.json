@@ -1,0 +1,1019 @@
+{
+  "fire_axe": {
+    "name_key": "items.fire_axe.name",
+    "desc_key": "items.fire_axe.desc",
+    "slot": "weapon",
+    "dmg": "1d10",
+    "stat": "str",
+    "price": 45
+  },
+  "letter_opener": {
+    "name_key": "items.letter_opener.name",
+    "desc_key": "items.letter_opener.desc",
+    "slot": "weapon",
+    "dmg": "1d6+1",
+    "stat": "dex",
+    "price": 35
+  },
+  "stylus": {
+    "name_key": "items.stylus.name",
+    "desc_key": "items.stylus.desc",
+    "slot": "weapon",
+    "dmg": "1d6",
+    "stat": "int",
+    "price": 35
+  },
+  "briefcase": {
+    "name_key": "items.briefcase.name",
+    "desc_key": "items.briefcase.desc",
+    "slot": "weapon",
+    "dmg": "1d8",
+    "stat": "cha",
+    "price": 40
+  },
+  "mop": {
+    "name_key": "items.mop.name",
+    "desc_key": "items.mop.desc",
+    "slot": "weapon",
+    "dmg": "1d8",
+    "stat": "str",
+    "found_key": "items.mop.found",
+    "price": 40
+  },
+  "stapler": {
+    "name_key": "items.stapler.name",
+    "desc_key": "items.stapler.desc",
+    "slot": "weapon",
+    "dmg": "2d4",
+    "stat": "dex",
+    "found_key": "items.stapler.found",
+    "price": 55
+  },
+  "hi_vis": {
+    "name_key": "items.hi_vis.name",
+    "desc_key": "items.hi_vis.desc",
+    "slot": "armour",
+    "ac": 2,
+    "price": 40
+  },
+  "courier_jacket": {
+    "name_key": "items.courier_jacket.name",
+    "desc_key": "items.courier_jacket.desc",
+    "slot": "armour",
+    "ac": 1,
+    "price": 30
+  },
+  "lanyard": {
+    "name_key": "items.lanyard.name",
+    "desc_key": "items.lanyard.desc",
+    "slot": "armour",
+    "ac": 0,
+    "price": 10
+  },
+  "good_suit": {
+    "name_key": "items.good_suit.name",
+    "desc_key": "items.good_suit.desc",
+    "slot": "armour",
+    "ac": 1,
+    "price": 30
+  },
+  "ppe_vest": {
+    "name_key": "items.ppe_vest.name",
+    "desc_key": "items.ppe_vest.desc",
+    "slot": "armour",
+    "ac": 3,
+    "found_key": "items.ppe_vest.found",
+    "price": 70
+  },
+  "ration": {
+    "name_key": "items.ration.name",
+    "desc_key": "items.ration.desc",
+    "aliases": [
+      "food",
+      "bar"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "2d4+2",
+      "consumed": true
+    },
+    "found_key": "items.ration.found",
+    "price": 12
+  },
+  "vending_coffee": {
+    "name_key": "items.vending_coffee.name",
+    "desc_key": "items.vending_coffee.desc",
+    "aliases": [
+      "coffee"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "3d4",
+      "consumed": true
+    },
+    "found_key": "items.vending_coffee.found",
+    "price": 18
+  },
+  "smoke_canister": {
+    "name_key": "items.smoke_canister.name",
+    "desc_key": "items.smoke_canister.desc",
+    "aliases": [
+      "smoke"
+    ],
+    "use": {
+      "op": "status_self",
+      "status": "guarded",
+      "rounds": 3,
+      "consumed": true
+    },
+    "price": 30
+  },
+  "chargeback_scroll": {
+    "name_key": "items.chargeback_scroll.name",
+    "desc_key": "items.chargeback_scroll.desc",
+    "aliases": [
+      "scroll"
+    ],
+    "use": {
+      "op": "status_self",
+      "status": "advantage",
+      "rounds": 2,
+      "consumed": true
+    },
+    "price": 35
+  },
+  "adrenaline": {
+    "name_key": "items.adrenaline.name",
+    "desc_key": "items.adrenaline.desc",
+    "use": {
+      "op": "heal",
+      "dice": "4d4+4",
+      "consumed": true
+    },
+    "found_key": "items.adrenaline.found",
+    "price": 55
+  },
+  "audit_trail": {
+    "name_key": "items.audit_trail.name",
+    "desc_key": "items.audit_trail.desc",
+    "aliases": [
+      "map"
+    ],
+    "key_item": true,
+    "grants_flag": "map_trail",
+    "found_key": "items.audit_trail.found",
+    "use": {
+      "op": "reveal",
+      "flag": "map_trail",
+      "text_key": "items.audit_trail.use",
+      "consumed": false
+    },
+    "price": 90
+  },
+  "settlement_chit": {
+    "name_key": "items.settlement_chit.name",
+    "desc_key": "items.settlement_chit.desc",
+    "price": 6
+  },
+  "business_card": {
+    "name_key": "items.business_card.name",
+    "desc_key": "items.business_card.desc",
+    "price": 2
+  },
+  "pressed_card": {
+    "name_key": "items.pressed_card.name",
+    "desc_key": "items.pressed_card.desc",
+    "slot": "weapon",
+    "dmg": "2d6+3",
+    "stat": "cha",
+    "price": 150
+  },
+  "own_merch": {
+    "name_key": "items.own_merch.name",
+    "desc_key": "items.own_merch.desc",
+    "found_key": "items.own_merch.found",
+    "price": 3
+  },
+  "greeter_badge": {
+    "name_key": "items.greeter_badge.name",
+    "desc_key": "items.greeter_badge.desc",
+    "key_item": true,
+    "found_key": "items.greeter_badge.found",
+    "price": 0
+  },
+  "laminate": {
+    "name_key": "items.laminate.name",
+    "desc_key": "items.laminate.desc",
+    "found_key": "items.laminate.found",
+    "price": 2
+  },
+  "cut_laminate": {
+    "name_key": "items.cut_laminate.name",
+    "desc_key": "items.cut_laminate.desc",
+    "slot": "weapon",
+    "dmg": "2d8+4",
+    "stat": "str",
+    "price": 330
+  },
+  "toll_token": {
+    "name_key": "items.toll_token.name",
+    "desc_key": "items.toll_token.desc",
+    "key_item": true,
+    "found_key": "items.toll_token.found",
+    "price": 0
+  },
+  "crowbar": {
+    "name_key": "items.crowbar.name",
+    "desc_key": "items.crowbar.desc",
+    "slot": "weapon",
+    "dmg": "1d12",
+    "stat": "str",
+    "found_key": "items.crowbar.found",
+    "price": 80
+  },
+  "coin_gauntlet": {
+    "name_key": "items.coin_gauntlet.name",
+    "desc_key": "items.coin_gauntlet.desc",
+    "slot": "weapon",
+    "dmg": "2d6",
+    "stat": "str",
+    "found_key": "items.coin_gauntlet.found",
+    "price": 95
+  },
+  "waders": {
+    "name_key": "items.waders.name",
+    "desc_key": "items.waders.desc",
+    "slot": "armour",
+    "ac": 3,
+    "found_key": "items.waders.found",
+    "price": 85
+  },
+  "receipt_coat": {
+    "name_key": "items.receipt_coat.name",
+    "desc_key": "items.receipt_coat.desc",
+    "slot": "armour",
+    "ac": 2,
+    "found_key": "items.receipt_coat.found",
+    "price": 60
+  },
+  "grease": {
+    "name_key": "items.grease.name",
+    "desc_key": "items.grease.desc",
+    "aliases": [
+      "grease"
+    ],
+    "use": {
+      "op": "status_self",
+      "status": "advantage",
+      "rounds": 3,
+      "consumed": true
+    },
+    "price": 26
+  },
+  "sump_water": {
+    "name_key": "items.sump_water.name",
+    "desc_key": "items.sump_water.desc",
+    "aliases": [
+      "water"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "3d4+3",
+      "consumed": true
+    },
+    "found_key": "items.sump_water.found",
+    "found_floor": 2,
+    "price": 22
+  },
+  "ledger_page": {
+    "name_key": "items.ledger_page.name",
+    "desc_key": "items.ledger_page.desc",
+    "key_item": true,
+    "found_key": "items.ledger_page.found",
+    "price": 0
+  },
+  "extended_log": {
+    "name_key": "items.extended_log.name",
+    "desc_key": "items.extended_log.desc",
+    "aliases": [
+      "log"
+    ],
+    "key_item": true,
+    "grants_flag": "map_extended",
+    "found_key": "items.extended_log.found",
+    "use": {
+      "op": "reveal",
+      "flag": "map_extended",
+      "text_key": "items.extended_log.use",
+      "consumed": false
+    },
+    "price": 220
+  },
+  "excess_clause": {
+    "name_key": "items.excess_clause.name",
+    "desc_key": "items.excess_clause.desc",
+    "key_item": true,
+    "grants_flag": "cap_broken",
+    "found_key": "items.excess_clause.found",
+    "price": 0
+  },
+  "actuary_pen": {
+    "name_key": "items.actuary_pen.name",
+    "desc_key": "items.actuary_pen.desc",
+    "slot": "weapon",
+    "dmg": "2d6+2",
+    "stat": "int",
+    "found_key": "items.actuary_pen.found",
+    "price": 110
+  },
+  "loss_ledger": {
+    "name_key": "items.loss_ledger.name",
+    "desc_key": "items.loss_ledger.desc",
+    "slot": "armour",
+    "ac": 4,
+    "found_key": "items.loss_ledger.found",
+    "price": 140
+  },
+  "secateurs": {
+    "name_key": "items.secateurs.name",
+    "desc_key": "items.secateurs.desc",
+    "slot": "weapon",
+    "dmg": "1d8+4",
+    "stat": "dex",
+    "found_key": "items.secateurs.found",
+    "price": 130
+  },
+  "gardening_gloves": {
+    "name_key": "items.gardening_gloves.name",
+    "desc_key": "items.gardening_gloves.desc",
+    "slot": "armour",
+    "ac": 4,
+    "found_key": "items.gardening_gloves.found",
+    "price": 150
+  },
+  "casserole": {
+    "name_key": "items.casserole.name",
+    "desc_key": "items.casserole.desc",
+    "aliases": [
+      "casserole",
+      "dish"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "5d4+5",
+      "consumed": true
+    },
+    "found_key": "items.casserole.found",
+    "found_floor": 4,
+    "price": 40
+  },
+  "cold_tea": {
+    "name_key": "items.cold_tea.name",
+    "desc_key": "items.cold_tea.desc",
+    "aliases": [
+      "tea"
+    ],
+    "found_key": "items.cold_tea.found",
+    "found_floor": 3,
+    "use": {
+      "op": "heal",
+      "dice": "4d4+2",
+      "consumed": true
+    },
+    "price": 24
+  },
+  "policy_wording": {
+    "name_key": "items.policy_wording.name",
+    "desc_key": "items.policy_wording.desc",
+    "use": {
+      "op": "status_self",
+      "status": "guarded",
+      "rounds": 4,
+      "consumed": true
+    },
+    "price": 30
+  },
+  "hensley_keys": {
+    "name_key": "items.hensley_keys.name",
+    "desc_key": "items.hensley_keys.desc",
+    "key_item": true,
+    "found_key": "items.hensley_keys.found",
+    "price": 0
+  },
+  "parity_disk": {
+    "name_key": "items.parity_disk.name",
+    "desc_key": "items.parity_disk.desc",
+    "key_item": true,
+    "grants_flag": "parity_broken",
+    "found_key": "items.parity_disk.found",
+    "price": 0
+  },
+  "tape_flail": {
+    "name_key": "items.tape_flail.name",
+    "desc_key": "items.tape_flail.desc",
+    "slot": "weapon",
+    "dmg": "2d8+2",
+    "stat": "str",
+    "found_key": "items.tape_flail.found",
+    "price": 190
+  },
+  "rack_plate": {
+    "name_key": "items.rack_plate.name",
+    "desc_key": "items.rack_plate.desc",
+    "slot": "armour",
+    "ac": 5,
+    "found_key": "items.rack_plate.found",
+    "price": 210
+  },
+  "cold_backup": {
+    "name_key": "items.cold_backup.name",
+    "desc_key": "items.cold_backup.desc",
+    "aliases": [
+      "backup"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "6d4+6",
+      "consumed": true
+    },
+    "found_key": "items.cold_backup.found",
+    "found_floor": 5,
+    "price": 75
+  },
+  "root_token": {
+    "name_key": "items.root_token.name",
+    "desc_key": "items.root_token.desc",
+    "aliases": [
+      "root"
+    ],
+    "use": {
+      "op": "status_self",
+      "status": "advantage",
+      "rounds": 4,
+      "consumed": true
+    },
+    "price": 60
+  },
+  "raid_head": {
+    "name_key": "items.raid_head.name",
+    "desc_key": "items.raid_head.desc",
+    "key_item": true,
+    "found_key": "items.raid_head.found",
+    "price": 0
+  },
+  "signature_pen": {
+    "name_key": "items.signature_pen.name",
+    "desc_key": "items.signature_pen.desc",
+    "slot": "weapon",
+    "dmg": "3d6+2",
+    "stat": "cha",
+    "found_key": "items.signature_pen.found",
+    "price": 240
+  },
+  "brand_shield": {
+    "name_key": "items.brand_shield.name",
+    "desc_key": "items.brand_shield.desc",
+    "slot": "armour",
+    "ac": 6,
+    "found_key": "items.brand_shield.found",
+    "price": 280
+  },
+  "royalty_cheque": {
+    "name_key": "items.royalty_cheque.name",
+    "desc_key": "items.royalty_cheque.desc",
+    "aliases": [
+      "cheque"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "5d6",
+      "consumed": true
+    },
+    "found_key": "items.royalty_cheque.found",
+    "found_floor": 6,
+    "price": 85
+  },
+  "likeness_rights": {
+    "name_key": "items.likeness_rights.name",
+    "desc_key": "items.likeness_rights.desc",
+    "key_item": true,
+    "found_key": "items.likeness_rights.found",
+    "price": 0
+  },
+  "barometer": {
+    "name_key": "items.barometer.name",
+    "desc_key": "items.barometer.desc",
+    "slot": "weapon",
+    "dmg": "3d8",
+    "stat": "int",
+    "found_key": "items.barometer.found",
+    "price": 300
+  },
+  "storm_coat": {
+    "name_key": "items.storm_coat.name",
+    "desc_key": "items.storm_coat.desc",
+    "slot": "armour",
+    "ac": 7,
+    "found_key": "items.storm_coat.found",
+    "price": 330
+  },
+  "eye_of_the_storm": {
+    "name_key": "items.eye_of_the_storm.name",
+    "desc_key": "items.eye_of_the_storm.desc",
+    "aliases": [
+      "eye"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "7d6",
+      "consumed": true
+    },
+    "found_key": "items.eye_of_the_storm.found",
+    "found_floor": 7,
+    "price": 110
+  },
+  "prism": {
+    "name_key": "items.prism.name",
+    "desc_key": "items.prism.desc",
+    "key_item": true,
+    "found_key": "items.prism.found",
+    "price": 0
+  },
+  "crucible_hammer": {
+    "name_key": "items.crucible_hammer.name",
+    "desc_key": "items.crucible_hammer.desc",
+    "slot": "weapon",
+    "dmg": "4d6+3",
+    "stat": "str",
+    "found_key": "items.crucible_hammer.found",
+    "price": 380
+  },
+  "slag_plate": {
+    "name_key": "items.slag_plate.name",
+    "desc_key": "items.slag_plate.desc",
+    "slot": "armour",
+    "ac": 8,
+    "found_key": "items.slag_plate.found",
+    "price": 400
+  },
+  "quench": {
+    "name_key": "items.quench.name",
+    "desc_key": "items.quench.desc",
+    "aliases": [
+      "quench"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "8d6",
+      "consumed": true
+    },
+    "found_key": "items.quench.found",
+    "found_floor": 8,
+    "price": 130
+  },
+  "full_disclosure": {
+    "name_key": "items.full_disclosure.name",
+    "desc_key": "items.full_disclosure.desc",
+    "aliases": [
+      "disclosure"
+    ],
+    "key_item": true,
+    "grants_flag": "map_full",
+    "found_key": "items.full_disclosure.found",
+    "use": {
+      "op": "reveal",
+      "flag": "map_full",
+      "text_key": "items.full_disclosure.use",
+      "consumed": false
+    },
+    "price": 0
+  },
+  "indemnity_waiver": {
+    "name_key": "items.indemnity_waiver.name",
+    "desc_key": "items.indemnity_waiver.desc",
+    "key_item": true,
+    "found_key": "items.indemnity_waiver.found",
+    "price": 0
+  },
+  "severed_half": {
+    "name_key": "items.severed_half.name",
+    "desc_key": "items.severed_half.desc",
+    "key_item": true,
+    "found_key": "items.severed_half.found",
+    "price": 0
+  },
+  "blue_pencil_item": {
+    "name_key": "items.blue_pencil_item.name",
+    "desc_key": "items.blue_pencil_item.desc",
+    "slot": "weapon",
+    "dmg": "4d6+4",
+    "stat": "int",
+    "found_key": "items.blue_pencil_item.found",
+    "price": 430
+  },
+  "severance_plate": {
+    "name_key": "items.severance_plate.name",
+    "desc_key": "items.severance_plate.desc",
+    "slot": "armour",
+    "ac": 9,
+    "found_key": "items.severance_plate.found",
+    "price": 450
+  },
+  "whole_thing": {
+    "name_key": "items.whole_thing.name",
+    "desc_key": "items.whole_thing.desc",
+    "aliases": [
+      "whole"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "9d6",
+      "consumed": true
+    },
+    "found_key": "items.whole_thing.found",
+    "found_floor": 9,
+    "price": 150
+  },
+  "gavel": {
+    "name_key": "items.gavel.name",
+    "desc_key": "items.gavel.desc",
+    "slot": "weapon",
+    "dmg": "5d6+3",
+    "stat": "cha",
+    "found_key": "items.gavel.found",
+    "price": 500
+  },
+  "court_dress": {
+    "name_key": "items.court_dress.name",
+    "desc_key": "items.court_dress.desc",
+    "slot": "armour",
+    "ac": 10,
+    "found_key": "items.court_dress.found",
+    "price": 520
+  },
+  "stay_of_execution": {
+    "name_key": "items.stay_of_execution.name",
+    "desc_key": "items.stay_of_execution.desc",
+    "aliases": [
+      "stay"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "10d6",
+      "consumed": true
+    },
+    "found_key": "items.stay_of_execution.found",
+    "found_floor": 10,
+    "price": 170
+  },
+  "vorn_seal": {
+    "name_key": "items.vorn_seal.name",
+    "desc_key": "items.vorn_seal.desc",
+    "key_item": true,
+    "found_key": "items.vorn_seal.found",
+    "price": 0
+  },
+  "red_pen": {
+    "name_key": "items.red_pen.name",
+    "desc_key": "items.red_pen.desc",
+    "slot": "weapon",
+    "dmg": "6d6+2",
+    "stat": "int",
+    "found_key": "items.red_pen.found",
+    "price": 580
+  },
+  "original_copy": {
+    "name_key": "items.original_copy.name",
+    "desc_key": "items.original_copy.desc",
+    "slot": "armour",
+    "ac": 11,
+    "found_key": "items.original_copy.found",
+    "price": 600
+  },
+  "clean_draft": {
+    "name_key": "items.clean_draft.name",
+    "desc_key": "items.clean_draft.desc",
+    "aliases": [
+      "draft"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "11d6",
+      "consumed": true
+    },
+    "found_key": "items.clean_draft.found",
+    "found_floor": 11,
+    "price": 190
+  },
+  "unamended_term": {
+    "name_key": "items.unamended_term.name",
+    "desc_key": "items.unamended_term.desc",
+    "key_item": true,
+    "found_key": "items.unamended_term.found",
+    "price": 0
+  },
+  "persistence": {
+    "name_key": "items.persistence.name",
+    "desc_key": "items.persistence.desc",
+    "slot": "weapon",
+    "dmg": "4d8",
+    "stat": "con",
+    "found_key": "items.persistence.found",
+    "price": 0
+  },
+  "ash_blade": {
+    "name_key": "items.ash_blade.name",
+    "desc_key": "items.ash_blade.desc",
+    "slot": "weapon",
+    "dmg": "6d6+4",
+    "stat": "str",
+    "found_key": "items.ash_blade.found",
+    "price": 650
+  },
+  "shutter_plate": {
+    "name_key": "items.shutter_plate.name",
+    "desc_key": "items.shutter_plate.desc",
+    "slot": "armour",
+    "ac": 12,
+    "found_key": "items.shutter_plate.found",
+    "price": 680
+  },
+  "last_kettle": {
+    "name_key": "items.last_kettle.name",
+    "desc_key": "items.last_kettle.desc",
+    "aliases": [
+      "kettle"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "12d6",
+      "consumed": true
+    },
+    "found_key": "items.last_kettle.found",
+    "found_floor": 12,
+    "price": 210
+  },
+  "reaper_scale": {
+    "name_key": "items.reaper_scale.name",
+    "desc_key": "items.reaper_scale.desc",
+    "key_item": true,
+    "found_key": "items.reaper_scale.found",
+    "price": 0
+  },
+  "blank_page": {
+    "name_key": "items.blank_page.name",
+    "desc_key": "items.blank_page.desc",
+    "slot": "weapon",
+    "dmg": "7d6+4",
+    "stat": "cha",
+    "found_key": "items.blank_page.found",
+    "price": 720
+  },
+  "entire_plate": {
+    "name_key": "items.entire_plate.name",
+    "desc_key": "items.entire_plate.desc",
+    "slot": "armour",
+    "ac": 13,
+    "found_key": "items.entire_plate.found",
+    "price": 760
+  },
+  "good_tea": {
+    "name_key": "items.good_tea.name",
+    "desc_key": "items.good_tea.desc",
+    "aliases": [
+      "tea",
+      "good tea"
+    ],
+    "use": {
+      "op": "heal",
+      "dice": "13d6",
+      "consumed": true
+    },
+    "found_key": "items.good_tea.found",
+    "found_floor": 13,
+    "price": 230
+  },
+  "notice_of_withdrawal": {
+    "name_key": "items.notice_of_withdrawal.name",
+    "desc_key": "items.notice_of_withdrawal.desc",
+    "key_item": true,
+    "found_key": "items.notice_of_withdrawal.found",
+    "price": 0
+  },
+  "harmony": {
+    "name_key": "items.harmony.name",
+    "desc_key": "items.harmony.desc",
+    "key_item": true,
+    "found_key": "items.harmony.found",
+    "price": 0
+  },
+  "the_photograph": {
+    "name_key": "items.the_photograph.name",
+    "desc_key": "items.the_photograph.desc",
+    "key_item": true,
+    "found_key": "items.the_photograph.found",
+    "price": 0
+  },
+  "the_last_word": {
+    "name_key": "items.the_last_word.name",
+    "desc_key": "items.the_last_word.desc",
+    "key_item": true,
+    "found_key": "items.the_last_word.found",
+    "price": 0
+  },
+  "royalty_statement": {
+    "name_key": "items.royalty_statement.name",
+    "desc_key": "items.royalty_statement.desc",
+    "key_item": true,
+    "found_key": "items.royalty_statement.found",
+    "price": 0
+  },
+  "the_franchise": {
+    "name_key": "items.the_franchise.name",
+    "desc_key": "items.the_franchise.desc",
+    "use": {
+      "op": "currency_multiplier",
+      "factor": 1.5,
+      "consumed": true
+    },
+    "found_key": "items.the_franchise.found",
+    "price": 2400
+  },
+  "silent_partner": {
+    "name_key": "items.silent_partner.name",
+    "desc_key": "items.silent_partner.desc",
+    "use": {
+      "op": "stat_up",
+      "stat": "all",
+      "amount": 1,
+      "consumed": true
+    },
+    "found_key": "items.silent_partner.found",
+    "price": 4200
+  },
+  "the_deed": {
+    "name_key": "items.the_deed.name",
+    "desc_key": "items.the_deed.desc",
+    "use": {
+      "op": "heal_full",
+      "consumed": true,
+      "grants_flag": "owns_deed"
+    },
+    "found_key": "items.the_deed.found",
+    "price": 6500
+  },
+  "second_opinion": {
+    "name_key": "items.second_opinion.name",
+    "desc_key": "items.second_opinion.desc",
+    "use": {
+      "op": "grant_continue",
+      "consumed": true
+    },
+    "found_key": "items.second_opinion.found",
+    "price": 3600
+  },
+  "hazard_wrap": {
+    "name_key": "items.hazard_wrap.name",
+    "desc_key": "items.hazard_wrap.desc",
+    "slot": "armour",
+    "ac": 4,
+    "found_key": "items.hazard_wrap.found",
+    "price": 90
+  },
+  "ledger_binding": {
+    "name_key": "items.ledger_binding.name",
+    "desc_key": "items.ledger_binding.desc",
+    "slot": "armour",
+    "ac": 5,
+    "found_key": "items.ledger_binding.found",
+    "price": 140
+  },
+  "dust_sheet": {
+    "name_key": "items.dust_sheet.name",
+    "desc_key": "items.dust_sheet.desc",
+    "slot": "armour",
+    "ac": 6,
+    "found_key": "items.dust_sheet.found",
+    "price": 200
+  },
+  "mesh_liner": {
+    "name_key": "items.mesh_liner.name",
+    "desc_key": "items.mesh_liner.desc",
+    "slot": "armour",
+    "ac": 7,
+    "found_key": "items.mesh_liner.found",
+    "price": 280
+  },
+  "counterweight": {
+    "name_key": "items.counterweight.name",
+    "desc_key": "items.counterweight.desc",
+    "slot": "armour",
+    "ac": 8,
+    "found_key": "items.counterweight.found",
+    "price": 360
+  },
+  "padded_ledger": {
+    "name_key": "items.padded_ledger.name",
+    "desc_key": "items.padded_ledger.desc",
+    "slot": "armour",
+    "ac": 9,
+    "found_key": "items.padded_ledger.found",
+    "price": 450
+  },
+  "interleaf": {
+    "name_key": "items.interleaf.name",
+    "desc_key": "items.interleaf.desc",
+    "slot": "armour",
+    "ac": 10,
+    "found_key": "items.interleaf.found",
+    "price": 540
+  },
+  "mirror_backing": {
+    "name_key": "items.mirror_backing.name",
+    "desc_key": "items.mirror_backing.desc",
+    "slot": "armour",
+    "ac": 11,
+    "found_key": "items.mirror_backing.found",
+    "price": 640
+  },
+  "injunction": {
+    "name_key": "items.injunction.name",
+    "desc_key": "items.injunction.desc",
+    "aliases": [
+      "injunction",
+      "order"
+    ],
+    "found_key": "items.injunction.found",
+    "use": {
+      "op": "status_self",
+      "status": "guarded",
+      "rounds": 6,
+      "consumed": true
+    },
+    "price": 210
+  },
+  "without_prejudice": {
+    "name_key": "items.without_prejudice.name",
+    "desc_key": "items.without_prejudice.desc",
+    "aliases": [
+      "prejudice",
+      "letter",
+      "wp"
+    ],
+    "found_key": "items.without_prejudice.found",
+    "use": {
+      "op": "status_self",
+      "status": "advantage",
+      "rounds": 6,
+      "consumed": true
+    },
+    "price": 240
+  },
+  "standing_order": {
+    "name_key": "items.standing_order.name",
+    "desc_key": "items.standing_order.desc",
+    "aliases": [
+      "standing",
+      "order form"
+    ],
+    "found_key": "items.standing_order.found",
+    "use": {
+      "op": "status_self",
+      "status": "guarded",
+      "rounds": 8,
+      "consumed": true
+    },
+    "price": 380
+  },
+  "material_change": {
+    "name_key": "items.material_change.name",
+    "desc_key": "items.material_change.desc",
+    "aliases": [
+      "material",
+      "change"
+    ],
+    "found_key": "items.material_change.found",
+    "use": {
+      "op": "status_self",
+      "status": "advantage",
+      "rounds": 8,
+      "consumed": true
+    },
+    "price": 420
+  },
+  "costs_order": {
+    "name_key": "items.costs_order.name",
+    "desc_key": "items.costs_order.desc",
+    "aliases": [
+      "costs",
+      "order as to costs"
+    ],
+    "found_key": "items.costs_order.found",
+    "use": {
+      "op": "currency_multiplier",
+      "factor": 1.35,
+      "consumed": true
+    },
+    "price": 520
+  }
+}

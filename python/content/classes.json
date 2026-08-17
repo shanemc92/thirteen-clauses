@@ -1,0 +1,255 @@
+{
+  "vanguard": {
+    "name_key": "classes.vanguard.name",
+    "desc_key": "classes.vanguard.desc",
+    "verb_key": "classes.vanguard.verb",
+    "art": "class_vanguard",
+    "primary": "str",
+    "hit_die": "1d10",
+    "hit_die_max": 22,
+    "hp_bonus": 2,
+    "ac_bonus": 2,
+    "stats": {
+      "str": 15,
+      "dex": 11,
+      "con": 14,
+      "int": 9,
+      "cha": 10
+    },
+    "starting_items": [
+      "ration",
+      "settlement_chit"
+    ],
+    "starting_equipment": {
+      "weapon": "fire_axe",
+      "armour": "hi_vis"
+    },
+    "abilities": [
+      {
+        "id": "interpose",
+        "level": 1
+      },
+      {
+        "id": "brace",
+        "level": 2
+      },
+      {
+        "id": "hostile_takeover",
+        "level": 3
+      },
+      {
+        "id": "immovable",
+        "level": 5
+      },
+      {
+        "id": "load_bearing",
+        "level": 7
+      },
+      {
+        "id": "redundancy_notice",
+        "level": 9
+      },
+      {
+        "id": "last_line",
+        "level": 12
+      },
+      {
+        "id": "structural",
+        "level": 15
+      },
+      {
+        "id": "full_stop",
+        "level": 18
+      }
+    ]
+  },
+  "skirmisher": {
+    "name_key": "classes.skirmisher.name",
+    "desc_key": "classes.skirmisher.desc",
+    "verb_key": "classes.skirmisher.verb",
+    "art": "class_skirmisher",
+    "primary": "dex",
+    "hit_die": "1d8",
+    "hit_die_max": 18,
+    "ac_bonus": 1,
+    "stats": {
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 11,
+      "cha": 10
+    },
+    "starting_items": [
+      "ration",
+      "smoke_canister"
+    ],
+    "starting_equipment": {
+      "weapon": "letter_opener",
+      "armour": "courier_jacket"
+    },
+    "abilities": [
+      {
+        "id": "slip",
+        "level": 1
+      },
+      {
+        "id": "flurry",
+        "level": 2
+      },
+      {
+        "id": "expedite",
+        "level": 3
+      },
+      {
+        "id": "blindside",
+        "level": 5
+      },
+      {
+        "id": "cut_and_run",
+        "level": 7
+      },
+      {
+        "id": "recorded_delivery",
+        "level": 9
+      },
+      {
+        "id": "blur",
+        "level": 12
+      },
+      {
+        "id": "hit_and_run",
+        "level": 15
+      },
+      {
+        "id": "signed_for",
+        "level": 18
+      }
+    ]
+  },
+  "hexwright": {
+    "name_key": "classes.hexwright.name",
+    "desc_key": "classes.hexwright.desc",
+    "verb_key": "classes.hexwright.verb",
+    "art": "class_hexwright",
+    "primary": "int",
+    "hit_die": "1d6",
+    "hit_die_max": 15,
+    "stats": {
+      "str": 9,
+      "dex": 12,
+      "con": 12,
+      "int": 16,
+      "cha": 12
+    },
+    "starting_items": [
+      "ration",
+      "ration",
+      "chargeback_scroll"
+    ],
+    "starting_equipment": {
+      "weapon": "stylus",
+      "armour": "lanyard"
+    },
+    "abilities": [
+      {
+        "id": "writeoff",
+        "level": 1
+      },
+      {
+        "id": "audit",
+        "level": 2
+      },
+      {
+        "id": "compound_interest",
+        "level": 3
+      },
+      {
+        "id": "depreciate",
+        "level": 5
+      },
+      {
+        "id": "bad_debt",
+        "level": 7
+      },
+      {
+        "id": "total_loss",
+        "level": 9
+      },
+      {
+        "id": "liquidate",
+        "level": 12
+      },
+      {
+        "id": "short_position",
+        "level": 15
+      },
+      {
+        "id": "write_down_all",
+        "level": 18
+      }
+    ]
+  },
+  "advocate": {
+    "name_key": "classes.advocate.name",
+    "desc_key": "classes.advocate.desc",
+    "verb_key": "classes.advocate.verb",
+    "art": "class_advocate",
+    "primary": "cha",
+    "hit_die": "1d8",
+    "hit_die_max": 18,
+    "ac_bonus": 1,
+    "stats": {
+      "str": 10,
+      "dex": 12,
+      "con": 12,
+      "int": 13,
+      "cha": 16
+    },
+    "starting_items": [
+      "ration",
+      "business_card"
+    ],
+    "starting_equipment": {
+      "weapon": "briefcase",
+      "armour": "good_suit"
+    },
+    "abilities": [
+      {
+        "id": "objection",
+        "level": 1
+      },
+      {
+        "id": "cross_examine",
+        "level": 2
+      },
+      {
+        "id": "class_action",
+        "level": 3
+      },
+      {
+        "id": "leading_question",
+        "level": 5
+      },
+      {
+        "id": "discovery",
+        "level": 7
+      },
+      {
+        "id": "summary_judgment",
+        "level": 9
+      },
+      {
+        "id": "no_case",
+        "level": 12
+      },
+      {
+        "id": "without_prejudice",
+        "level": 15
+      },
+      {
+        "id": "final_submission",
+        "level": 18
+      }
+    ]
+  }
+}

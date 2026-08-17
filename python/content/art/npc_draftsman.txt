@@ -1,0 +1,12 @@
+       .---------.
+      |  ^     ^  |
+      |     v     |
+       '.._____..'
+     ____|       |____
+    |  CLAUSE          |
+    |  AMENDMENT       |
+    |  SCHEDULE        |
+    |  PRECEDENT       |
+    |  WAIVER          |
+    '------------------'
+      there were three

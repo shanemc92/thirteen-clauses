@@ -1,0 +1,7 @@
+  +---------------------------+
+  |                           |
+  |   four walls. a ceiling.  |
+  |   every corner present.   |
+  |                           |
+  |   [bench]        [kettle] |
+  +---------------------------+

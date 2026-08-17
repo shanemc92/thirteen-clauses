@@ -1,0 +1,629 @@
+{
+  "id": 3,
+  "name_key": "floors.03.name",
+  "clause_key": "floors.03.clause",
+  "theme": "flooded actuarial archive",
+  "palette": "full",
+  "start": "03-r01",
+  "boss_room": "03-r22",
+  "encounter_chance": 0.22,
+  "last": false,
+  "encounter_table": [
+    {
+      "monster": "actuarial_table",
+      "weight": 26
+    },
+    {
+      "monster": "exclusion",
+      "weight": 24
+    },
+    {
+      "monster": "small_print",
+      "weight": 22
+    },
+    {
+      "monster": "claimant",
+      "weight": 18
+    },
+    {
+      "monster": "act_of_god",
+      "weight": 10
+    }
+  ],
+  "rooms": {
+    "03-r01": {
+      "pos": [
+        2,
+        0
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r01.name",
+      "desc_key": "rooms3.r01.desc",
+      "long_desc_key": "rooms3.r01.long",
+      "exits": {
+        "south": "03-r02"
+      },
+      "no_encounter": true,
+      "art": "room_archive_entry",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "floor3_arrival",
+          "once": true,
+          "flag": "tut.f3"
+        }
+      ]
+    },
+    "03-r02": {
+      "pos": [
+        2,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r02.name",
+      "desc_key": "rooms3.r02.desc",
+      "long_desc_key": "rooms3.r02.long",
+      "exits": {
+        "north": "03-r01",
+        "west": "03-r03",
+        "east": "03-r05",
+        "south": "03-r07"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f3_n1",
+          "hint_key": "room.note_hint",
+          "flag": "03.note.n1"
+        }
+      ]
+    },
+    "03-r03": {
+      "pos": [
+        1,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r03.name",
+      "desc_key": "rooms3.r03.desc",
+      "long_desc_key": "rooms3.r03.long",
+      "exits": {
+        "east": "03-r02",
+        "west": "03-r04",
+        "south": "03-r06"
+      }
+    },
+    "03-r04": {
+      "pos": [
+        0,
+        1
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms3.r04.name",
+      "desc_key": "rooms3.r04.desc",
+      "long_desc_key": "rooms3.r04.long",
+      "exits": {
+        "east": "03-r03",
+        "south": "03-r24"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f3_common",
+          "flag": "03.chest.r04"
+        }
+      ]
+    },
+    "03-r05": {
+      "pos": [
+        3,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r05.name",
+      "desc_key": "rooms3.r05.desc",
+      "long_desc_key": "rooms3.r05.long",
+      "exits": {
+        "west": "03-r02",
+        "east": "03-r09",
+        "south": "03-r08"
+      }
+    },
+    "03-r06": {
+      "pos": [
+        1,
+        2
+      ],
+      "kind": "safe",
+      "name_key": "rooms3.r06.name",
+      "desc_key": "rooms3.r06.desc",
+      "long_desc_key": "rooms3.r06.long",
+      "exits": {
+        "north": "03-r03",
+        "east": "03-r07",
+        "south": "03-r10"
+      },
+      "art": "room_reading"
+    },
+    "03-r07": {
+      "pos": [
+        2,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r07.name",
+      "desc_key": "rooms3.r07.desc",
+      "long_desc_key": "rooms3.r07.long",
+      "exits": {
+        "north": "03-r02",
+        "west": "03-r06",
+        "east": "03-r08",
+        "south": "03-r11"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "03.stash.1",
+          "low": 21,
+          "high": 44
+        }
+      ]
+    },
+    "03-r08": {
+      "pos": [
+        3,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r08.name",
+      "desc_key": "rooms3.r08.desc",
+      "long_desc_key": "rooms3.r08.long",
+      "exits": {
+        "north": "03-r05",
+        "west": "03-r07",
+        "south": "03-r12",
+        "east": "03-r23"
+      }
+    },
+    "03-r09": {
+      "pos": [
+        4,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r09.name",
+      "desc_key": "rooms3.r09.desc",
+      "long_desc_key": "rooms3.r09.long",
+      "exits": {
+        "west": "03-r05",
+        "south": "03-r23"
+      },
+      "no_encounter": true,
+      "art": "room_actuary",
+      "contents": [
+        {
+          "type": "npc",
+          "id": "actuary",
+          "gives": "excess_clause",
+          "hint_key": "rooms3.r09.npc_hint"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f3_actuary",
+          "once": true,
+          "flag": "tut.f3act"
+        }
+      ]
+    },
+    "03-r10": {
+      "pos": [
+        1,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r10.name",
+      "desc_key": "rooms3.r10.desc",
+      "long_desc_key": "rooms3.r10.long",
+      "exits": {
+        "north": "03-r06",
+        "east": "03-r11",
+        "south": "03-r14",
+        "west": "03-r25"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f3_w",
+          "hint_key": "room.note_hint",
+          "flag": "03.note.w"
+        }
+      ]
+    },
+    "03-r11": {
+      "pos": [
+        2,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r11.name",
+      "desc_key": "rooms3.r11.desc",
+      "long_desc_key": "rooms3.r11.long",
+      "exits": {
+        "north": "03-r07",
+        "west": "03-r10",
+        "east": "03-r12",
+        "south": "03-r15"
+      }
+    },
+    "03-r12": {
+      "pos": [
+        3,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r12.name",
+      "desc_key": "rooms3.r12.desc",
+      "long_desc_key": "rooms3.r12.long",
+      "exits": {
+        "north": "03-r08",
+        "west": "03-r11",
+        "east": "03-r13",
+        "south": "03-r16"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f3_n2",
+          "hint_key": "room.note_hint",
+          "flag": "03.note.n2"
+        }
+      ]
+    },
+    "03-r13": {
+      "pos": [
+        4,
+        3
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms3.r13.name",
+      "desc_key": "rooms3.r13.desc",
+      "long_desc_key": "rooms3.r13.long",
+      "exits": {
+        "north": "03-r23",
+        "west": "03-r12"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f3_good",
+          "flag": "03.chest.r13",
+          "hint_key": "rooms3.r13.chest_hint"
+        }
+      ]
+    },
+    "03-r14": {
+      "pos": [
+        1,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r14.name",
+      "desc_key": "rooms3.r14.desc",
+      "long_desc_key": "rooms3.r14.long",
+      "exits": {
+        "north": "03-r10",
+        "east": "03-r15",
+        "south": "03-r18",
+        "west": "03-r26"
+      }
+    },
+    "03-r15": {
+      "pos": [
+        2,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r15.name",
+      "desc_key": "rooms3.r15.desc",
+      "long_desc_key": "rooms3.r15.long",
+      "exits": {
+        "north": "03-r11",
+        "west": "03-r14",
+        "east": "03-r16",
+        "south": "03-r19"
+      }
+    },
+    "03-r16": {
+      "pos": [
+        3,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r16.name",
+      "desc_key": "rooms3.r16.desc",
+      "long_desc_key": "rooms3.r16.long",
+      "exits": {
+        "north": "03-r12",
+        "west": "03-r15",
+        "south": "03-r20"
+      },
+      "no_encounter": true,
+      "elite": "loss_adjuster",
+      "art": "room_adjuster",
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f3_hoard",
+          "flag": "03.chest.r16",
+          "hint_key": "rooms3.r16.chest_hint"
+        }
+      ]
+    },
+    "03-r17": {
+      "pos": [
+        0,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms3.r17.name",
+      "desc_key": "rooms3.r17.desc",
+      "long_desc_key": "rooms3.r17.long",
+      "exits": {
+        "east": "03-r18"
+      },
+      "no_encounter": true,
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f3_hoard",
+          "flag": "03.chest.r17",
+          "hint_key": "rooms3.r17.chest_hint"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f3_secret",
+          "once": true,
+          "flag": "tut.f3sec"
+        }
+      ]
+    },
+    "03-r18": {
+      "pos": [
+        1,
+        5
+      ],
+      "kind": "safe",
+      "name_key": "rooms3.r18.name",
+      "desc_key": "rooms3.r18.desc",
+      "long_desc_key": "rooms3.r18.long",
+      "exits": {
+        "north": "03-r14",
+        "west": "03-r17",
+        "east": "03-r19"
+      },
+      "art": "room_reading"
+    },
+    "03-r19": {
+      "pos": [
+        2,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r19.name",
+      "desc_key": "rooms3.r19.desc",
+      "long_desc_key": "rooms3.r19.long",
+      "exits": {
+        "north": "03-r15",
+        "west": "03-r18",
+        "east": "03-r20",
+        "south": "03-r21"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "03.stash.2",
+          "low": 21,
+          "high": 44
+        }
+      ]
+    },
+    "03-r20": {
+      "pos": [
+        3,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms3.r20.name",
+      "desc_key": "rooms3.r20.desc",
+      "long_desc_key": "rooms3.r20.long",
+      "exits": {
+        "north": "03-r16",
+        "west": "03-r19"
+      },
+      "contents": [
+        {
+          "type": "item",
+          "item": "own_merch",
+          "flag": "03.item.r20",
+          "hint_key": "rooms3.r20.item_hint"
+        }
+      ]
+    },
+    "03-r21": {
+      "pos": [
+        2,
+        6
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r21.name",
+      "desc_key": "rooms3.r21.desc",
+      "long_desc_key": "rooms3.r21.long",
+      "exits": {
+        "north": "03-r19",
+        "south": "03-r22"
+      },
+      "no_encounter": true,
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f3_pre_boss",
+          "once": true,
+          "flag": "tut.f3pb"
+        }
+      ]
+    },
+    "03-r22": {
+      "pos": [
+        2,
+        7
+      ],
+      "kind": "boss",
+      "name_key": "rooms3.r22.name",
+      "desc_key": "rooms3.r22.desc",
+      "long_desc_key": "rooms3.r22.long",
+      "exits": {
+        "north": "03-r21"
+      },
+      "no_encounter": true,
+      "boss": "the_cap"
+    },
+    "03-r23": {
+      "pos": [
+        4,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r23.name",
+      "desc_key": "rooms3.r23.desc",
+      "long_desc_key": "rooms3.r23.long",
+      "exits": {
+        "north": "03-r09",
+        "south": "03-r13",
+        "west": "03-r08"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f3_tos",
+          "hint_key": "room.note_hint",
+          "flag": "03.note.tos"
+        }
+      ]
+    },
+    "03-r24": {
+      "pos": [
+        0,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r24.name",
+      "desc_key": "rooms3.r24.desc",
+      "long_desc_key": "rooms3.r24.long",
+      "exits": {
+        "north": "03-r04",
+        "south": "03-r25"
+      }
+    },
+    "03-r25": {
+      "pos": [
+        0,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms3.r25.name",
+      "desc_key": "rooms3.r25.desc",
+      "long_desc_key": "rooms3.r25.long",
+      "exits": {
+        "north": "03-r24",
+        "east": "03-r10",
+        "south": "03-r26"
+      }
+    },
+    "03-r26": {
+      "pos": [
+        0,
+        4
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms3.r26.name",
+      "desc_key": "rooms3.r26.desc",
+      "long_desc_key": "rooms3.r26.long",
+      "exits": {
+        "north": "03-r25",
+        "east": "03-r14"
+      },
+      "no_encounter": true,
+      "art": "room_merchant",
+      "contents": [
+        {
+          "type": "npc",
+          "id": "merchant",
+          "shop": true,
+          "hint_key": "rooms_common.merchant_hint",
+          "config": {
+            "npc": "merchant",
+            "stock_table": "stock_f3",
+            "slots": 5
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "merchant_again",
+          "once": true,
+          "flag": "tut.m3"
+        }
+      ]
+    }
+  },
+  "quirk": {
+    "key": "quirk.f3",
+    "hide_exits": true,
+    "crit_range": 20
+  },
+  "event_chance": 0.16,
+  "random_events": [
+    {
+      "id": "f3_shelf",
+      "weight": 26,
+      "key": "events.f3.shelf",
+      "op": "damage",
+      "dice": "1d6"
+    },
+    {
+      "id": "f3_file",
+      "weight": 24,
+      "key": "events.f3.file",
+      "op": "currency",
+      "range": [
+        5,
+        14
+      ]
+    },
+    {
+      "id": "f3_lamp",
+      "weight": 20,
+      "key": "events.f3.lamp",
+      "op": "status",
+      "status": "advantage",
+      "rounds": 3
+    },
+    {
+      "id": "f3_name",
+      "weight": 18,
+      "key": "events.f3.name"
+    },
+    {
+      "id": "f3_tea",
+      "weight": 12,
+      "key": "events.f3.tea",
+      "op": "item",
+      "item": "cold_tea"
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "id": 4,
+  "name_key": "floors.04.name",
+  "clause_key": "floors.04.clause",
+  "theme": "a polite suburb that is wrong",
+  "palette": "full",
+  "start": "04-r01",
+  "boss_room": "04-r21",
+  "encounter_chance": 0.21,
+  "last": false,
+  "encounter_table": [
+    {
+      "monster": "net_curtain",
+      "weight": 26
+    },
+    {
+      "monster": "wheelie_bin",
+      "weight": 24
+    },
+    {
+      "monster": "lawn",
+      "weight": 20
+    },
+    {
+      "monster": "caroller",
+      "weight": 18
+    },
+    {
+      "monster": "ice_cream_van",
+      "weight": 12
+    }
+  ],
+  "rooms": {
+    "04-r01": {
+      "pos": [
+        2,
+        0
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r01.name",
+      "desc_key": "rooms4.r01.desc",
+      "long_desc_key": "rooms4.r01.long",
+      "exits": {
+        "south": "04-r02"
+      },
+      "no_encounter": true,
+      "art": "room_culdesac",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "floor4_arrival",
+          "once": true,
+          "flag": "tut.f4"
+        }
+      ]
+    },
+    "04-r02": {
+      "pos": [
+        2,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r02.name",
+      "desc_key": "rooms4.r02.desc",
+      "long_desc_key": "rooms4.r02.long",
+      "exits": {
+        "north": "04-r01",
+        "west": "04-r03",
+        "east": "04-r04",
+        "south": "04-r06"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f4_n1",
+          "hint_key": "room.note_hint",
+          "flag": "04.note.n1"
+        }
+      ]
+    },
+    "04-r03": {
+      "pos": [
+        1,
+        1
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r03.name",
+      "desc_key": "rooms4.r03.desc",
+      "long_desc_key": "rooms4.r03.long",
+      "exits": {
+        "east": "04-r02",
+        "south": "04-r05",
+        "west": "04-r22"
+      }
+    },
+    "04-r04": {
+      "pos": [
+        3,
+        1
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r04.name",
+      "desc_key": "rooms4.r04.desc",
+      "long_desc_key": "rooms4.r04.long",
+      "exits": {
+        "west": "04-r02",
+        "south": "04-r07"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_common",
+          "flag": "04.chest.r04"
+        }
+      ]
+    },
+    "04-r05": {
+      "pos": [
+        1,
+        2
+      ],
+      "kind": "safe",
+      "name_key": "rooms4.r05.name",
+      "desc_key": "rooms4.r05.desc",
+      "long_desc_key": "rooms4.r05.long",
+      "exits": {
+        "north": "04-r03",
+        "east": "04-r06",
+        "south": "04-r09",
+        "west": "04-r23"
+      },
+      "art": "room_shed"
+    },
+    "04-r06": {
+      "pos": [
+        2,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r06.name",
+      "desc_key": "rooms4.r06.desc",
+      "long_desc_key": "rooms4.r06.long",
+      "exits": {
+        "north": "04-r02",
+        "west": "04-r05",
+        "east": "04-r07",
+        "south": "04-r10"
+      }
+    },
+    "04-r07": {
+      "pos": [
+        3,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r07.name",
+      "desc_key": "rooms4.r07.desc",
+      "long_desc_key": "rooms4.r07.long",
+      "exits": {
+        "north": "04-r04",
+        "west": "04-r06",
+        "east": "04-r08",
+        "south": "04-r11"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "04.stash.1",
+          "low": 24,
+          "high": 50
+        }
+      ]
+    },
+    "04-r08": {
+      "pos": [
+        4,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r08.name",
+      "desc_key": "rooms4.r08.desc",
+      "long_desc_key": "rooms4.r08.long",
+      "exits": {
+        "west": "04-r07",
+        "south": "04-r12"
+      },
+      "no_encounter": true,
+      "art": "room_postbox",
+      "contents": [
+        {
+          "type": "npc",
+          "id": "postman",
+          "minigame": "rps",
+          "hint_key": "rooms4.r08.npc_hint",
+          "config": {
+            "opponent": "postman",
+            "reward": "extended_log",
+            "penalty": 5,
+            "name_key": "minigame.rps.postman_name"
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f4_postman",
+          "once": true,
+          "flag": "tut.f4post"
+        }
+      ]
+    },
+    "04-r09": {
+      "pos": [
+        1,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r09.name",
+      "desc_key": "rooms4.r09.desc",
+      "long_desc_key": "rooms4.r09.long",
+      "exits": {
+        "north": "04-r05",
+        "east": "04-r10",
+        "south": "04-r13",
+        "west": "04-r24"
+      }
+    },
+    "04-r10": {
+      "pos": [
+        2,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r10.name",
+      "desc_key": "rooms4.r10.desc",
+      "long_desc_key": "rooms4.r10.long",
+      "exits": {
+        "north": "04-r06",
+        "west": "04-r09",
+        "east": "04-r11",
+        "south": "04-r14"
+      },
+      "no_encounter": true,
+      "miniboss": "the_committee",
+      "art": "room_hall",
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f4_miniboss",
+          "once": true,
+          "flag": "tut.f4mini"
+        }
+      ]
+    },
+    "04-r11": {
+      "pos": [
+        3,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r11.name",
+      "desc_key": "rooms4.r11.desc",
+      "long_desc_key": "rooms4.r11.long",
+      "exits": {
+        "north": "04-r07",
+        "west": "04-r10",
+        "east": "04-r12",
+        "south": "04-r15"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f4_w",
+          "hint_key": "room.note_hint",
+          "flag": "04.note.w"
+        }
+      ]
+    },
+    "04-r12": {
+      "pos": [
+        4,
+        3
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r12.name",
+      "desc_key": "rooms4.r12.desc",
+      "long_desc_key": "rooms4.r12.long",
+      "exits": {
+        "north": "04-r08",
+        "west": "04-r11"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_good",
+          "flag": "04.chest.r12",
+          "hint_key": "rooms4.r12.chest_hint"
+        }
+      ]
+    },
+    "04-r13": {
+      "pos": [
+        1,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r13.name",
+      "desc_key": "rooms4.r13.desc",
+      "long_desc_key": "rooms4.r13.long",
+      "exits": {
+        "north": "04-r09",
+        "east": "04-r14",
+        "south": "04-r17",
+        "west": "04-r25"
+      },
+      "contents": [
+        {
+          "type": "note",
+          "text_key": "notes.f4_n2",
+          "hint_key": "room.note_hint",
+          "flag": "04.note.n2"
+        }
+      ]
+    },
+    "04-r14": {
+      "pos": [
+        2,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r14.name",
+      "desc_key": "rooms4.r14.desc",
+      "long_desc_key": "rooms4.r14.long",
+      "exits": {
+        "north": "04-r10",
+        "west": "04-r13",
+        "east": "04-r15",
+        "south": "04-r18"
+      }
+    },
+    "04-r15": {
+      "pos": [
+        3,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r15.name",
+      "desc_key": "rooms4.r15.desc",
+      "long_desc_key": "rooms4.r15.long",
+      "exits": {
+        "north": "04-r11",
+        "west": "04-r14",
+        "south": "04-r19",
+        "east": "04-r26"
+      },
+      "no_encounter": true,
+      "elite": "neighbourhood_watch",
+      "art": "room_watch",
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_hoard",
+          "flag": "04.chest.r15",
+          "hint_key": "rooms4.r15.chest_hint"
+        }
+      ]
+    },
+    "04-r16": {
+      "pos": [
+        0,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r16.name",
+      "desc_key": "rooms4.r16.desc",
+      "long_desc_key": "rooms4.r16.long",
+      "exits": {
+        "east": "04-r17"
+      },
+      "no_encounter": true,
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_hoard",
+          "flag": "04.chest.r16",
+          "hint_key": "rooms4.r16.chest_hint"
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f4_secret",
+          "once": true,
+          "flag": "tut.f4sec"
+        }
+      ]
+    },
+    "04-r17": {
+      "pos": [
+        1,
+        5
+      ],
+      "kind": "safe",
+      "name_key": "rooms4.r17.name",
+      "desc_key": "rooms4.r17.desc",
+      "long_desc_key": "rooms4.r17.long",
+      "exits": {
+        "north": "04-r13",
+        "west": "04-r16",
+        "east": "04-r18",
+        "south": "04-r28"
+      },
+      "art": "room_shed"
+    },
+    "04-r18": {
+      "pos": [
+        2,
+        5
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r18.name",
+      "desc_key": "rooms4.r18.desc",
+      "long_desc_key": "rooms4.r18.long",
+      "exits": {
+        "north": "04-r14",
+        "west": "04-r17",
+        "east": "04-r19",
+        "south": "04-r20"
+      }
+    },
+    "04-r19": {
+      "pos": [
+        3,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r19.name",
+      "desc_key": "rooms4.r19.desc",
+      "long_desc_key": "rooms4.r19.long",
+      "exits": {
+        "north": "04-r15",
+        "west": "04-r18",
+        "east": "04-r27"
+      },
+      "contents": [
+        {
+          "type": "item",
+          "item": "own_merch",
+          "flag": "04.item.r19",
+          "hint_key": "rooms4.r19.item_hint"
+        }
+      ]
+    },
+    "04-r20": {
+      "pos": [
+        2,
+        6
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r20.name",
+      "desc_key": "rooms4.r20.desc",
+      "long_desc_key": "rooms4.r20.long",
+      "exits": {
+        "north": "04-r18",
+        "south": "04-r21",
+        "west": "04-r28"
+      },
+      "no_encounter": true,
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "f4_pre_boss",
+          "once": true,
+          "flag": "tut.f4pb"
+        }
+      ]
+    },
+    "04-r21": {
+      "pos": [
+        2,
+        7
+      ],
+      "kind": "boss",
+      "name_key": "rooms4.r21.name",
+      "desc_key": "rooms4.r21.desc",
+      "long_desc_key": "rooms4.r21.long",
+      "exits": {
+        "north": "04-r20"
+      },
+      "no_encounter": true,
+      "boss": "mrs_hensley"
+    },
+    "04-r22": {
+      "pos": [
+        0,
+        1
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r22.name",
+      "desc_key": "rooms4.r22.desc",
+      "long_desc_key": "rooms4.r22.long",
+      "exits": {
+        "east": "04-r03",
+        "south": "04-r23"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_common",
+          "flag": "04.chest.r22"
+        }
+      ]
+    },
+    "04-r23": {
+      "pos": [
+        0,
+        2
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r23.name",
+      "desc_key": "rooms4.r23.desc",
+      "long_desc_key": "rooms4.r23.long",
+      "exits": {
+        "north": "04-r22",
+        "east": "04-r05",
+        "south": "04-r24"
+      },
+      "contents": [
+        {
+          "type": "stash",
+          "flag": "04.stash.2",
+          "low": 24,
+          "high": 50
+        }
+      ]
+    },
+    "04-r24": {
+      "pos": [
+        0,
+        3
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r24.name",
+      "desc_key": "rooms4.r24.desc",
+      "long_desc_key": "rooms4.r24.long",
+      "exits": {
+        "north": "04-r23",
+        "east": "04-r09",
+        "south": "04-r25"
+      }
+    },
+    "04-r25": {
+      "pos": [
+        0,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r25.name",
+      "desc_key": "rooms4.r25.desc",
+      "long_desc_key": "rooms4.r25.long",
+      "exits": {
+        "north": "04-r24",
+        "east": "04-r13"
+      },
+      "no_encounter": true,
+      "art": "room_merchant",
+      "contents": [
+        {
+          "type": "npc",
+          "id": "merchant",
+          "shop": true,
+          "hint_key": "rooms_common.merchant_hint",
+          "config": {
+            "npc": "merchant",
+            "stock_table": "stock_f4",
+            "slots": 5
+          }
+        }
+      ],
+      "on_enter": [
+        {
+          "event": "narrator",
+          "key": "merchant_again",
+          "once": true,
+          "flag": "tut.m4"
+        }
+      ]
+    },
+    "04-r26": {
+      "pos": [
+        4,
+        4
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r26.name",
+      "desc_key": "rooms4.r26.desc",
+      "long_desc_key": "rooms4.r26.long",
+      "exits": {
+        "west": "04-r15",
+        "south": "04-r27"
+      }
+    },
+    "04-r27": {
+      "pos": [
+        4,
+        5
+      ],
+      "kind": "dead_end",
+      "name_key": "rooms4.r27.name",
+      "desc_key": "rooms4.r27.desc",
+      "long_desc_key": "rooms4.r27.long",
+      "exits": {
+        "north": "04-r26",
+        "west": "04-r19"
+      },
+      "contents": [
+        {
+          "type": "chest",
+          "loot_table": "chest_f4_good",
+          "flag": "04.chest.r27",
+          "hint_key": "rooms4.r27.chest_hint"
+        }
+      ]
+    },
+    "04-r28": {
+      "pos": [
+        1,
+        6
+      ],
+      "kind": "normal",
+      "name_key": "rooms4.r28.name",
+      "desc_key": "rooms4.r28.desc",
+      "long_desc_key": "rooms4.r28.long",
+      "exits": {
+        "north": "04-r17",
+        "east": "04-r20"
+      },
+      "no_encounter": true
+    }
+  },
+  "quirk": {
+    "key": "quirk.f4",
+    "flee_dc": 4,
+    "stalker_speed": 1
+  },
+  "event_chance": 0.18,
+  "random_events": [
+    {
+      "id": "f4_curtain",
+      "weight": 26,
+      "key": "events.f4.curtain"
+    },
+    {
+      "id": "f4_casserole",
+      "weight": 20,
+      "key": "events.f4.casserole",
+      "op": "item",
+      "item": "casserole"
+    },
+    {
+      "id": "f4_change",
+      "weight": 18,
+      "key": "events.f4.change",
+      "op": "currency",
+      "range": [
+        8,
+        18
+      ]
+    },
+    {
+      "id": "f4_hedge",
+      "weight": 16,
+      "key": "events.f4.hedge",
+      "op": "damage",
+      "dice": "1d6"
+    },
+    {
+      "id": "f4_watch",
+      "weight": 12,
+      "key": "events.f4.watch",
+      "op": "stalker",
+      "monster": "neighbourhood_watch"
+    },
+    {
+      "id": "f4_flicker",
+      "weight": 8,
+      "key": "events.f4.flicker"
+    }
+  ]
+}

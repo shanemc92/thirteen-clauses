@@ -1,0 +1,45 @@
+# static-web-server config for this site.
+#   static-web-server --config-file ./sws.toml
+#
+# TLS is not optional. SharedArrayBuffer — which is how input() reaches Python —
+# is refused outside a secure context, so plain HTTP works on localhost and
+# nowhere else.
+
+[general]
+host = "0.0.0.0"
+port = 443
+root = "/public"
+
+http2 = true
+http2-tls-cert = "/certs/cert.pem"
+http2-tls-key  = "/certs/key.pem"
+
+# optional: bounce plain HTTP to HTTPS
+https-redirect = true
+https-redirect-host = "your.host.name"
+https-redirect-from-port = 80
+
+[advanced]
+
+# sw.js can supply these itself, but only after it has registered — which needs a
+# secure context too. Setting them server-side avoids the extra reload.
+[[advanced.headers]]
+source = "**"
+headers.Cross-Origin-Opener-Policy = "same-origin"
+headers.Cross-Origin-Embedder-Policy = "require-corp"
+
+# Ordinary hardening. frame-ancestors has to be a header: the <meta> CSP in
+# index.html cannot carry it, so without this the page is framable and the
+# Erase button — one confirm() away from wiping every save — is clickjackable.
+headers.X-Content-Type-Options = "nosniff"
+headers.X-Frame-Options = "DENY"
+headers.Referrer-Policy = "no-referrer"
+headers.Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()"
+headers.Content-Security-Policy = "frame-ancestors 'none'"
+headers.Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Nothing here may be cached without revalidation. A browser holding yesterday's
+# app.js against today's index.html produces errors that look like server problems.
+[[advanced.headers]]
+source = "**/*.{html,js,css,json,webmanifest}"
+headers.Cache-Control = "no-cache"

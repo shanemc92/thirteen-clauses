@@ -1,0 +1,4 @@
+   the ~~old~~ new wording
+   ~~struck~~ inserted
+   the ~~old~~ new wording
+     accept? reject? all?

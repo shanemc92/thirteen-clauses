@@ -1,0 +1,612 @@
+{
+  "interpose": {
+    "name_key": "abilities.interpose.name",
+    "desc_key": "abilities.interpose.desc",
+    "flavour_key": "abilities.interpose.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "interposing",
+        "rounds": 2
+      }
+    ]
+  },
+  "brace": {
+    "name_key": "abilities.brace.name",
+    "desc_key": "abilities.brace.desc",
+    "flavour_key": "abilities.brace.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "guarded",
+        "rounds": 2
+      },
+      {
+        "op": "heal",
+        "dice": "1d6"
+      }
+    ]
+  },
+  "hostile_takeover": {
+    "name_key": "abilities.hostile_takeover.name",
+    "desc_key": "abilities.hostile_takeover.desc",
+    "flavour_key": "abilities.hostile_takeover.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "2d8",
+        "stat": "str"
+      },
+      {
+        "op": "status_enemy",
+        "status": "stunned",
+        "rounds": 1
+      }
+    ]
+  },
+  "slip": {
+    "name_key": "abilities.slip.name",
+    "desc_key": "abilities.slip.desc",
+    "flavour_key": "abilities.slip.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "escape"
+      }
+    ]
+  },
+  "flurry": {
+    "name_key": "abilities.flurry.name",
+    "desc_key": "abilities.flurry.desc",
+    "flavour_key": "abilities.flurry.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "3d4",
+        "stat": "dex"
+      }
+    ]
+  },
+  "expedite": {
+    "name_key": "abilities.expedite.name",
+    "desc_key": "abilities.expedite.desc",
+    "flavour_key": "abilities.expedite.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "advantage",
+        "rounds": 2
+      }
+    ]
+  },
+  "writeoff": {
+    "name_key": "abilities.writeoff.name",
+    "desc_key": "abilities.writeoff.desc",
+    "flavour_key": "abilities.writeoff.flavour",
+    "uses": 3,
+    "hp_cost": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "2d6",
+        "stat": "int"
+      }
+    ]
+  },
+  "audit": {
+    "name_key": "abilities.audit.name",
+    "desc_key": "abilities.audit.desc",
+    "flavour_key": "abilities.audit.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_all",
+        "status": "vulnerable",
+        "rounds": 3
+      }
+    ]
+  },
+  "compound_interest": {
+    "name_key": "abilities.compound_interest.name",
+    "desc_key": "abilities.compound_interest.desc",
+    "flavour_key": "abilities.compound_interest.flavour",
+    "uses": 1,
+    "hp_cost": 4,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "2d8"
+      }
+    ]
+  },
+  "objection": {
+    "name_key": "abilities.objection.name",
+    "desc_key": "abilities.objection.desc",
+    "flavour_key": "abilities.objection.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "cancel"
+      },
+      {
+        "op": "status_enemy",
+        "status": "weakened",
+        "rounds": 3
+      }
+    ]
+  },
+  "cross_examine": {
+    "name_key": "abilities.cross_examine.name",
+    "desc_key": "abilities.cross_examine.desc",
+    "flavour_key": "abilities.cross_examine.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "1d8",
+        "stat": "cha"
+      },
+      {
+        "op": "status_enemy",
+        "status": "vulnerable",
+        "rounds": 2
+      }
+    ]
+  },
+  "class_action": {
+    "name_key": "abilities.class_action.name",
+    "desc_key": "abilities.class_action.desc",
+    "flavour_key": "abilities.class_action.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "1d10"
+      },
+      {
+        "op": "status_all",
+        "status": "weakened",
+        "rounds": 2
+      }
+    ]
+  },
+  "immovable": {
+    "name_key": "abilities.immovable.name",
+    "desc_key": "abilities.immovable.desc",
+    "flavour_key": "abilities.immovable.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "guarded",
+        "rounds": 3
+      },
+      {
+        "op": "status_all",
+        "status": "taunted",
+        "rounds": 2
+      }
+    ]
+  },
+  "load_bearing": {
+    "name_key": "abilities.load_bearing.name",
+    "desc_key": "abilities.load_bearing.desc",
+    "flavour_key": "abilities.load_bearing.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "interposing",
+        "rounds": 3
+      },
+      {
+        "op": "heal",
+        "dice": "3d6"
+      }
+    ]
+  },
+  "redundancy_notice": {
+    "name_key": "abilities.redundancy_notice.name",
+    "desc_key": "abilities.redundancy_notice.desc",
+    "flavour_key": "abilities.redundancy_notice.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "4d10",
+        "stat": "str"
+      },
+      {
+        "op": "status_enemy",
+        "status": "stunned",
+        "rounds": 1
+      }
+    ]
+  },
+  "blindside": {
+    "name_key": "abilities.blindside.name",
+    "desc_key": "abilities.blindside.desc",
+    "flavour_key": "abilities.blindside.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "3d8",
+        "stat": "dex"
+      },
+      {
+        "op": "status_self",
+        "status": "advantage",
+        "rounds": 2
+      }
+    ]
+  },
+  "cut_and_run": {
+    "name_key": "abilities.cut_and_run.name",
+    "desc_key": "abilities.cut_and_run.desc",
+    "flavour_key": "abilities.cut_and_run.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "2d6"
+      },
+      {
+        "op": "escape"
+      }
+    ]
+  },
+  "recorded_delivery": {
+    "name_key": "abilities.recorded_delivery.name",
+    "desc_key": "abilities.recorded_delivery.desc",
+    "flavour_key": "abilities.recorded_delivery.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "5d8",
+        "stat": "dex"
+      },
+      {
+        "op": "status_enemy",
+        "status": "vulnerable",
+        "rounds": 3
+      }
+    ]
+  },
+  "depreciate": {
+    "name_key": "abilities.depreciate.name",
+    "desc_key": "abilities.depreciate.desc",
+    "flavour_key": "abilities.depreciate.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_all",
+        "status": "vulnerable",
+        "rounds": 4
+      },
+      {
+        "op": "damage_all",
+        "dice": "1d8"
+      }
+    ],
+    "hp_cost": 3
+  },
+  "bad_debt": {
+    "name_key": "abilities.bad_debt.name",
+    "desc_key": "abilities.bad_debt.desc",
+    "flavour_key": "abilities.bad_debt.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "4d8",
+        "stat": "int"
+      }
+    ],
+    "hp_cost": 6
+  },
+  "total_loss": {
+    "name_key": "abilities.total_loss.name",
+    "desc_key": "abilities.total_loss.desc",
+    "flavour_key": "abilities.total_loss.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "4d8"
+      },
+      {
+        "op": "status_all",
+        "status": "weakened",
+        "rounds": 3
+      }
+    ],
+    "hp_cost": 10
+  },
+  "leading_question": {
+    "name_key": "abilities.leading_question.name",
+    "desc_key": "abilities.leading_question.desc",
+    "flavour_key": "abilities.leading_question.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "2d8",
+        "stat": "cha"
+      },
+      {
+        "op": "status_enemy",
+        "status": "weakened",
+        "rounds": 3
+      }
+    ]
+  },
+  "discovery": {
+    "name_key": "abilities.discovery.name",
+    "desc_key": "abilities.discovery.desc",
+    "flavour_key": "abilities.discovery.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_all",
+        "status": "vulnerable",
+        "rounds": 3
+      },
+      {
+        "op": "heal",
+        "dice": "3d6"
+      }
+    ]
+  },
+  "summary_judgment": {
+    "name_key": "abilities.summary_judgment.name",
+    "desc_key": "abilities.summary_judgment.desc",
+    "flavour_key": "abilities.summary_judgment.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "5d6",
+        "stat": "cha"
+      },
+      {
+        "op": "status_enemy",
+        "status": "stunned",
+        "rounds": 1
+      },
+      {
+        "op": "cancel"
+      }
+    ]
+  },
+  "last_line": {
+    "name_key": "abilities.last_line.name",
+    "desc_key": "abilities.last_line.desc",
+    "flavour_key": "abilities.last_line.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "interposing",
+        "rounds": 4
+      },
+      {
+        "op": "status_self",
+        "status": "guarded",
+        "rounds": 4
+      },
+      {
+        "op": "heal",
+        "dice": "4d8"
+      }
+    ]
+  },
+  "structural": {
+    "name_key": "abilities.structural.name",
+    "desc_key": "abilities.structural.desc",
+    "flavour_key": "abilities.structural.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_all",
+        "status": "taunted",
+        "rounds": 3
+      },
+      {
+        "op": "status_self",
+        "status": "guarded",
+        "rounds": 3
+      },
+      {
+        "op": "damage_all",
+        "dice": "2d8"
+      }
+    ]
+  },
+  "full_stop": {
+    "name_key": "abilities.full_stop.name",
+    "desc_key": "abilities.full_stop.desc",
+    "flavour_key": "abilities.full_stop.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "6d10",
+        "stat": "str"
+      },
+      {
+        "op": "status_enemy",
+        "status": "stunned",
+        "rounds": 2
+      }
+    ]
+  },
+  "blur": {
+    "name_key": "abilities.blur.name",
+    "desc_key": "abilities.blur.desc",
+    "flavour_key": "abilities.blur.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_self",
+        "status": "advantage",
+        "rounds": 4
+      },
+      {
+        "op": "status_self",
+        "status": "guarded",
+        "rounds": 2
+      }
+    ]
+  },
+  "hit_and_run": {
+    "name_key": "abilities.hit_and_run.name",
+    "desc_key": "abilities.hit_and_run.desc",
+    "flavour_key": "abilities.hit_and_run.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "4d8",
+        "stat": "dex"
+      },
+      {
+        "op": "escape"
+      }
+    ]
+  },
+  "signed_for": {
+    "name_key": "abilities.signed_for.name",
+    "desc_key": "abilities.signed_for.desc",
+    "flavour_key": "abilities.signed_for.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "7d8",
+        "stat": "dex"
+      },
+      {
+        "op": "status_enemy",
+        "status": "vulnerable",
+        "rounds": 4
+      }
+    ]
+  },
+  "liquidate": {
+    "name_key": "abilities.liquidate.name",
+    "desc_key": "abilities.liquidate.desc",
+    "flavour_key": "abilities.liquidate.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "3d8"
+      },
+      {
+        "op": "status_all",
+        "status": "vulnerable",
+        "rounds": 3
+      }
+    ],
+    "hp_cost": 6
+  },
+  "short_position": {
+    "name_key": "abilities.short_position.name",
+    "desc_key": "abilities.short_position.desc",
+    "flavour_key": "abilities.short_position.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "6d8",
+        "stat": "int"
+      }
+    ],
+    "hp_cost": 10
+  },
+  "write_down_all": {
+    "name_key": "abilities.write_down_all.name",
+    "desc_key": "abilities.write_down_all.desc",
+    "flavour_key": "abilities.write_down_all.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage_all",
+        "dice": "5d10"
+      },
+      {
+        "op": "status_all",
+        "status": "weakened",
+        "rounds": 3
+      }
+    ],
+    "hp_cost": 16
+  },
+  "no_case": {
+    "name_key": "abilities.no_case.name",
+    "desc_key": "abilities.no_case.desc",
+    "flavour_key": "abilities.no_case.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "status_all",
+        "status": "weakened",
+        "rounds": 4
+      },
+      {
+        "op": "status_all",
+        "status": "vulnerable",
+        "rounds": 3
+      }
+    ]
+  },
+  "without_prejudice": {
+    "name_key": "abilities.without_prejudice.name",
+    "desc_key": "abilities.without_prejudice.desc",
+    "flavour_key": "abilities.without_prejudice.flavour",
+    "uses": 2,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "4d8",
+        "stat": "cha"
+      },
+      {
+        "op": "heal",
+        "dice": "4d6"
+      },
+      {
+        "op": "cancel"
+      }
+    ]
+  },
+  "final_submission": {
+    "name_key": "abilities.final_submission.name",
+    "desc_key": "abilities.final_submission.desc",
+    "flavour_key": "abilities.final_submission.flavour",
+    "uses": 1,
+    "effects": [
+      {
+        "op": "damage",
+        "dice": "6d8",
+        "stat": "cha"
+      },
+      {
+        "op": "status_enemy",
+        "status": "stunned",
+        "rounds": 2
+      },
+      {
+        "op": "damage_all",
+        "dice": "2d8"
+      }
+    ]
+  }
+}

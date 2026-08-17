@@ -1,0 +1,8 @@
+  +---------------------------+
+  |  [][][][] judgments       |
+  |                           |
+  |   (~~~)  fire             |
+  |   [chair]      [chair]    |
+  |            [decanter]     |
+  +---------------------------+
+    older than the contract

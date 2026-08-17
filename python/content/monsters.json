@@ -1,0 +1,3970 @@
+{
+  "signage": {
+    "name_key": "mon.signage.name",
+    "hp": [
+      10,
+      16
+    ],
+    "ac": 11,
+    "xp": 30,
+    "dex_mod": 0,
+    "art": "mon_signage",
+    "attacks": [
+      {
+        "name_key": "mon.signage.atk1",
+        "to_hit": 4,
+        "dmg": "1d6"
+      },
+      {
+        "name_key": "mon.signage.atk2",
+        "to_hit": 5,
+        "dmg": "1d4"
+      }
+    ],
+    "loot_table": "floor1_scraps",
+    "taunts": [
+      "mon.signage.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      0,
+      2
+    ]
+  },
+  "intern": {
+    "name_key": "mon.intern.name",
+    "hp": [
+      13,
+      21
+    ],
+    "ac": 12,
+    "xp": 45,
+    "dex_mod": 1,
+    "art": "mon_intern",
+    "group": true,
+    "attacks": [
+      {
+        "name_key": "mon.intern.atk1",
+        "to_hit": 5,
+        "dmg": "1d6+1"
+      },
+      {
+        "name_key": "mon.intern.atk2",
+        "to_hit": 4,
+        "dmg": "1d8"
+      }
+    ],
+    "loot_table": "floor1_scraps",
+    "taunts": [
+      "mon.intern.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 1,
+      "patience": 6,
+      "start_distance": 2
+    },
+    "clips": [
+      1,
+      3
+    ]
+  },
+  "clipboards": {
+    "name_key": "mon.clipboards.name",
+    "hp": [
+      12,
+      18
+    ],
+    "ac": 13,
+    "xp": 40,
+    "dex_mod": 2,
+    "art": "mon_clipboards",
+    "attacks": [
+      {
+        "name_key": "mon.clipboards.atk1",
+        "to_hit": 6,
+        "dmg": "1d4+2"
+      }
+    ],
+    "loot_table": "floor1_scraps",
+    "taunts": [
+      "mon.clipboards.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      1,
+      2
+    ]
+  },
+  "mascot": {
+    "name_key": "mon.mascot.name",
+    "hp": [
+      18,
+      26
+    ],
+    "ac": 12,
+    "xp": 60,
+    "dex_mod": 2,
+    "art": "mon_mascot",
+    "attacks": [
+      {
+        "name_key": "mon.mascot.atk1",
+        "to_hit": 5,
+        "dmg": "1d8+1"
+      },
+      {
+        "name_key": "mon.mascot.atk2",
+        "to_hit": 6,
+        "dmg": "2d4"
+      }
+    ],
+    "loot_table": "floor1_good",
+    "taunts": [
+      "mon.mascot.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 9,
+      "start_distance": 3
+    },
+    "clips": [
+      2,
+      4
+    ]
+  },
+  "queue": {
+    "name_key": "mon.queue.name",
+    "hp": [
+      21,
+      29
+    ],
+    "ac": 10,
+    "xp": 55,
+    "dex_mod": -1,
+    "art": "mon_queue",
+    "attacks": [
+      {
+        "name_key": "mon.queue.atk1",
+        "to_hit": 4,
+        "dmg": "1d10"
+      },
+      {
+        "name_key": "mon.queue.atk2",
+        "to_hit": 3,
+        "dmg": "2d4"
+      }
+    ],
+    "loot_table": "floor1_scraps",
+    "taunts": [
+      "mon.queue.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      1,
+      3
+    ]
+  },
+  "middle_management": {
+    "name_key": "mon.middle_management.name",
+    "hp": [
+      34,
+      42
+    ],
+    "ac": 14,
+    "xp": 120,
+    "dex_mod": 1,
+    "art": "mon_middle_management",
+    "attacks": [
+      {
+        "name_key": "mon.middle_management.atk1",
+        "to_hit": 7,
+        "dmg": "1d10+2"
+      },
+      {
+        "name_key": "mon.middle_management.atk2",
+        "to_hit": 6,
+        "dmg": "2d6"
+      },
+      {
+        "name_key": "mon.middle_management.atk3",
+        "to_hit": 8,
+        "dmg": "1d6+3"
+      }
+    ],
+    "loot_table": "floor1_good",
+    "elite_loot": "floor1_elite",
+    "taunts": [
+      "mon.middle_management.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 8,
+      "start_distance": 2
+    },
+    "clips": [
+      5,
+      9
+    ]
+  },
+  "the_greeter": {
+    "name_key": "mon.the_greeter.name",
+    "hp": [
+      52,
+      60
+    ],
+    "ac": 13,
+    "xp": 260,
+    "dex_mod": 1,
+    "art": "boss_greeter",
+    "attacks": [
+      {
+        "name_key": "mon.the_greeter.atk1",
+        "to_hit": 6,
+        "dmg": "1d8+2"
+      },
+      {
+        "name_key": "mon.the_greeter.atk2",
+        "to_hit": 7,
+        "dmg": "2d6"
+      },
+      {
+        "name_key": "mon.the_greeter.atk3",
+        "to_hit": 5,
+        "dmg": "1d12"
+      }
+    ],
+    "loot_table": "boss_greeter",
+    "taunts": [
+      "mon.the_greeter.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      12,
+      20
+    ]
+  },
+  "coin_slick": {
+    "name_key": "mon.coin_slick.name",
+    "hp": [
+      14,
+      20
+    ],
+    "ac": 11,
+    "xp": 60,
+    "dex_mod": 0,
+    "art": "mon_coin_slick",
+    "group": true,
+    "attacks": [
+      {
+        "name_key": "mon.coin_slick.atk1",
+        "to_hit": 5,
+        "dmg": "1d8+1"
+      },
+      {
+        "name_key": "mon.coin_slick.atk2",
+        "to_hit": 4,
+        "dmg": "2d4"
+      }
+    ],
+    "loot_table": "f2_scraps",
+    "taunts": [
+      "mon.coin_slick.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      3,
+      7
+    ]
+  },
+  "surcharge": {
+    "name_key": "mon.surcharge.name",
+    "hp": [
+      16,
+      22
+    ],
+    "ac": 13,
+    "xp": 70,
+    "dex_mod": 2,
+    "art": "mon_surcharge",
+    "group": true,
+    "attacks": [
+      {
+        "name_key": "mon.surcharge.atk1",
+        "to_hit": 6,
+        "dmg": "1d10"
+      },
+      {
+        "name_key": "mon.surcharge.atk2",
+        "to_hit": 5,
+        "dmg": "1d6+3"
+      }
+    ],
+    "loot_table": "f2_scraps",
+    "taunts": [
+      "mon.surcharge.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 7,
+      "start_distance": 2
+    },
+    "clips": [
+      3,
+      6
+    ]
+  },
+  "collections": {
+    "name_key": "mon.collections.name",
+    "hp": [
+      20,
+      28
+    ],
+    "ac": 12,
+    "xp": 85,
+    "dex_mod": 1,
+    "art": "mon_collections",
+    "attacks": [
+      {
+        "name_key": "mon.collections.atk1",
+        "to_hit": 6,
+        "dmg": "2d6"
+      },
+      {
+        "name_key": "mon.collections.atk2",
+        "to_hit": 5,
+        "dmg": "1d8+2"
+      }
+    ],
+    "loot_table": "f2_common",
+    "taunts": [
+      "mon.collections.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "clips": [
+      4,
+      7
+    ]
+  },
+  "meter": {
+    "name_key": "mon.meter.name",
+    "hp": [
+      18,
+      24
+    ],
+    "ac": 14,
+    "xp": 75,
+    "dex_mod": 0,
+    "art": "mon_meter",
+    "attacks": [
+      {
+        "name_key": "mon.meter.atk1",
+        "to_hit": 5,
+        "dmg": "1d12"
+      },
+      {
+        "name_key": "mon.meter.atk2",
+        "to_hit": 7,
+        "dmg": "1d6+2"
+      }
+    ],
+    "loot_table": "f2_common",
+    "taunts": [
+      "mon.meter.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      3,
+      6
+    ]
+  },
+  "drowned_customer": {
+    "name_key": "mon.drowned_customer.name",
+    "hp": [
+      24,
+      30
+    ],
+    "ac": 11,
+    "xp": 95,
+    "dex_mod": -1,
+    "art": "mon_drowned",
+    "attacks": [
+      {
+        "name_key": "mon.drowned_customer.atk1",
+        "to_hit": 5,
+        "dmg": "2d8"
+      },
+      {
+        "name_key": "mon.drowned_customer.atk2",
+        "to_hit": 4,
+        "dmg": "1d10+2"
+      }
+    ],
+    "loot_table": "f2_good",
+    "taunts": [
+      "mon.drowned_customer.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 1,
+      "patience": 14,
+      "start_distance": 4
+    },
+    "clips": [
+      5,
+      10
+    ]
+  },
+  "auditor": {
+    "name_key": "mon.auditor.name",
+    "hp": [
+      34,
+      42
+    ],
+    "ac": 15,
+    "xp": 160,
+    "dex_mod": 2,
+    "art": "mon_auditor",
+    "attacks": [
+      {
+        "name_key": "mon.auditor.atk1",
+        "to_hit": 7,
+        "dmg": "2d6+2"
+      },
+      {
+        "name_key": "mon.auditor.atk2",
+        "to_hit": 8,
+        "dmg": "1d8+4"
+      },
+      {
+        "name_key": "mon.auditor.atk3",
+        "to_hit": 6,
+        "dmg": "3d4"
+      }
+    ],
+    "loot_table": "f2_good",
+    "elite_loot": "f2_elite",
+    "taunts": [
+      "mon.auditor.taunt"
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 9,
+      "start_distance": 2
+    },
+    "clips": [
+      9,
+      15
+    ]
+  },
+  "the_deductible": {
+    "name_key": "mon.the_deductible.name",
+    "hp": [
+      44,
+      52
+    ],
+    "ac": 14,
+    "xp": 220,
+    "dex_mod": 0,
+    "art": "mon_deductible",
+    "attacks": [
+      {
+        "name_key": "mon.the_deductible.atk1",
+        "to_hit": 6,
+        "dmg": "2d8"
+      },
+      {
+        "name_key": "mon.the_deductible.atk2",
+        "to_hit": 7,
+        "dmg": "1d10+3"
+      }
+    ],
+    "loot_table": "miniboss_deductible",
+    "taunts": [
+      "mon.the_deductible.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      11,
+      17
+    ]
+  },
+  "ledgermaw": {
+    "name_key": "mon.ledgermaw.name",
+    "hp": [
+      70,
+      82
+    ],
+    "ac": 15,
+    "xp": 420,
+    "dex_mod": 1,
+    "art": "boss_ledgermaw",
+    "attacks": [
+      {
+        "name_key": "mon.ledgermaw.atk1",
+        "to_hit": 7,
+        "dmg": "2d8+2"
+      },
+      {
+        "name_key": "mon.ledgermaw.atk2",
+        "to_hit": 8,
+        "dmg": "3d6"
+      },
+      {
+        "name_key": "mon.ledgermaw.atk3",
+        "to_hit": 6,
+        "dmg": "1d12+4"
+      }
+    ],
+    "loot_table": "boss_ledgermaw",
+    "taunts": [
+      "mon.ledgermaw.taunt"
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      30,
+      45
+    ]
+  },
+  "actuarial_table": {
+    "name_key": "mon.actuarial_table.name",
+    "hp": [
+      22,
+      30
+    ],
+    "ac": 13,
+    "xp": 100,
+    "dex_mod": 0,
+    "art": "mon_table",
+    "loot_table": "f3_scraps",
+    "taunts": [
+      "mon.actuarial_table.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.actuarial_table.atk1",
+        "to_hit": 6,
+        "dmg": "2d6+1"
+      },
+      {
+        "name_key": "mon.actuarial_table.atk2",
+        "to_hit": 5,
+        "dmg": "1d10+2"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true,
+    "clips": [
+      4,
+      7
+    ]
+  },
+  "exclusion": {
+    "name_key": "mon.exclusion.name",
+    "hp": [
+      20,
+      26
+    ],
+    "ac": 15,
+    "xp": 110,
+    "dex_mod": 3,
+    "art": "mon_exclusion",
+    "loot_table": "f3_scraps",
+    "taunts": [
+      "mon.exclusion.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.exclusion.atk1",
+        "to_hit": 8,
+        "dmg": "1d8+3"
+      },
+      {
+        "name_key": "mon.exclusion.atk2",
+        "to_hit": 7,
+        "dmg": "2d4+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 8,
+      "start_distance": 2
+    },
+    "group": true,
+    "clips": [
+      4,
+      7
+    ]
+  },
+  "small_print": {
+    "name_key": "mon.small_print.name",
+    "hp": [
+      18,
+      24
+    ],
+    "ac": 16,
+    "xp": 105,
+    "dex_mod": 4,
+    "art": "mon_smallprint",
+    "loot_table": "f3_common",
+    "taunts": [
+      "mon.small_print.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.small_print.atk1",
+        "to_hit": 9,
+        "dmg": "1d6+4"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 10,
+      "start_distance": 3
+    },
+    "clips": [
+      3,
+      6
+    ]
+  },
+  "claimant": {
+    "name_key": "mon.claimant.name",
+    "hp": [
+      30,
+      38
+    ],
+    "ac": 12,
+    "xp": 130,
+    "dex_mod": 0,
+    "art": "mon_claimant",
+    "loot_table": "f3_common",
+    "taunts": [
+      "mon.claimant.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.claimant.atk1",
+        "to_hit": 6,
+        "dmg": "2d8"
+      },
+      {
+        "name_key": "mon.claimant.atk2",
+        "to_hit": 5,
+        "dmg": "1d12+2"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      5,
+      9
+    ]
+  },
+  "act_of_god": {
+    "name_key": "mon.act_of_god.name",
+    "hp": [
+      34,
+      44
+    ],
+    "ac": 13,
+    "xp": 170,
+    "dex_mod": 1,
+    "art": "mon_actofgod",
+    "loot_table": "f3_good",
+    "taunts": [
+      "mon.act_of_god.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.act_of_god.atk1",
+        "to_hit": 7,
+        "dmg": "3d6",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.act_of_god.atk2",
+        "to_hit": 8,
+        "dmg": "2d8+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "clips": [
+      6,
+      11
+    ]
+  },
+  "loss_adjuster": {
+    "name_key": "mon.loss_adjuster.name",
+    "hp": [
+      46,
+      56
+    ],
+    "ac": 16,
+    "xp": 240,
+    "dex_mod": 2,
+    "art": "mon_adjuster",
+    "loot_table": "f3_good",
+    "taunts": [
+      "mon.loss_adjuster.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.loss_adjuster.atk1",
+        "to_hit": 8,
+        "dmg": "2d8+3"
+      },
+      {
+        "name_key": "mon.loss_adjuster.atk2",
+        "to_hit": 9,
+        "dmg": "1d10+5"
+      },
+      {
+        "name_key": "mon.loss_adjuster.atk3",
+        "to_hit": 7,
+        "dmg": "4d4"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 9,
+      "start_distance": 2
+    },
+    "elite_loot": "f3_elite",
+    "clips": [
+      11,
+      18
+    ]
+  },
+  "the_cap": {
+    "name_key": "mon.the_cap.name",
+    "hp": [
+      88,
+      100
+    ],
+    "ac": 16,
+    "xp": 560,
+    "dex_mod": 1,
+    "art": "boss_cap",
+    "loot_table": "boss_cap",
+    "taunts": [
+      "mon.the_cap.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_cap.atk1",
+        "to_hit": 8,
+        "dmg": "2d10"
+      },
+      {
+        "name_key": "mon.the_cap.atk2",
+        "to_hit": 9,
+        "dmg": "3d6+2"
+      },
+      {
+        "name_key": "mon.the_cap.atk3",
+        "to_hit": 7,
+        "dmg": "1d12+5"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "damage_cap": 6,
+    "cap_break_flag": "cap_broken",
+    "clips": [
+      35,
+      50
+    ]
+  },
+  "net_curtain": {
+    "name_key": "mon.net_curtain.name",
+    "hp": [
+      26,
+      34
+    ],
+    "ac": 14,
+    "xp": 130,
+    "dex_mod": 2,
+    "art": "mon_curtain",
+    "loot_table": "f4_scraps",
+    "taunts": [
+      "mon.net_curtain.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.net_curtain.atk1",
+        "to_hit": 7,
+        "dmg": "2d6+2"
+      },
+      {
+        "name_key": "mon.net_curtain.atk2",
+        "to_hit": 6,
+        "dmg": "1d10+3"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true,
+    "clips": [
+      4,
+      8
+    ]
+  },
+  "wheelie_bin": {
+    "name_key": "mon.wheelie_bin.name",
+    "hp": [
+      34,
+      42
+    ],
+    "ac": 13,
+    "xp": 140,
+    "dex_mod": 0,
+    "art": "mon_bin",
+    "loot_table": "f4_scraps",
+    "taunts": [
+      "mon.wheelie_bin.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.wheelie_bin.atk1",
+        "to_hit": 7,
+        "dmg": "2d8"
+      },
+      {
+        "name_key": "mon.wheelie_bin.atk2",
+        "to_hit": 6,
+        "dmg": "1d12+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 9,
+      "start_distance": 2
+    },
+    "clips": [
+      5,
+      9
+    ]
+  },
+  "lawn": {
+    "name_key": "mon.lawn.name",
+    "hp": [
+      30,
+      38
+    ],
+    "ac": 15,
+    "xp": 145,
+    "dex_mod": 1,
+    "art": "mon_lawn",
+    "loot_table": "f4_common",
+    "taunts": [
+      "mon.lawn.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.lawn.atk1",
+        "to_hit": 8,
+        "dmg": "2d6+3"
+      },
+      {
+        "name_key": "mon.lawn.atk2",
+        "to_hit": 7,
+        "dmg": "3d4+1"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      4,
+      8
+    ]
+  },
+  "caroller": {
+    "name_key": "mon.caroller.name",
+    "hp": [
+      28,
+      36
+    ],
+    "ac": 14,
+    "xp": 150,
+    "dex_mod": 2,
+    "art": "mon_caroller",
+    "loot_table": "f4_common",
+    "taunts": [
+      "mon.caroller.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.caroller.atk1",
+        "to_hit": 8,
+        "dmg": "1d10+4"
+      },
+      {
+        "name_key": "mon.caroller.atk2",
+        "to_hit": 7,
+        "dmg": "2d8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 3
+    },
+    "group": true,
+    "clips": [
+      5,
+      9
+    ]
+  },
+  "ice_cream_van": {
+    "name_key": "mon.ice_cream_van.name",
+    "hp": [
+      44,
+      54
+    ],
+    "ac": 14,
+    "xp": 200,
+    "dex_mod": 3,
+    "art": "mon_van",
+    "loot_table": "f4_good",
+    "taunts": [
+      "mon.ice_cream_van.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.ice_cream_van.atk1",
+        "to_hit": 9,
+        "dmg": "3d6"
+      },
+      {
+        "name_key": "mon.ice_cream_van.atk2",
+        "to_hit": 8,
+        "dmg": "2d10+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 4,
+      "patience": 14,
+      "start_distance": 4
+    },
+    "clips": [
+      7,
+      13
+    ]
+  },
+  "neighbourhood_watch": {
+    "name_key": "mon.neighbourhood_watch.name",
+    "hp": [
+      54,
+      66
+    ],
+    "ac": 17,
+    "xp": 300,
+    "dex_mod": 3,
+    "art": "mon_watch",
+    "loot_table": "f4_good",
+    "taunts": [
+      "mon.neighbourhood_watch.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.neighbourhood_watch.atk1",
+        "to_hit": 9,
+        "dmg": "2d8+4"
+      },
+      {
+        "name_key": "mon.neighbourhood_watch.atk2",
+        "to_hit": 10,
+        "dmg": "1d12+5"
+      },
+      {
+        "name_key": "mon.neighbourhood_watch.atk3",
+        "to_hit": 8,
+        "dmg": "4d4+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 10,
+      "start_distance": 2
+    },
+    "elite_loot": "f4_elite",
+    "clips": [
+      13,
+      21
+    ]
+  },
+  "the_committee": {
+    "name_key": "mon.the_committee.name",
+    "hp": [
+      60,
+      70
+    ],
+    "ac": 15,
+    "xp": 320,
+    "dex_mod": 1,
+    "art": "mon_committee",
+    "loot_table": "miniboss_committee",
+    "taunts": [
+      "mon.the_committee.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_committee.atk1",
+        "to_hit": 8,
+        "dmg": "2d8+2"
+      },
+      {
+        "name_key": "mon.the_committee.atk2",
+        "to_hit": 7,
+        "dmg": "3d6"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      15,
+      22
+    ]
+  },
+  "mrs_hensley": {
+    "name_key": "mon.mrs_hensley.name",
+    "hp": [
+      96,
+      112
+    ],
+    "ac": 17,
+    "xp": 700,
+    "dex_mod": 2,
+    "art": "boss_hensley",
+    "loot_table": "boss_hensley",
+    "taunts": [
+      "mon.mrs_hensley.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.mrs_hensley.atk1",
+        "to_hit": 9,
+        "dmg": "2d10+2"
+      },
+      {
+        "name_key": "mon.mrs_hensley.atk2",
+        "to_hit": 10,
+        "dmg": "3d8"
+      },
+      {
+        "name_key": "mon.mrs_hensley.atk3",
+        "to_hit": 8,
+        "dmg": "1d12+6"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "summons": {
+      "monster": "neighbour",
+      "count": 1,
+      "every": 2,
+      "first_round": 2,
+      "max": 3,
+      "field_cap": 4,
+      "line_key": "mon.mrs_hensley.call"
+    },
+    "clips": [
+      40,
+      60
+    ]
+  },
+  "neighbour": {
+    "name_key": "mon.neighbour.name",
+    "hp": [
+      20,
+      26
+    ],
+    "ac": 13,
+    "xp": 70,
+    "dex_mod": 1,
+    "art": "mon_neighbour",
+    "loot_table": "f4_scraps",
+    "taunts": [
+      "mon.neighbour.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.neighbour.atk1",
+        "to_hit": 7,
+        "dmg": "1d10+2"
+      },
+      {
+        "name_key": "mon.neighbour.atk2",
+        "to_hit": 6,
+        "dmg": "2d4+2"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "clips": [
+      2,
+      5
+    ]
+  },
+  "tape_ghoul": {
+    "name_key": "mon.tape_ghoul.name",
+    "hp": [
+      34,
+      42
+    ],
+    "ac": 15,
+    "xp": 180,
+    "dex_mod": 1,
+    "art": "mon_tapeghoul",
+    "loot_table": "f5_common",
+    "clips": [
+      6,
+      11
+    ],
+    "taunts": [
+      "mon.tape_ghoul.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.tape_ghoul.atk1",
+        "to_hit": 9,
+        "dmg": "2d8+2"
+      },
+      {
+        "name_key": "mon.tape_ghoul.atk2",
+        "to_hit": 8,
+        "dmg": "3d6"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 10,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "orphan_process": {
+    "name_key": "mon.orphan_process.name",
+    "hp": [
+      28,
+      36
+    ],
+    "ac": 17,
+    "xp": 175,
+    "dex_mod": 4,
+    "art": "mon_orphan",
+    "loot_table": "f5_scraps",
+    "clips": [
+      5,
+      10
+    ],
+    "taunts": [
+      "mon.orphan_process.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.orphan_process.atk1",
+        "to_hit": 10,
+        "dmg": "2d6+4"
+      },
+      {
+        "name_key": "mon.orphan_process.atk2",
+        "to_hit": 9,
+        "dmg": "1d10+5"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "retention_policy": {
+    "name_key": "mon.retention_policy.name",
+    "hp": [
+      40,
+      50
+    ],
+    "ac": 15,
+    "xp": 195,
+    "dex_mod": 0,
+    "art": "mon_retention",
+    "loot_table": "f5_common",
+    "clips": [
+      7,
+      13
+    ],
+    "taunts": [
+      "mon.retention_policy.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.retention_policy.atk1",
+        "to_hit": 9,
+        "dmg": "3d6+2"
+      },
+      {
+        "name_key": "mon.retention_policy.atk2",
+        "to_hit": 8,
+        "dmg": "2d10"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "cold_storage": {
+    "name_key": "mon.cold_storage.name",
+    "hp": [
+      46,
+      58
+    ],
+    "ac": 16,
+    "xp": 220,
+    "dex_mod": -1,
+    "art": "mon_coldstore",
+    "loot_table": "f5_good",
+    "clips": [
+      8,
+      15
+    ],
+    "taunts": [
+      "mon.cold_storage.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.cold_storage.atk1",
+        "to_hit": 9,
+        "dmg": "2d12"
+      },
+      {
+        "name_key": "mon.cold_storage.atk2",
+        "to_hit": 10,
+        "dmg": "3d8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 1,
+      "patience": 16,
+      "start_distance": 4
+    }
+  },
+  "undead_sysadmin": {
+    "name_key": "mon.undead_sysadmin.name",
+    "hp": [
+      42,
+      52
+    ],
+    "ac": 16,
+    "xp": 240,
+    "dex_mod": 2,
+    "art": "mon_sysadmin",
+    "loot_table": "f5_good",
+    "clips": [
+      10,
+      17
+    ],
+    "taunts": [
+      "mon.undead_sysadmin.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.undead_sysadmin.atk1",
+        "to_hit": 10,
+        "dmg": "2d8+4"
+      },
+      {
+        "name_key": "mon.undead_sysadmin.atk2",
+        "to_hit": 11,
+        "dmg": "1d12+6"
+      },
+      {
+        "name_key": "mon.undead_sysadmin.atk3",
+        "to_hit": 9,
+        "dmg": "4d4+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    }
+  },
+  "the_backup": {
+    "name_key": "mon.the_backup.name",
+    "hp": [
+      80,
+      94
+    ],
+    "ac": 16,
+    "xp": 420,
+    "dex_mod": 1,
+    "art": "mon_backup",
+    "loot_table": "miniboss_backup",
+    "clips": [
+      22,
+      35
+    ],
+    "taunts": [
+      "mon.the_backup.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_backup.atk1",
+        "to_hit": 10,
+        "dmg": "3d6+2"
+      },
+      {
+        "name_key": "mon.the_backup.atk2",
+        "to_hit": 9,
+        "dmg": "2d10+3"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "regen": 8,
+    "regen_max": 5
+  },
+  "sysadmin": {
+    "name_key": "mon.sysadmin.name",
+    "hp": [
+      70,
+      84
+    ],
+    "ac": 18,
+    "xp": 400,
+    "dex_mod": 3,
+    "art": "mon_sysadmin",
+    "loot_table": "f5_good",
+    "clips": [
+      20,
+      31
+    ],
+    "taunts": [
+      "mon.sysadmin.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.sysadmin.atk1",
+        "to_hit": 11,
+        "dmg": "2d10+3"
+      },
+      {
+        "name_key": "mon.sysadmin.atk2",
+        "to_hit": 12,
+        "dmg": "1d12+6"
+      },
+      {
+        "name_key": "mon.sysadmin.atk3",
+        "to_hit": 10,
+        "dmg": "4d6"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 10,
+      "start_distance": 2
+    },
+    "elite_loot": "f5_elite"
+  },
+  "raid_six": {
+    "name_key": "mon.raid_six.name",
+    "hp": [
+      150,
+      170
+    ],
+    "ac": 18,
+    "xp": 1000,
+    "dex_mod": 1,
+    "art": "boss_raid",
+    "loot_table": "boss_raid",
+    "clips": [
+      65,
+      95
+    ],
+    "taunts": [
+      "mon.raid_six.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.raid_six.atk1",
+        "to_hit": 11,
+        "dmg": "3d8+3"
+      },
+      {
+        "name_key": "mon.raid_six.atk2",
+        "to_hit": 12,
+        "dmg": "4d6+2"
+      },
+      {
+        "name_key": "mon.raid_six.atk3",
+        "to_hit": 10,
+        "dmg": "2d12+4"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "regen": 12,
+    "regen_break_flag": "parity_broken",
+    "regen_max": 6
+  },
+  "licensing": {
+    "name_key": "mon.licensing.name",
+    "hp": [
+      40,
+      50
+    ],
+    "ac": 16,
+    "xp": 210,
+    "dex_mod": 2,
+    "art": "mon_licensing",
+    "loot_table": "f6_common",
+    "clips": [
+      7,
+      13
+    ],
+    "taunts": [
+      "mon.licensing.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.licensing.atk1",
+        "to_hit": 10,
+        "dmg": "2d8+3"
+      },
+      {
+        "name_key": "mon.licensing.atk2",
+        "to_hit": 9,
+        "dmg": "3d6+1"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "plush_you": {
+    "name_key": "mon.plush_you.name",
+    "hp": [
+      36,
+      46
+    ],
+    "ac": 15,
+    "xp": 200,
+    "dex_mod": 3,
+    "art": "mon_plush",
+    "loot_table": "f6_scraps",
+    "clips": [
+      6,
+      12
+    ],
+    "taunts": [
+      "mon.plush_you.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.plush_you.atk1",
+        "to_hit": 10,
+        "dmg": "2d6+5"
+      },
+      {
+        "name_key": "mon.plush_you.atk2",
+        "to_hit": 11,
+        "dmg": "1d10+4"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "trademark": {
+    "name_key": "mon.trademark.name",
+    "hp": [
+      44,
+      54
+    ],
+    "ac": 18,
+    "xp": 225,
+    "dex_mod": 1,
+    "art": "mon_trademark",
+    "loot_table": "f6_common",
+    "clips": [
+      8,
+      15
+    ],
+    "taunts": [
+      "mon.trademark.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.trademark.atk1",
+        "to_hit": 11,
+        "dmg": "2d10+2"
+      },
+      {
+        "name_key": "mon.trademark.atk2",
+        "to_hit": 10,
+        "dmg": "3d6+3"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "derivative_work": {
+    "name_key": "mon.derivative_work.name",
+    "hp": [
+      38,
+      48
+    ],
+    "ac": 15,
+    "xp": 215,
+    "dex_mod": 3,
+    "art": "mon_derivative",
+    "loot_table": "f6_good",
+    "clips": [
+      7,
+      14
+    ],
+    "taunts": [
+      "mon.derivative_work.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.derivative_work.atk1",
+        "to_hit": 10,
+        "dmg": "3d6"
+      },
+      {
+        "name_key": "mon.derivative_work.atk2",
+        "to_hit": 9,
+        "dmg": "2d8+3"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 11,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "cease_and_desist": {
+    "name_key": "mon.cease_and_desist.name",
+    "hp": [
+      52,
+      64
+    ],
+    "ac": 17,
+    "xp": 260,
+    "dex_mod": 2,
+    "art": "mon_cease",
+    "loot_table": "f6_good",
+    "clips": [
+      11,
+      19
+    ],
+    "taunts": [
+      "mon.cease_and_desist.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.cease_and_desist.atk1",
+        "to_hit": 11,
+        "dmg": "3d8"
+      },
+      {
+        "name_key": "mon.cease_and_desist.atk2",
+        "to_hit": 12,
+        "dmg": "2d10+3"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 13,
+      "start_distance": 3
+    }
+  },
+  "the_focus_group": {
+    "name_key": "mon.the_focus_group.name",
+    "hp": [
+      92,
+      108
+    ],
+    "ac": 16,
+    "xp": 480,
+    "dex_mod": 1,
+    "art": "mon_focusgroup",
+    "loot_table": "miniboss_focus",
+    "clips": [
+      27,
+      42
+    ],
+    "taunts": [
+      "mon.the_focus_group.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_focus_group.atk1",
+        "to_hit": 11,
+        "dmg": "2d10+4"
+      },
+      {
+        "name_key": "mon.the_focus_group.atk2",
+        "to_hit": 10,
+        "dmg": "4d6"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "summons": {
+      "monster": "plush_you",
+      "count": 1,
+      "every": 3,
+      "first_round": 3,
+      "max": 2,
+      "field_cap": 3,
+      "line_key": "mon.the_focus_group.call"
+    }
+  },
+  "brand_guardian": {
+    "name_key": "mon.brand_guardian.name",
+    "hp": [
+      80,
+      96
+    ],
+    "ac": 19,
+    "xp": 460,
+    "dex_mod": 3,
+    "art": "mon_brandguardian",
+    "loot_table": "f6_good",
+    "clips": [
+      24,
+      36
+    ],
+    "taunts": [
+      "mon.brand_guardian.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.brand_guardian.atk1",
+        "to_hit": 12,
+        "dmg": "3d6+4"
+      },
+      {
+        "name_key": "mon.brand_guardian.atk2",
+        "to_hit": 11,
+        "dmg": "2d12+2"
+      },
+      {
+        "name_key": "mon.brand_guardian.atk3",
+        "to_hit": 13,
+        "dmg": "1d12+7"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 10,
+      "start_distance": 2
+    },
+    "elite_loot": "f6_elite"
+  },
+  "the_likeness": {
+    "name_key": "mon.the_likeness.name",
+    "hp": [
+      160,
+      180
+    ],
+    "ac": 18,
+    "xp": 1200,
+    "dex_mod": 3,
+    "art": "boss_likeness",
+    "loot_table": "boss_likeness",
+    "clips": [
+      75,
+      110
+    ],
+    "taunts": [
+      "mon.the_likeness.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_likeness.atk1",
+        "to_hit": 12,
+        "dmg": "3d10"
+      },
+      {
+        "name_key": "mon.the_likeness.atk2",
+        "to_hit": 13,
+        "dmg": "4d6+4"
+      },
+      {
+        "name_key": "mon.the_likeness.atk3",
+        "to_hit": 11,
+        "dmg": "2d12+6"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "mirror": true
+  },
+  "unforeseen": {
+    "name_key": "mon.unforeseen.name",
+    "hp": [
+      41,
+      52
+    ],
+    "ac": 17,
+    "xp": 290,
+    "dex_mod": 4,
+    "art": "mon_unforeseen",
+    "loot_table": "f7_common",
+    "clips": [
+      9,
+      17
+    ],
+    "taunts": [
+      "mon.unforeseen.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.unforeseen.atk1",
+        "to_hit": 10,
+        "dmg": "2d6+1"
+      },
+      {
+        "name_key": "mon.unforeseen.atk2",
+        "to_hit": 11,
+        "dmg": "2d8+1"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "act_of_weather": {
+    "name_key": "mon.act_of_weather.name",
+    "hp": [
+      47,
+      58
+    ],
+    "ac": 16,
+    "xp": 311,
+    "dex_mod": 2,
+    "art": "mon_weather",
+    "loot_table": "f7_common",
+    "clips": [
+      10,
+      19
+    ],
+    "taunts": [
+      "mon.act_of_weather.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.act_of_weather.atk1",
+        "to_hit": 10,
+        "dmg": "3d6+1"
+      },
+      {
+        "name_key": "mon.act_of_weather.atk2",
+        "to_hit": 9,
+        "dmg": "2d6+1"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "beyond_control": {
+    "name_key": "mon.beyond_control.name",
+    "hp": [
+      52,
+      64
+    ],
+    "ac": 17,
+    "xp": 333,
+    "dex_mod": 1,
+    "art": "mon_beyond",
+    "loot_table": "f7_good",
+    "clips": [
+      12,
+      22
+    ],
+    "taunts": [
+      "mon.beyond_control.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.beyond_control.atk1",
+        "to_hit": 11,
+        "dmg": "2d6+2"
+      },
+      {
+        "name_key": "mon.beyond_control.atk2",
+        "to_hit": 10,
+        "dmg": "2d10+3"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 14,
+      "start_distance": 4
+    }
+  },
+  "contingency_plan": {
+    "name_key": "mon.contingency_plan.name",
+    "hp": [
+      40,
+      50
+    ],
+    "ac": 19,
+    "xp": 322,
+    "dex_mod": 3,
+    "art": "mon_contingency",
+    "loot_table": "f7_common",
+    "clips": [
+      11,
+      20
+    ],
+    "taunts": [
+      "mon.contingency_plan.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.contingency_plan.atk1",
+        "to_hit": 12,
+        "dmg": "2d8+3"
+      },
+      {
+        "name_key": "mon.contingency_plan.atk2",
+        "to_hit": 11,
+        "dmg": "2d6+4"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "the_forecast": {
+    "name_key": "mon.the_forecast.name",
+    "hp": [
+      56,
+      69
+    ],
+    "ac": 16,
+    "xp": 365,
+    "dex_mod": 2,
+    "art": "mon_forecast",
+    "loot_table": "f7_good",
+    "clips": [
+      15,
+      27
+    ],
+    "taunts": [
+      "mon.the_forecast.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_forecast.atk1",
+        "to_hit": 11,
+        "dmg": "3d6+1"
+      },
+      {
+        "name_key": "mon.the_forecast.atk2",
+        "to_hit": 12,
+        "dmg": "2d10+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 13,
+      "start_distance": 3
+    }
+  },
+  "the_exception": {
+    "name_key": "mon.the_exception.name",
+    "hp": [
+      98,
+      114
+    ],
+    "ac": 17,
+    "xp": 602,
+    "dex_mod": 2,
+    "art": "mon_exception",
+    "loot_table": "miniboss_exception",
+    "clips": [
+      30,
+      48
+    ],
+    "taunts": [
+      "mon.the_exception.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_exception.atk1",
+        "to_hit": 10,
+        "dmg": "2d6+3"
+      },
+      {
+        "name_key": "mon.the_exception.atk2",
+        "to_hit": 11,
+        "dmg": "3d6+1"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "contingency": {
+    "name_key": "mon.contingency.name",
+    "hp": [
+      85,
+      98
+    ],
+    "ac": 20,
+    "xp": 580,
+    "dex_mod": 4,
+    "art": "mon_contingency",
+    "loot_table": "f7_good",
+    "clips": [
+      28,
+      44
+    ],
+    "taunts": [
+      "mon.contingency.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.contingency.atk1",
+        "to_hit": 12,
+        "dmg": "2d6+3"
+      },
+      {
+        "name_key": "mon.contingency.atk2",
+        "to_hit": 11,
+        "dmg": "2d10+4"
+      },
+      {
+        "name_key": "mon.contingency.atk3",
+        "to_hit": 13,
+        "dmg": "3d6+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f7_elite"
+  },
+  "kaleidon": {
+    "name_key": "mon.kaleidon.name",
+    "hp": [
+      175,
+      196
+    ],
+    "ac": 17,
+    "xp": 1612,
+    "dex_mod": 4,
+    "art": "boss_kaleidon",
+    "loot_table": "boss_kaleidon",
+    "clips": [
+      90,
+      130
+    ],
+    "taunts": [
+      "mon.kaleidon.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.kaleidon.atk1",
+        "to_hit": 11,
+        "dmg": "3d6+1"
+      },
+      {
+        "name_key": "mon.kaleidon.atk2",
+        "to_hit": 12,
+        "dmg": "2d8+3"
+      },
+      {
+        "name_key": "mon.kaleidon.atk3",
+        "to_hit": 10,
+        "dmg": "2d10+8"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "chaotic": {
+      "ac_range": [
+        14,
+        22
+      ]
+    }
+  },
+  "debtor": {
+    "name_key": "mon.debtor.name",
+    "hp": [
+      55,
+      67
+    ],
+    "ac": 17,
+    "xp": 368,
+    "dex_mod": 1,
+    "art": "mon_debtor",
+    "loot_table": "f8_common",
+    "clips": [
+      11,
+      20
+    ],
+    "taunts": [
+      "mon.debtor.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.debtor.atk1",
+        "to_hit": 11,
+        "dmg": "2d6+2"
+      },
+      {
+        "name_key": "mon.debtor.atk2",
+        "to_hit": 10,
+        "dmg": "2d8+4"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "pour_crew": {
+    "name_key": "mon.pour_crew.name",
+    "hp": [
+      62,
+      74
+    ],
+    "ac": 18,
+    "xp": 390,
+    "dex_mod": 2,
+    "art": "mon_pourcrew",
+    "loot_table": "f8_common",
+    "clips": [
+      12,
+      22
+    ],
+    "taunts": [
+      "mon.pour_crew.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.pour_crew.atk1",
+        "to_hit": 12,
+        "dmg": "2d6+3",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.pour_crew.atk2",
+        "to_hit": 11,
+        "dmg": "3d6+3",
+        "type": "fire"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "held_harmless": {
+    "name_key": "mon.held_harmless.name",
+    "hp": [
+      67,
+      83
+    ],
+    "ac": 18,
+    "xp": 413,
+    "dex_mod": 1,
+    "art": "mon_heldharmless",
+    "loot_table": "f8_good",
+    "clips": [
+      14,
+      25
+    ],
+    "taunts": [
+      "mon.held_harmless.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.held_harmless.atk1",
+        "to_hit": 12,
+        "dmg": "3d6+5"
+      },
+      {
+        "name_key": "mon.held_harmless.atk2",
+        "to_hit": 11,
+        "dmg": "2d8+2"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 14,
+      "start_distance": 4
+    }
+  },
+  "joint_and_several": {
+    "name_key": "mon.joint_and_several.name",
+    "hp": [
+      59,
+      72
+    ],
+    "ac": 19,
+    "xp": 402,
+    "dex_mod": 3,
+    "art": "mon_jointsev",
+    "loot_table": "f8_common",
+    "clips": [
+      13,
+      23
+    ],
+    "taunts": [
+      "mon.joint_and_several.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.joint_and_several.atk1",
+        "to_hit": 13,
+        "dmg": "2d6+4"
+      },
+      {
+        "name_key": "mon.joint_and_several.atk2",
+        "to_hit": 12,
+        "dmg": "2d10+6"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "the_smelt": {
+    "name_key": "mon.the_smelt.name",
+    "hp": [
+      78,
+      94
+    ],
+    "ac": 17,
+    "xp": 459,
+    "dex_mod": 0,
+    "art": "mon_smelt",
+    "loot_table": "f8_good",
+    "clips": [
+      18,
+      30
+    ],
+    "taunts": [
+      "mon.the_smelt.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_smelt.atk1",
+        "to_hit": 12,
+        "dmg": "3d6+3",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.the_smelt.atk2",
+        "to_hit": 13,
+        "dmg": "2d8+3",
+        "type": "fire"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_surety": {
+    "name_key": "mon.the_surety.name",
+    "hp": [
+      130,
+      150
+    ],
+    "ac": 18,
+    "xp": 758,
+    "dex_mod": 2,
+    "art": "mon_surety",
+    "loot_table": "miniboss_surety",
+    "clips": [
+      36,
+      56
+    ],
+    "taunts": [
+      "mon.the_surety.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_surety.atk1",
+        "to_hit": 12,
+        "dmg": "3d6+5"
+      },
+      {
+        "name_key": "mon.the_surety.atk2",
+        "to_hit": 11,
+        "dmg": "2d8+3"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_bond": {
+    "name_key": "mon.the_bond.name",
+    "hp": [
+      111,
+      130
+    ],
+    "ac": 21,
+    "xp": 736,
+    "dex_mod": 4,
+    "art": "mon_bond",
+    "loot_table": "f8_good",
+    "clips": [
+      34,
+      52
+    ],
+    "taunts": [
+      "mon.the_bond.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_bond.atk1",
+        "to_hit": 13,
+        "dmg": "2d8+4"
+      },
+      {
+        "name_key": "mon.the_bond.atk2",
+        "to_hit": 12,
+        "dmg": "3d6+3"
+      },
+      {
+        "name_key": "mon.the_bond.atk3",
+        "to_hit": 14,
+        "dmg": "2d10+8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 2
+    },
+    "elite_loot": "f8_elite"
+  },
+  "the_guarantor": {
+    "name_key": "mon.the_guarantor.name",
+    "hp": [
+      182,
+      205
+    ],
+    "ac": 19,
+    "xp": 2185,
+    "dex_mod": 2,
+    "art": "boss_guarantor",
+    "loot_table": "boss_guarantor",
+    "clips": [
+      110,
+      160
+    ],
+    "taunts": [
+      "mon.the_guarantor.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_guarantor.atk1",
+        "to_hit": 11,
+        "dmg": "3d6+6"
+      },
+      {
+        "name_key": "mon.the_guarantor.atk2",
+        "to_hit": 12,
+        "dmg": "2d10+4"
+      },
+      {
+        "name_key": "mon.the_guarantor.atk3",
+        "to_hit": 10,
+        "dmg": "4d6+9"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "indemnify": true
+  },
+  "offcut": {
+    "name_key": "mon.offcut.name",
+    "hp": [
+      66,
+      84
+    ],
+    "ac": 17,
+    "xp": 416,
+    "dex_mod": 2,
+    "art": "mon_offcut",
+    "loot_table": "f9_common",
+    "clips": [
+      12,
+      22
+    ],
+    "taunts": [
+      "mon.offcut.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.offcut.atk1",
+        "to_hit": 13,
+        "dmg": "3d6+6"
+      },
+      {
+        "name_key": "mon.offcut.atk2",
+        "to_hit": 12,
+        "dmg": "2d8+7"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "partial_term": {
+    "name_key": "mon.partial_term.name",
+    "hp": [
+      72,
+      89
+    ],
+    "ac": 18,
+    "xp": 441,
+    "dex_mod": 1,
+    "art": "mon_partial",
+    "loot_table": "f9_common",
+    "clips": [
+      13,
+      24
+    ],
+    "taunts": [
+      "mon.partial_term.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.partial_term.atk1",
+        "to_hit": 13,
+        "dmg": "3d8+6"
+      },
+      {
+        "name_key": "mon.partial_term.atk2",
+        "to_hit": 14,
+        "dmg": "2d10+6"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "blue_pencil": {
+    "name_key": "mon.blue_pencil.name",
+    "hp": [
+      60,
+      78
+    ],
+    "ac": 19,
+    "xp": 428,
+    "dex_mod": 4,
+    "art": "mon_bluepencil",
+    "loot_table": "f9_good",
+    "clips": [
+      14,
+      25
+    ],
+    "taunts": [
+      "mon.blue_pencil.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.blue_pencil.atk1",
+        "to_hit": 15,
+        "dmg": "2d10+7"
+      },
+      {
+        "name_key": "mon.blue_pencil.atk2",
+        "to_hit": 14,
+        "dmg": "3d6+8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    }
+  },
+  "void_clause": {
+    "name_key": "mon.void_clause.name",
+    "hp": [
+      81,
+      101
+    ],
+    "ac": 17,
+    "xp": 465,
+    "dex_mod": 0,
+    "art": "mon_void",
+    "loot_table": "f9_good",
+    "clips": [
+      15,
+      27
+    ],
+    "taunts": [
+      "mon.void_clause.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.void_clause.atk1",
+        "to_hit": 13,
+        "dmg": "4d6+8"
+      },
+      {
+        "name_key": "mon.void_clause.atk2",
+        "to_hit": 14,
+        "dmg": "3d8+8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 1,
+      "patience": 15,
+      "start_distance": 4
+    }
+  },
+  "unenforceable": {
+    "name_key": "mon.unenforceable.name",
+    "hp": [
+      87,
+      107
+    ],
+    "ac": 18,
+    "xp": 502,
+    "dex_mod": 2,
+    "art": "mon_unenforceable",
+    "loot_table": "f9_good",
+    "clips": [
+      17,
+      30
+    ],
+    "taunts": [
+      "mon.unenforceable.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.unenforceable.atk1",
+        "to_hit": 14,
+        "dmg": "3d8+10"
+      },
+      {
+        "name_key": "mon.unenforceable.atk2",
+        "to_hit": 15,
+        "dmg": "2d12+8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 13,
+      "start_distance": 3
+    }
+  },
+  "the_remainder": {
+    "name_key": "mon.the_remainder.name",
+    "hp": [
+      130,
+      154
+    ],
+    "ac": 18,
+    "xp": 759,
+    "dex_mod": 3,
+    "art": "mon_remainder",
+    "loot_table": "f9_good",
+    "clips": [
+      46,
+      70
+    ],
+    "taunts": [
+      "mon.the_remainder.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_remainder.atk1",
+        "to_hit": 16,
+        "dmg": "2d8+9"
+      },
+      {
+        "name_key": "mon.the_remainder.atk2",
+        "to_hit": 15,
+        "dmg": "2d12+9"
+      },
+      {
+        "name_key": "mon.the_remainder.atk3",
+        "to_hit": 17,
+        "dmg": "3d6+8"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f9_elite"
+  },
+  "hemikin_left": {
+    "name_key": "mon.hemikin_left.name",
+    "hp": [
+      174,
+      200
+    ],
+    "ac": 18,
+    "xp": 931,
+    "dex_mod": 2,
+    "art": "mon_hemikin_left",
+    "loot_table": "miniboss_hemikin",
+    "clips": [
+      55,
+      85
+    ],
+    "taunts": [
+      "mon.hemikin_left.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.hemikin_left.atk1",
+        "to_hit": 15,
+        "dmg": "3d8+10"
+      },
+      {
+        "name_key": "mon.hemikin_left.atk2",
+        "to_hit": 14,
+        "dmg": "4d6+9"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "paired_with": "hemikin_right"
+  },
+  "hemikin_right": {
+    "name_key": "mon.hemikin_right.name",
+    "hp": [
+      238,
+      271
+    ],
+    "ac": 18,
+    "xp": 1102,
+    "dex_mod": 2,
+    "art": "boss_hemikin_right",
+    "loot_table": "boss_hemikin",
+    "clips": [
+      95,
+      140
+    ],
+    "taunts": [
+      "mon.hemikin_right.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.hemikin_right.atk1",
+        "to_hit": 15,
+        "dmg": "3d10+9"
+      },
+      {
+        "name_key": "mon.hemikin_right.atk2",
+        "to_hit": 16,
+        "dmg": "4d6+10"
+      },
+      {
+        "name_key": "mon.hemikin_right.atk3",
+        "to_hit": 14,
+        "dmg": "2d12+11"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "paired_with": "hemikin_left"
+  },
+  "precedent": {
+    "name_key": "mon.precedent.name",
+    "hp": [
+      86,
+      105
+    ],
+    "ac": 18,
+    "xp": 494,
+    "dex_mod": 1,
+    "art": "mon_precedent",
+    "loot_table": "f10_common",
+    "clips": [
+      13,
+      24
+    ],
+    "taunts": [
+      "mon.precedent.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.precedent.atk1",
+        "to_hit": 14,
+        "dmg": "3d8+10"
+      },
+      {
+        "name_key": "mon.precedent.atk2",
+        "to_hit": 13,
+        "dmg": "2d12+7"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "jurisdiction": {
+    "name_key": "mon.jurisdiction.name",
+    "hp": [
+      92,
+      112
+    ],
+    "ac": 19,
+    "xp": 520,
+    "dex_mod": 2,
+    "art": "mon_jurisdiction",
+    "loot_table": "f10_common",
+    "clips": [
+      14,
+      26
+    ],
+    "taunts": [
+      "mon.jurisdiction.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.jurisdiction.atk1",
+        "to_hit": 15,
+        "dmg": "3d8+11"
+      },
+      {
+        "name_key": "mon.jurisdiction.atk2",
+        "to_hit": 14,
+        "dmg": "4d6+10"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_gallery": {
+    "name_key": "mon.the_gallery.name",
+    "hp": [
+      76,
+      96
+    ],
+    "ac": 17,
+    "xp": 481,
+    "dex_mod": 3,
+    "art": "mon_gallery",
+    "loot_table": "f10_good",
+    "clips": [
+      13,
+      24
+    ],
+    "taunts": [
+      "mon.the_gallery.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_gallery.atk1",
+        "to_hit": 14,
+        "dmg": "2d10+10"
+      },
+      {
+        "name_key": "mon.the_gallery.atk2",
+        "to_hit": 15,
+        "dmg": "3d6+9"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "obiter": {
+    "name_key": "mon.obiter.name",
+    "hp": [
+      83,
+      102
+    ],
+    "ac": 20,
+    "xp": 507,
+    "dex_mod": 4,
+    "art": "mon_obiter",
+    "loot_table": "f10_good",
+    "clips": [
+      15,
+      27
+    ],
+    "taunts": [
+      "mon.obiter.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.obiter.atk1",
+        "to_hit": 16,
+        "dmg": "2d12+9"
+      },
+      {
+        "name_key": "mon.obiter.atk2",
+        "to_hit": 15,
+        "dmg": "3d8+10"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    }
+  },
+  "contempt": {
+    "name_key": "mon.contempt.name",
+    "hp": [
+      102,
+      124
+    ],
+    "ac": 18,
+    "xp": 559,
+    "dex_mod": 2,
+    "art": "mon_contempt",
+    "loot_table": "f10_good",
+    "clips": [
+      18,
+      32
+    ],
+    "taunts": [
+      "mon.contempt.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.contempt.atk1",
+        "to_hit": 15,
+        "dmg": "4d6+12"
+      },
+      {
+        "name_key": "mon.contempt.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+11"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 14,
+      "start_distance": 3
+    }
+  },
+  "the_clerk": {
+    "name_key": "mon.the_clerk.name",
+    "hp": [
+      208,
+      240
+    ],
+    "ac": 19,
+    "xp": 1066,
+    "dex_mod": 2,
+    "art": "mon_clerk",
+    "loot_table": "miniboss_clerk",
+    "clips": [
+      58,
+      88
+    ],
+    "taunts": [
+      "mon.the_clerk.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_clerk.atk1",
+        "to_hit": 16,
+        "dmg": "3d10+12"
+      },
+      {
+        "name_key": "mon.the_clerk.atk2",
+        "to_hit": 15,
+        "dmg": "4d6+13"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_bailiff": {
+    "name_key": "mon.the_bailiff.name",
+    "hp": [
+      158,
+      186
+    ],
+    "ac": 19,
+    "xp": 910,
+    "dex_mod": 3,
+    "art": "mon_bailiff",
+    "loot_table": "f10_good",
+    "clips": [
+      50,
+      76
+    ],
+    "taunts": [
+      "mon.the_bailiff.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_bailiff.atk1",
+        "to_hit": 17,
+        "dmg": "2d10+10"
+      },
+      {
+        "name_key": "mon.the_bailiff.atk2",
+        "to_hit": 16,
+        "dmg": "3d8+9"
+      },
+      {
+        "name_key": "mon.the_bailiff.atk3",
+        "to_hit": 18,
+        "dmg": "2d12+11"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f10_elite"
+  },
+  "justice_vorn": {
+    "name_key": "mon.justice_vorn.name",
+    "hp": [
+      421,
+      482
+    ],
+    "ac": 19,
+    "xp": 3120,
+    "dex_mod": 2,
+    "art": "boss_vorn",
+    "loot_table": "boss_vorn",
+    "clips": [
+      120,
+      175
+    ],
+    "taunts": [
+      "mon.justice_vorn.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.justice_vorn.atk1",
+        "to_hit": 16,
+        "dmg": "4d8+16"
+      },
+      {
+        "name_key": "mon.justice_vorn.atk2",
+        "to_hit": 17,
+        "dmg": "3d12+16"
+      },
+      {
+        "name_key": "mon.justice_vorn.atk3",
+        "to_hit": 15,
+        "dmg": "5d6+19"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "phase_minigame": {
+      "at_hp_pct": 0.55,
+      "game": "dice",
+      "intro_key": "phases.vorn.intro",
+      "win_key": "phases.vorn.win",
+      "lose_key": "phases.vorn.lose",
+      "win_damage_pct": 0.25,
+      "win_stun": 1,
+      "lose_damage": 18,
+      "config": {
+        "opponent": "justice_vorn",
+        "penalty": 0,
+        "name_key": "minigame.dice.vorn_name"
+      }
+    }
+  },
+  "tracked_change": {
+    "name_key": "mon.tracked_change.name",
+    "hp": [
+      98,
+      122
+    ],
+    "ac": 18,
+    "xp": 550,
+    "dex_mod": 3,
+    "art": "mon_tracked",
+    "loot_table": "f11_common",
+    "clips": [
+      14,
+      26
+    ],
+    "taunts": [
+      "mon.tracked_change.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.tracked_change.atk1",
+        "to_hit": 15,
+        "dmg": "3d8+13"
+      },
+      {
+        "name_key": "mon.tracked_change.atk2",
+        "to_hit": 14,
+        "dmg": "4d6+12"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "schedule_two": {
+    "name_key": "mon.schedule_two.name",
+    "hp": [
+      105,
+      129
+    ],
+    "ac": 19,
+    "xp": 577,
+    "dex_mod": 1,
+    "art": "mon_schedule",
+    "loot_table": "f11_common",
+    "clips": [
+      15,
+      27
+    ],
+    "taunts": [
+      "mon.schedule_two.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.schedule_two.atk1",
+        "to_hit": 15,
+        "dmg": "4d6+14"
+      },
+      {
+        "name_key": "mon.schedule_two.atk2",
+        "to_hit": 16,
+        "dmg": "3d8+13"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_variation": {
+    "name_key": "mon.the_variation.name",
+    "hp": [
+      94,
+      119
+    ],
+    "ac": 20,
+    "xp": 563,
+    "dex_mod": 4,
+    "art": "mon_variation",
+    "loot_table": "f11_good",
+    "clips": [
+      15,
+      28
+    ],
+    "taunts": [
+      "mon.the_variation.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_variation.atk1",
+        "to_hit": 17,
+        "dmg": "3d8+14"
+      },
+      {
+        "name_key": "mon.the_variation.atk2",
+        "to_hit": 16,
+        "dmg": "2d12+13"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    },
+    "chaotic": {
+      "ac_range": [
+        16,
+        22
+      ]
+    }
+  },
+  "marginalia": {
+    "name_key": "mon.marginalia.name",
+    "hp": [
+      87,
+      108
+    ],
+    "ac": 18,
+    "xp": 536,
+    "dex_mod": 3,
+    "art": "mon_marginalia",
+    "loot_table": "f11_good",
+    "clips": [
+      14,
+      26
+    ],
+    "taunts": [
+      "mon.marginalia.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.marginalia.atk1",
+        "to_hit": 15,
+        "dmg": "2d12+12"
+      },
+      {
+        "name_key": "mon.marginalia.atk2",
+        "to_hit": 16,
+        "dmg": "3d6+12"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "effective_immediately": {
+    "name_key": "mon.effective_immediately.name",
+    "hp": [
+      119,
+      143
+    ],
+    "ac": 19,
+    "xp": 618,
+    "dex_mod": 4,
+    "art": "mon_effective",
+    "loot_table": "f11_good",
+    "clips": [
+      19,
+      34
+    ],
+    "taunts": [
+      "mon.effective_immediately.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.effective_immediately.atk1",
+        "to_hit": 17,
+        "dmg": "4d6+15"
+      },
+      {
+        "name_key": "mon.effective_immediately.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+15"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 4,
+      "patience": 14,
+      "start_distance": 3
+    }
+  },
+  "the_redline": {
+    "name_key": "mon.the_redline.name",
+    "hp": [
+      245,
+      280
+    ],
+    "ac": 19,
+    "xp": 1210,
+    "dex_mod": 2,
+    "art": "mon_redline",
+    "loot_table": "miniboss_redline",
+    "clips": [
+      62,
+      94
+    ],
+    "taunts": [
+      "mon.the_redline.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_redline.atk1",
+        "to_hit": 16,
+        "dmg": "4d6+15"
+      },
+      {
+        "name_key": "mon.the_redline.atk2",
+        "to_hit": 17,
+        "dmg": "3d10+16"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_rider": {
+    "name_key": "mon.the_rider.name",
+    "hp": [
+      175,
+      205
+    ],
+    "ac": 19,
+    "xp": 1017,
+    "dex_mod": 4,
+    "art": "mon_rider",
+    "loot_table": "f11_good",
+    "clips": [
+      54,
+      82
+    ],
+    "taunts": [
+      "mon.the_rider.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_rider.atk1",
+        "to_hit": 18,
+        "dmg": "2d10+13"
+      },
+      {
+        "name_key": "mon.the_rider.atk2",
+        "to_hit": 17,
+        "dmg": "3d8+12"
+      },
+      {
+        "name_key": "mon.the_rider.atk3",
+        "to_hit": 19,
+        "dmg": "1d12+13"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f11_elite"
+  },
+  "the_amendment": {
+    "name_key": "mon.the_amendment.name",
+    "hp": [
+      357,
+      405
+    ],
+    "ac": 18,
+    "xp": 3850,
+    "dex_mod": 3,
+    "art": "boss_amendment",
+    "loot_table": "boss_amendment",
+    "clips": [
+      130,
+      190
+    ],
+    "taunts": [
+      "mon.the_amendment.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_amendment.atk1",
+        "to_hit": 17,
+        "dmg": "4d8+15"
+      },
+      {
+        "name_key": "mon.the_amendment.atk2",
+        "to_hit": 18,
+        "dmg": "3d12+15"
+      },
+      {
+        "name_key": "mon.the_amendment.atk3",
+        "to_hit": 16,
+        "dmg": "5d6+17"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "chaotic": {
+      "ac_range": [
+        15,
+        23
+      ]
+    },
+    "regen": 10,
+    "regen_max": 5
+  },
+  "shutdown_notice": {
+    "name_key": "mon.shutdown_notice.name",
+    "hp": [
+      110,
+      136
+    ],
+    "ac": 18,
+    "xp": 609,
+    "dex_mod": 2,
+    "art": "mon_shutdown",
+    "loot_table": "f12_common",
+    "clips": [
+      14,
+      26
+    ],
+    "taunts": [
+      "mon.shutdown_notice.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.shutdown_notice.atk1",
+        "to_hit": 15,
+        "dmg": "3d8+16",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.shutdown_notice.atk2",
+        "to_hit": 14,
+        "dmg": "4d6+15"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "ash_clerk": {
+    "name_key": "mon.ash_clerk.name",
+    "hp": [
+      117,
+      144
+    ],
+    "ac": 19,
+    "xp": 638,
+    "dex_mod": 1,
+    "art": "mon_ashclerk",
+    "loot_table": "f12_common",
+    "clips": [
+      15,
+      28
+    ],
+    "taunts": [
+      "mon.ash_clerk.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.ash_clerk.atk1",
+        "to_hit": 16,
+        "dmg": "4d6+16",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.ash_clerk.atk2",
+        "to_hit": 15,
+        "dmg": "3d8+16"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "last_day": {
+    "name_key": "mon.last_day.name",
+    "hp": [
+      106,
+      133
+    ],
+    "ac": 18,
+    "xp": 623,
+    "dex_mod": 3,
+    "art": "mon_lastday",
+    "loot_table": "f12_good",
+    "clips": [
+      15,
+      28
+    ],
+    "taunts": [
+      "mon.last_day.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.last_day.atk1",
+        "to_hit": 16,
+        "dmg": "3d8+17"
+      },
+      {
+        "name_key": "mon.last_day.atk2",
+        "to_hit": 15,
+        "dmg": "2d12+16"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 12,
+      "start_distance": 3
+    }
+  },
+  "wound_down": {
+    "name_key": "mon.wound_down.name",
+    "hp": [
+      133,
+      163
+    ],
+    "ac": 17,
+    "xp": 667,
+    "dex_mod": 0,
+    "art": "mon_wounddown",
+    "loot_table": "f12_good",
+    "clips": [
+      17,
+      31
+    ],
+    "taunts": [
+      "mon.wound_down.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.wound_down.atk1",
+        "to_hit": 15,
+        "dmg": "4d8+18"
+      },
+      {
+        "name_key": "mon.wound_down.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+18"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_skeleton_staff": {
+    "name_key": "mon.the_skeleton_staff.name",
+    "hp": [
+      121,
+      152
+    ],
+    "ac": 20,
+    "xp": 696,
+    "dex_mod": 3,
+    "art": "mon_skeletonstaff",
+    "loot_table": "f12_good",
+    "clips": [
+      20,
+      36
+    ],
+    "taunts": [
+      "mon.the_skeleton_staff.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_skeleton_staff.atk1",
+        "to_hit": 17,
+        "dmg": "4d6+18"
+      },
+      {
+        "name_key": "mon.the_skeleton_staff.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+18"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 13,
+      "start_distance": 3
+    },
+    "group": true
+  },
+  "the_final_notice": {
+    "name_key": "mon.the_final_notice.name",
+    "hp": [
+      285,
+      326
+    ],
+    "ac": 19,
+    "xp": 1363,
+    "dex_mod": 2,
+    "art": "mon_finalnotice",
+    "loot_table": "miniboss_finalnotice",
+    "clips": [
+      66,
+      100
+    ],
+    "taunts": [
+      "mon.the_final_notice.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_final_notice.atk1",
+        "to_hit": 17,
+        "dmg": "4d6+18"
+      },
+      {
+        "name_key": "mon.the_final_notice.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+19"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_liquidator": {
+    "name_key": "mon.the_liquidator.name",
+    "hp": [
+      167,
+      193
+    ],
+    "ac": 18,
+    "xp": 1160,
+    "dex_mod": 3,
+    "art": "mon_liquidator",
+    "loot_table": "f12_good",
+    "clips": [
+      58,
+      88
+    ],
+    "taunts": [
+      "mon.the_liquidator.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_liquidator.atk1",
+        "to_hit": 18,
+        "dmg": "3d8+14"
+      },
+      {
+        "name_key": "mon.the_liquidator.atk2",
+        "to_hit": 17,
+        "dmg": "2d12+15"
+      },
+      {
+        "name_key": "mon.the_liquidator.atk3",
+        "to_hit": 19,
+        "dmg": "1d12+14"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f12_elite"
+  },
+  "reaper_of_records": {
+    "name_key": "mon.reaper_of_records.name",
+    "hp": [
+      411,
+      465
+    ],
+    "ac": 19,
+    "xp": 4640,
+    "dex_mod": 3,
+    "art": "boss_reaper",
+    "loot_table": "boss_reaper",
+    "clips": [
+      140,
+      200
+    ],
+    "taunts": [
+      "mon.reaper_of_records.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.reaper_of_records.atk1",
+        "to_hit": 18,
+        "dmg": "4d10+17",
+        "type": "fire"
+      },
+      {
+        "name_key": "mon.reaper_of_records.atk2",
+        "to_hit": 19,
+        "dmg": "3d12+17"
+      },
+      {
+        "name_key": "mon.reaper_of_records.atk3",
+        "to_hit": 17,
+        "dmg": "6d6+19",
+        "type": "fire"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "summons": {
+      "monster": "ash_clerk",
+      "count": 1,
+      "every": 3,
+      "first_round": 3,
+      "max": 2,
+      "field_cap": 3,
+      "line_key": "mon.reaper_of_records.call"
+    }
+  },
+  "entire_agreement": {
+    "name_key": "mon.entire_agreement.name",
+    "hp": [
+      122,
+      151
+    ],
+    "ac": 19,
+    "xp": 671,
+    "dex_mod": 2,
+    "art": "mon_entire",
+    "loot_table": "f13_common",
+    "clips": [
+      14,
+      26
+    ],
+    "taunts": [
+      "mon.entire_agreement.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.entire_agreement.atk1",
+        "to_hit": 16,
+        "dmg": "4d6+18"
+      },
+      {
+        "name_key": "mon.entire_agreement.atk2",
+        "to_hit": 15,
+        "dmg": "3d8+19"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "no_other_terms": {
+    "name_key": "mon.no_other_terms.name",
+    "hp": [
+      131,
+      159
+    ],
+    "ac": 20,
+    "xp": 701,
+    "dex_mod": 1,
+    "art": "mon_noother",
+    "loot_table": "f13_common",
+    "clips": [
+      15,
+      28
+    ],
+    "taunts": [
+      "mon.no_other_terms.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.no_other_terms.atk1",
+        "to_hit": 17,
+        "dmg": "4d6+19"
+      },
+      {
+        "name_key": "mon.no_other_terms.atk2",
+        "to_hit": 16,
+        "dmg": "3d10+20"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "prior_understanding": {
+    "name_key": "mon.prior_understanding.name",
+    "hp": [
+      118,
+      147
+    ],
+    "ac": 18,
+    "xp": 686,
+    "dex_mod": 3,
+    "art": "mon_prior",
+    "loot_table": "f13_good",
+    "clips": [
+      15,
+      28
+    ],
+    "taunts": [
+      "mon.prior_understanding.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.prior_understanding.atk1",
+        "to_hit": 16,
+        "dmg": "3d10+21"
+      },
+      {
+        "name_key": "mon.prior_understanding.atk2",
+        "to_hit": 17,
+        "dmg": "2d12+19"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 2,
+      "patience": 12,
+      "start_distance": 3
+    }
+  },
+  "the_blank": {
+    "name_key": "mon.the_blank.name",
+    "hp": [
+      147,
+      180
+    ],
+    "ac": 18,
+    "xp": 732,
+    "dex_mod": 0,
+    "art": "mon_blank",
+    "loot_table": "f13_good",
+    "clips": [
+      17,
+      32
+    ],
+    "taunts": [
+      "mon.the_blank.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_blank.atk1",
+        "to_hit": 16,
+        "dmg": "4d8+22"
+      },
+      {
+        "name_key": "mon.the_blank.atk2",
+        "to_hit": 17,
+        "dmg": "3d12+22"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "boilerplate": {
+    "name_key": "mon.boilerplate.name",
+    "hp": [
+      135,
+      168
+    ],
+    "ac": 21,
+    "xp": 762,
+    "dex_mod": 2,
+    "art": "mon_boilerplate",
+    "loot_table": "f13_good",
+    "clips": [
+      20,
+      36
+    ],
+    "taunts": [
+      "mon.boilerplate.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.boilerplate.atk1",
+        "to_hit": 18,
+        "dmg": "4d6+20"
+      },
+      {
+        "name_key": "mon.boilerplate.atk2",
+        "to_hit": 17,
+        "dmg": "3d10+22"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "group": true
+  },
+  "the_recital": {
+    "name_key": "mon.the_recital.name",
+    "hp": [
+      323,
+      368
+    ],
+    "ac": 20,
+    "xp": 1525,
+    "dex_mod": 2,
+    "art": "mon_recital",
+    "loot_table": "miniboss_recital",
+    "clips": [
+      70,
+      105
+    ],
+    "taunts": [
+      "mon.the_recital.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_recital.atk1",
+        "to_hit": 17,
+        "dmg": "4d8+23"
+      },
+      {
+        "name_key": "mon.the_recital.atk2",
+        "to_hit": 18,
+        "dmg": "3d12+23"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_whole_agreement": {
+    "name_key": "mon.the_whole_agreement.name",
+    "hp": [
+      190,
+      222
+    ],
+    "ac": 19,
+    "xp": 1311,
+    "dex_mod": 3,
+    "art": "mon_wholeagreement",
+    "loot_table": "f13_good",
+    "clips": [
+      62,
+      94
+    ],
+    "taunts": [
+      "mon.the_whole_agreement.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_whole_agreement.atk1",
+        "to_hit": 19,
+        "dmg": "3d8+16"
+      },
+      {
+        "name_key": "mon.the_whole_agreement.atk2",
+        "to_hit": 18,
+        "dmg": "2d12+17"
+      },
+      {
+        "name_key": "mon.the_whole_agreement.atk3",
+        "to_hit": 20,
+        "dmg": "1d12+16"
+      }
+    ],
+    "stalker": {
+      "enabled": true,
+      "speed": 3,
+      "patience": 11,
+      "start_distance": 2
+    },
+    "elite_loot": "f13_elite"
+  },
+  "the_signatory": {
+    "name_key": "mon.the_signatory.name",
+    "hp": [
+      307,
+      348
+    ],
+    "ac": 18,
+    "xp": 6100,
+    "dex_mod": 2,
+    "art": "boss_signatory",
+    "loot_table": "boss_signatory",
+    "clips": [
+      200,
+      280
+    ],
+    "taunts": [
+      "mon.the_signatory.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_signatory.atk1",
+        "to_hit": 16,
+        "dmg": "3d10+21"
+      },
+      {
+        "name_key": "mon.the_signatory.atk2",
+        "to_hit": 17,
+        "dmg": "4d6+19"
+      },
+      {
+        "name_key": "mon.the_signatory.atk3",
+        "to_hit": 15,
+        "dmg": "2d12+19"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    }
+  },
+  "the_narrator": {
+    "name_key": "mon.the_narrator.name",
+    "hp": [
+      633,
+      697
+    ],
+    "ac": 19,
+    "xp": 9150,
+    "dex_mod": 3,
+    "art": "boss_narrator",
+    "loot_table": "boss_narrator",
+    "clips": [
+      0,
+      0
+    ],
+    "taunts": [
+      "mon.the_narrator.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_narrator.atk1",
+        "to_hit": 17,
+        "dmg": "4d8+23"
+      },
+      {
+        "name_key": "mon.the_narrator.atk2",
+        "to_hit": 18,
+        "dmg": "3d12+24"
+      },
+      {
+        "name_key": "mon.the_narrator.atk3",
+        "to_hit": 16,
+        "dmg": "6d6+28"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "steals_abilities": true,
+    "steal_heal": 16,
+    "chaotic": {
+      "ac_range": [
+        16,
+        22
+      ]
+    }
+  },
+  "the_contents": {
+    "name_key": "mon.the_contents.name",
+    "hp": [
+      70,
+      150
+    ],
+    "ac": 17,
+    "xp": 600,
+    "dex_mod": 2,
+    "art": "mon_contents",
+    "loot_table": "chest_f4_hoard",
+    "clips": [
+      40,
+      90
+    ],
+    "taunts": [
+      "mon.the_contents.taunt"
+    ],
+    "attacks": [
+      {
+        "name_key": "mon.the_contents.atk1",
+        "to_hit": 14,
+        "dmg": "3d8+4"
+      },
+      {
+        "name_key": "mon.the_contents.atk2",
+        "to_hit": 13,
+        "dmg": "2d12+3"
+      }
+    ],
+    "stalker": {
+      "enabled": false
+    },
+    "scales_with_floor": true
+  }
+}

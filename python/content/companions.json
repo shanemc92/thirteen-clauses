@@ -1,0 +1,71 @@
+{
+  "pip": {
+    "name_key": "companions.pip.name",
+    "desc_key": "companions.pip.desc",
+    "passive_key": "companions.pip.passive",
+    "stabilise_key": "companions.pip.stabilise",
+    "art": "comp_pip",
+    "hp": 14,
+    "to_hit": 4,
+    "dmg": "1d4",
+    "dex_mod": 3,
+    "can_stabilise": true,
+    "regen": 2,
+    "ac": 15,
+    "level_hp": 3,
+    "inspects_chests": true
+  },
+  "grunk": {
+    "name_key": "companions.grunk.name",
+    "desc_key": "companions.grunk.desc",
+    "passive_key": "companions.grunk.passive",
+    "stabilise_key": "companions.grunk.stabilise",
+    "art": "comp_grunk",
+    "hp": 26,
+    "to_hit": 3,
+    "dmg": "1d6",
+    "dex_mod": 0,
+    "can_stabilise": true,
+    "regen": 3,
+    "ac": 12,
+    "level_hp": 4,
+    "absorbs_pounce": true
+  },
+  "cube": {
+    "name_key": "companions.cube.name",
+    "desc_key": "companions.cube.desc",
+    "passive_key": "companions.cube.passive",
+    "stabilise_key": "companions.cube.stabilise",
+    "art": "comp_cube",
+    "hp": 18,
+    "to_hit": 5,
+    "dmg": "1d4",
+    "dex_mod": 2,
+    "can_stabilise": false,
+    "regen": 2,
+    "ac": 16,
+    "level_hp": 3,
+    "minigame_edge": true
+  },
+  "bartleby": {
+    "name_key": "companions.bartleby.name",
+    "desc_key": "companions.bartleby.desc",
+    "passive_key": "companions.bartleby.passive",
+    "stabilise_key": "companions.bartleby.stabilise",
+    "art": "comp_bartleby",
+    "hp": 20,
+    "to_hit": 4,
+    "dmg": "1d8",
+    "dex_mod": 2,
+    "can_stabilise": true,
+    "regen": 2,
+    "ac": 14,
+    "level_hp": 3,
+    "fire_resist": 0.5,
+    "breath": {
+      "dice": "3d6",
+      "every": 3,
+      "key": "companions.bartleby.breath"
+    }
+  }
+}

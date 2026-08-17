@@ -1,0 +1,246 @@
+
+/* ============ effects overlay ============ */
+
+/* Covers the page, never the keyboard: .kb is raised above this layer below. */
+.fx {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fx > * {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.fx > .is-in { opacity: 1; }
+
+/* --- storm --- */
+
+.fx__flash {
+  background: radial-gradient(120% 90% at 50% 0%, rgba(198, 216, 240, .5), transparent 65%);
+  transition: opacity .55s ease-out;
+}
+.fx__flash.is-in { opacity: 0; }
+.fx__flash.is-in.is-lit { opacity: .55; transition: opacity .06s ease-in; }
+
+/* --- party --- */
+
+.fx__party i {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(60px);
+  mix-blend-mode: screen;
+  opacity: .55;
+}
+.fx__party i:nth-child(1) { background: radial-gradient(circle, #e0417a, transparent 66%); animation: fx-drift-a 5.5s ease-in-out infinite; }
+.fx__party i:nth-child(2) { background: radial-gradient(circle, #3f8fe0, transparent 66%); animation: fx-drift-b 6.7s ease-in-out infinite; }
+.fx__party i:nth-child(3) { background: radial-gradient(circle, #47c46b, transparent 66%); animation: fx-drift-c 7.9s ease-in-out infinite; }
+.fx__party i:nth-child(4) { background: radial-gradient(circle, #e8a33d, transparent 66%); animation: fx-drift-d 6.1s ease-in-out infinite; }
+
+/* Slow, wide movement rather than flashing. Nothing here changes faster than
+   about 1 Hz, which keeps it clear of photosensitivity territory. */
+@keyframes fx-drift-a { 0%,100% { transform: translate(-25%, -20%) scale(1);   } 50% { transform: translate(10%, 15%) scale(1.25); } }
+@keyframes fx-drift-b { 0%,100% { transform: translate(60%, -15%) scale(1.15); } 50% { transform: translate(25%, 30%) scale(.9);  } }
+@keyframes fx-drift-c { 0%,100% { transform: translate(15%, 60%) scale(1);     } 50% { transform: translate(55%, 20%) scale(1.2); } }
+@keyframes fx-drift-d { 0%,100% { transform: translate(50%, 45%) scale(.95);   } 50% { transform: translate(-5%, 5%) scale(1.15); } }
+
+.fx__party.is-calm i { animation: none; opacity: .3; }
+.fx__party.is-calm i:nth-child(1) { transform: translate(-20%, -15%); }
+.fx__party.is-calm i:nth-child(2) { transform: translate(55%, -10%); }
+.fx__party.is-calm i:nth-child(3) { transform: translate(10%, 55%); }
+.fx__party.is-calm i:nth-child(4) { transform: translate(45%, 40%); }
+
+/* --- floor cleared --- */
+
+.fx__cleared {
+  background: radial-gradient(90% 70% at 50% 50%, rgba(232, 163, 61, .16), transparent 70%);
+  animation: fx-fade-out 1.8s ease-out forwards;
+}
+.fx__cleared i {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 10vmax; height: 10vmax;
+  margin: -5vmax 0 0 -5vmax;
+  border: 2px solid rgba(242, 192, 121, .8);
+  border-radius: 50%;
+  animation: fx-ring 1.5s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+@keyframes fx-ring { to { transform: scale(9); opacity: 0; } }
+@keyframes fx-fade-out { 60% { opacity: 1; } to { opacity: 0; } }
+
+/* --- cold: floor 5, the catacomb --- */
+
+/* Held, so it fades in over a couple of seconds rather than snapping on. */
+.fx__cold {
+  transition: opacity 2.2s ease;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(126, 168, 208, .16), transparent 60%),
+    linear-gradient(rgba(88, 128, 168, .10), rgba(60, 96, 136, .16));
+}
+.console__screen.fx-cold {
+  filter: saturate(.45) hue-rotate(-18deg) brightness(.94);
+  transition: filter 2.2s ease;
+}
+
+/* --- sever: floor 9, the page cut in half --- */
+
+/* Both halves are ruled with the same fine lines. The right half is three
+   pixels out of step, so the seam reads as a cut that never lined up again. */
+.fx__sever { transition: opacity 1.4s ease; }
+.fx__sever i {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 50%;
+  background-image: repeating-linear-gradient(
+    rgba(236, 223, 196, .055) 0 1px, transparent 1px 7px);
+}
+.fx__sever-l { left: 0;  background-position: 0 0; }
+.fx__sever-r { right: 0; transform: translateY(-3px); }
+.fx__sever b {
+  position: absolute;
+  top: -2%; bottom: -2%;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background: linear-gradient(90deg,
+    rgba(236, 223, 196, .30), rgba(6, 5, 4, .85) 45%, rgba(6, 5, 4, .85) 55%, rgba(0, 0, 0, .25));
+  box-shadow: 0 0 14px rgba(0, 0, 0, .8);
+  animation: fx-sever-breathe 7s ease-in-out infinite;
+}
+@keyframes fx-sever-breathe {
+  0%, 100% { transform: translateX(0);    }
+  50%      { transform: translateX(1.5px); }
+}
+
+/* --- session: floor 10, court is sitting --- */
+
+.fx__session {
+  transition: opacity 3s ease;
+  background: radial-gradient(78% 62% at 50% 46%, transparent 30%, rgba(4, 3, 2, .62) 100%);
+}
+.fx__session.is-in { animation: fx-session-breathe 14s ease-in-out infinite; }
+@keyframes fx-session-breathe { 0%, 100% { opacity: 1; } 50% { opacity: .78; } }
+
+/* --- amend: floor 11 rewrites a room --- */
+
+/* One element, one transform, 1.6s. It fires on about half of all revisits. */
+.fx__amend { transition: opacity .2s ease; }
+.fx__amend i {
+  position: absolute;
+  left: 0; right: 0;
+  height: 14vh;
+  background: linear-gradient(rgba(168, 56, 42, 0), rgba(168, 56, 42, .22) 55%, rgba(216, 92, 74, .5));
+  border-bottom: 1px solid rgba(216, 92, 74, .75);
+  will-change: transform;
+  animation: fx-amend-sweep 1.5s cubic-bezier(.35, 0, .2, 1) forwards;
+}
+@keyframes fx-amend-sweep {
+  from { transform: translateY(-14vh); opacity: .25; }
+  25%  { opacity: 1; }
+  to   { transform: translateY(100vh); opacity: 0; }
+}
+
+/* --- ember: the Reaper of Records --- */
+
+.fx__ember { opacity: 0; }
+.fx__ember.is-in { opacity: .9; }
+
+/* --- blank: floor 13 --- */
+
+/* Drains over eight seconds, and stops well short of unreadable. */
+.fx__blank {
+  background: radial-gradient(120% 120% at 50% 45%, rgba(255, 253, 248, .34), rgba(244, 240, 232, .24));
+  transition: opacity 8s linear;
+}
+.console__screen.fx-blank {
+  filter: brightness(1.25) contrast(.72) saturate(.2);
+  transition: filter 8s linear;
+}
+
+/* --- static: the secret final boss --- */
+
+/* A noise tile drawn once in JS, then only moved: no per-frame repaint, and
+   nothing on screen changes faster than about a fifth of a hertz. */
+.fx__static {
+  background-repeat: repeat;
+  transition: opacity 1.2s ease;
+  animation: fx-static-drift 9s linear infinite;
+}
+.fx__static.is-in { opacity: .5; }
+.fx__static i {
+  position: absolute;
+  left: 0; right: 0;
+  height: 22vh;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .05), rgba(255, 255, 255, 0));
+  animation: fx-static-roll 5s linear infinite;
+}
+@keyframes fx-static-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 60px; }
+}
+@keyframes fx-static-roll {
+  from { transform: translateY(-22vh); }
+  to   { transform: translateY(100vh); }
+}
+.fx__static.is-calm { animation: none; }
+
+/* --- signature: the withdrawal ending --- */
+
+.fx__signature i {
+  position: absolute;
+  border-radius: 46% 54% 52% 48% / 50% 46% 54% 50%;
+  background: radial-gradient(circle, rgba(12, 10, 7, .82), rgba(12, 10, 7, .45) 55%, transparent 72%);
+  transform: scale(0);
+  will-change: transform;
+}
+.fx__signature i:nth-child(1) { left: 8%;  top: 62%; width: 70vmax; height: 70vmax; margin: -35vmax 0 0 -35vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) forwards; }
+.fx__signature i:nth-child(2) { left: 68%; top: 30%; width: 60vmax; height: 60vmax; margin: -30vmax 0 0 -30vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) .5s forwards; }
+.fx__signature i:nth-child(3) { left: 38%; top: 78%; width: 80vmax; height: 80vmax; margin: -40vmax 0 0 -40vmax; animation: fx-ink 6s cubic-bezier(.2, .6, .25, 1) 1.1s forwards; }
+@keyframes fx-ink {
+  from { transform: scale(0);   opacity: .95; }
+  70%  { transform: scale(1);   opacity: .8;  }
+  to   { transform: scale(1.2); opacity: 0;   }
+}
+
+/* --- lowhp: under a quarter health --- */
+
+/* Above static, so the two compose during the last fight instead of one
+   hiding the other. The pulse is a shade over two seconds: 0.4 Hz. */
+.fx__lowhp {
+  z-index: 2;
+  background: radial-gradient(74% 60% at 50% 50%, transparent 40%, rgba(122, 20, 14, .5) 100%);
+  transition: opacity 1.6s ease;
+}
+.fx__lowhp.is-in { animation: fx-lowhp-pulse 2.4s ease-in-out infinite; }
+@keyframes fx-lowhp-pulse { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+
+/* --- palette shifts, applied to the screen itself --- */
+
+.console__screen.fx-rainbow { animation: fx-hue 9s linear infinite; }
+.console__screen.fx-mono    { filter: grayscale(1) contrast(1.06); transition: filter 1.2s ease; }
+.console__screen.fx-still   { animation: none; filter: hue-rotate(140deg) saturate(1.3); }
+@keyframes fx-hue { to { filter: hue-rotate(360deg); } }
+
+/* The keyboard stays above every effect, unfiltered and tappable. */
+.kb { position: relative; z-index: 60; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx__cleared i { animation-duration: .9s; }
+  .console__screen.fx-rainbow { animation: none; filter: hue-rotate(140deg) saturate(1.3); }
+
+  /* Still versions of the held effects: the same picture, without the movement. */
+  .fx__sever b,
+  .fx__session.is-in,
+  .fx__static,
+  .fx__lowhp.is-in { animation: none; }
+  .fx__static i { display: none; }
+  .fx__lowhp { opacity: .85; }
+  .fx__lowhp.is-in { opacity: .85; }
+  .fx__amend i { animation-duration: 1.2s; }
+}

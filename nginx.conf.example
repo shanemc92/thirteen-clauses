@@ -1,0 +1,60 @@
+# nginx reverse proxy in front of the static server.
+#
+# GOTCHA: add_header does NOT accumulate across blocks. If any location{} below
+# has its own add_header, every add_header inherited from the server{} block is
+# discarded inside that location. So either put these at server level and use no
+# add_header anywhere else, or repeat the full set in every location that has one.
+#
+# That is why the whole set is factored into a snippet and included verbatim in
+# each location rather than written out four times and drifting apart.
+
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name your.host.name;
+
+    ssl_certificate     /etc/ssl/certs/your.pem;
+    ssl_certificate_key /etc/ssl/private/your.key;
+
+    # Save this block as /etc/nginx/snippets/thirteen-clauses-headers.conf
+    #
+    #   # Required. Without both of these SharedArrayBuffer is unavailable and
+    #   # input() cannot reach Python. "always" applies them to error responses too.
+    #   add_header Cross-Origin-Opener-Policy   same-origin  always;
+    #   add_header Cross-Origin-Embedder-Policy require-corp always;
+    #
+    #   # Ordinary hardening. frame-ancestors has to be a header: the <meta> CSP
+    #   # in index.html cannot carry it (meta-delivered CSP ignores frame-ancestors,
+    #   # sandbox and report-uri), so without this the page is framable and the
+    #   # Erase button — one confirm() from wiping every save — is clickjackable.
+    #   add_header X-Content-Type-Options nosniff always;
+    #   add_header X-Frame-Options        DENY    always;
+    #   add_header Referrer-Policy        no-referrer always;
+    #   add_header Permissions-Policy     "accelerometer=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()" always;
+    #   add_header Content-Security-Policy "frame-ancestors 'none'" always;
+    #   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    include snippets/thirteen-clauses-headers.conf;
+
+    location / {
+        proxy_pass http://static-web-server:80;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        include snippets/thirteen-clauses-headers.conf;
+    }
+
+    # The service worker and the entry point must never be cached, or browsers
+    # keep running an old app.js against a new index.html.
+    location = /sw.js {
+        proxy_pass http://static-web-server:80/sw.js;
+        include snippets/thirteen-clauses-headers.conf;
+        add_header Cache-Control "no-cache" always;
+    }
+
+    location = /index.html {
+        proxy_pass http://static-web-server:80/index.html;
+        include snippets/thirteen-clauses-headers.conf;
+        add_header Cache-Control "no-cache" always;
+    }
+}

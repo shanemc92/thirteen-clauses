@@ -1,0 +1,68 @@
+
+/* ============ on-screen keyboard (touch devices) ============ */
+
+.kb {
+  margin-top: 8px;
+  padding: 8px 6px 10px;
+  border-radius: 5px;
+  background: linear-gradient(#151109, #0f0c07);
+  border: 1px solid #100c08;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.kb__row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.kb__row:last-child { margin-bottom: 0; }
+.kb__row--indent { padding: 0 5%; }
+.kb__row--util { margin-bottom: 8px; }
+
+.kb__key {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 42px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--paper);
+  background: linear-gradient(#332921, #221b13);
+  border: 1px solid #4a3c2b;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: none;
+}
+.kb__key.is-down {
+  background: linear-gradient(#4a3c2b, #332921);
+  border-bottom-width: 1px;
+  transform: translateY(1px);
+}
+
+.kb__key--wide  { flex: 1.5 1 0; font-size: 13px; }
+.kb__key--space { flex: 5 1 0; }
+.kb__key--util  { flex: 1 1 0; font-size: 14px; color: var(--paper-dim); height: 34px; }
+.kb__key--ghost { visibility: hidden; pointer-events: none; }
+
+.kb__key--enter {
+  color: #1b1409;
+  font-weight: 600;
+  background: linear-gradient(var(--amber-soft), var(--amber));
+  border-color: #a8752a;
+}
+.kb__key--enter.is-down { background: linear-gradient(var(--amber), #c9871f); }
+
+#kbShift.is-active {
+  color: var(--amber-soft);
+  border-color: var(--amber);
+  box-shadow: inset 0 0 10px -2px rgba(232, 163, 61, .6);
+}
+
+/* short screens: shrink keys rather than push the terminal off-screen */
+@media (max-height: 720px) {
+  .kb__key { height: 36px; font-size: 15px; }
+  .kb__key--util { height: 30px; }
+}

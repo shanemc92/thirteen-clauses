@@ -1,0 +1,5 @@
+        | is this right?
+        | check w/ legal
+   TEXT | why this way?
+        | ??
+        | see above

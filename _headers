@@ -1,0 +1,23 @@
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: frame-ancestors 'none'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# COOP/COEP are load-bearing: SharedArrayBuffer is how input() reaches Python,
+# and it is refused without both. Everything below them is ordinary hardening.
+#
+# frame-ancestors is sent as a header rather than in the <meta> CSP in
+# index.html because meta-delivered CSP ignores it — as it ignores sandbox and
+# report-uri. Without it the page is framable and the Erase button, which is
+# guarded by a single confirm(), is clickjackable. X-Frame-Options is the same
+# rule for anything predating frame-ancestors.
+#
+# This file is a Netlify / Cloudflare Pages convention. GitHub Pages ignores it
+# entirely, which is what sw.js is for — the worker supplies COOP/COEP itself
+# once registered, but it cannot supply frame-ancestors. Behind a real server,
+# use nginx.conf.example or sws.toml instead.

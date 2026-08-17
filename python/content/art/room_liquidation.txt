@@ -1,0 +1,6 @@
+   LOT 001 .......... desks
+   LOT 114 .......... plant
+   LOT 402 .......... fittings
+   LOT 909 .......... DISPUTANTS
+                      (11)
+                      COND: VARIABLE

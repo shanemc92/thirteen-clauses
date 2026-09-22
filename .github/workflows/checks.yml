@@ -10,3 +10,10 @@ permissions:
 jobs:
   static-checks:
     uses: shanemc92/.github/.github/workflows/static-checks.yml@main
+    with:
+      # This tool is deliberately not self-contained. It boots a Pyodide
+      # runtime from jsDelivr at load time - several megabytes of WebAssembly
+      # that there is no sense vendoring - and pulls xterm.js and its fit
+      # addon from the same CDN for the terminal. jsDelivr is named explicitly
+      # in the page's own CSP, which stays stricter than the site-wide one.
+      allow-off-origin: true

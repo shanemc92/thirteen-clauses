@@ -1,0 +1,23 @@
+# gitleaks configuration for thirteen-clauses.
+#
+# Keep every default rule, and allowlist one specific, well-understood false
+# positive rather than disabling a rule or skipping a scan.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = """
+The game's content files are localisation tables. Every entry is a
+"<something>_key": "<dotted.string.id>" pair - mon.signage.atk1, item.writ.desc
+and so on - which the generic-api-key rule reads as an assignment to a
+high-entropy value. There are 779 of them across these files and none is a
+credential: they are the keys used to look a display string up in theme.json.
+
+Both conditions have to match, so this only silences that exact shape of line
+inside python/content/*.json. A real secret in one of those files, or a
+name_key-looking line anywhere else in the repo, still fails the scan.
+"""
+matchCondition = "AND"
+paths = ['''^python/content/[^/]+\.json$''']
+regexTarget = "line"
+regexes = ['''"[a-z_]+_key"\s*:\s*"[a-z0-9_]+(?:\.[a-z0-9_]+)+"''']
